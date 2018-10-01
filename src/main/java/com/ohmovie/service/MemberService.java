@@ -1,5 +1,5 @@
 package com.ohmovie.service;
 
-public interface UserService {
+public interface MemberService {
 
 }

@@ -1,9 +1,9 @@
 package com.ohmovie.vo;
 
 /* 회원 정보 */
-public class UserVO {
+public class MemberVO {
 	
-	private int uno;			// 회원 식별번호
+	private int uNo;			// 회원 식별번호
 	private String uId;			// 아이디(email)
 	private String uPw;			// 비밀번호
 	private String uName;		// 회원 닉네임
@@ -13,11 +13,11 @@ public class UserVO {
 	private String lastDate;	// 마지막방문일
 	private String oauthId;		// oauth 아이디
 	
-	public int getUno() {
-		return uno;
+	public int getuNo() {
+		return uNo;
 	}
-	public void setUno(int uno) {
-		this.uno = uno;
+	public void setuNo(int uNo) {
+		this.uNo = uNo;
 	}
 	public String getuId() {
 		return uId;
@@ -70,7 +70,7 @@ public class UserVO {
 	
 	@Override
 	public String toString() {
-		return "UserVO [uno=" + uno + ", uId=" + uId + ", uPw=" + uPw + ", uName=" + uName + ", uType=" + uType
+		return "MemberVO [uNo=" + uNo + ", uId=" + uId + ", uPw=" + uPw + ", uName=" + uName + ", uType=" + uType
 				+ ", uFlag=" + uFlag + ", regDate=" + regDate + ", lastDate=" + lastDate + ", oauthId=" + oauthId + "]";
 	}
 	

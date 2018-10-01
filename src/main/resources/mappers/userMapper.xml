@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
     PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="me.dalek.mapper.UserMapper">
+<mapper namespace="me.dalek.mapper.MemberMapper">
 	
-	<select id="login" resultType="UserVO">
+	<select id="login" resultType="MemberVO">
 		select uid, upw, uname from user where uid = #{uid} and upw = #{upw}
 	</select>
 	
@@ -13,7 +13,7 @@
 		where uid = #{uid}
 	</update>
 	
-	<select id="checkUserWithSessionKey" resultType="UserVO">
+	<select id="checkUserWithSessionKey" resultType="MemberVO">
 		select * from user where sessionKey = #{value}
 		and sessionLimit > now()
 	</select>

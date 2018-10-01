@@ -1,5 +1,5 @@
 package com.ohmovie.dao;
 
-public interface UserDAO {
+public interface MemberDAO {
 
 }
