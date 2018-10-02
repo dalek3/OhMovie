@@ -1,7 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <footer>
-        <strong>Copyright &copy; 2018 OhMoive. All rights reserved.</strong>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <span class="footer-item"><a href="#">서비스 이용약관</a></span class>
+                <span class="footer-item"><a href="#">개인정보 처리방침</a></span class>
+                <span class="footer-item"><a href="#">도움말</a></span class>
+            </p>
+            <p class="text-muted"><strong>Copyright &copy; 2018 <a href="#">OhMoive</a>. All rights reserved.</strong></p>
+        </div>
     </footer>
     <!-- jQuery -->
     <script src="resources/vendor/jquery/jquery.min.js"></script>
@@ -14,5 +21,13 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="resources/dist/js/sb-admin-2.js"></script>
+    <script src="resources/dist/js/jquery.barrating.min.js"></script>
+    <script>
+        $(function () {
+            $('#example').barrating({
+                theme: 'fontawesone-stars'
+            });
+        });
+    </script>
 </body>
 </html>

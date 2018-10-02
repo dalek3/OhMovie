@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="../../resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../../resources/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../resources/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../resources/dist/css/list.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../resources/dist/css/star/fontawesome-stars.css">
+    <style>
+        body > .container {
+            padding: 60px 15px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
+                        aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">Oh!Movie</a>
+                </div>
+
+                <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="category.html">카테고리</a></li>
+                        <li><a href="#">평가하기</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="navbar-form">
+                            <div class="input-group custom-search-form">
+                                <input type="text" class="form-control search" placeholder="Search">
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default btn-search">
+                                        <i class="fa fa-search"></i>
+                                    </button>
+                                </span>
+                            </div>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-user">
+                                <li><a href="#"><i class="fa fa-user fa-fw"></i> 마이페이지</a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main class="container">
+        <section class="content">
+            <div class="row">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">검색결과</h3>
+                        <div class="row">
+                            <p>''검색결과</p>
+                            <p>검색결과가 없어요</p>
+                            <ul class="list">
+                            </ul>
+                            <p>''님, 이 작품들은 어떠세요?</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <span class="footer-item"><a href="#">서비스 이용약관</a></span class>
+                <span class="footer-item"><a href="#">개인정보 처리방침</a></span class>
+                <span class="footer-item"><a href="#">도움말</a></span class>
+            </p>
+            <p class="text-muted"><strong>Copyright &copy; 2018 <a href="#">OhMoive</a>. All rights reserved.</strong></p>
+        </div>
+    </footer>
+    <!-- jQuery -->
+    <script src="../../resources/vendor/jquery/jquery.min.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../../resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="../../resources/vendor/metisMenu/metisMenu.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="../../resources/dist/js/sb-admin-2.js"></script>
+    <script src="../../resources/dist/js/jquery.barrating.min.js"></script>
+    <script src="../../resources/dist/js/search.js"></script>
+    <script src="../../resources/dist/js/speech.js"></script>
+    <script>
+        $(function () {
+            $('#example').barrating({
+                theme: 'fontawesone-stars'
+            });
+        });
+    </script>
+</body>
+
+</html>

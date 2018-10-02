@@ -17,9 +17,23 @@ public class HomeController {
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(Locale locale, Model model) {
-		logger.info("Welcome index!");
+		logger.info("index");
 		
 		return "index";
+	}
+
+	@RequestMapping(value = "/category", method = RequestMethod.GET)
+	public String category(Model model) {
+		logger.info("category");
+		
+		return "category";
+	}
+	
+	@RequestMapping(value = "/search", method = RequestMethod.GET)
+	public String search(Model model) {
+		logger.info("search");
+		
+		return "search";
 	}
 	
 }

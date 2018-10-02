@@ -13,6 +13,7 @@
 
     <!-- Custom CSS -->
     <link href="../../resources/dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../../resources/dist/css/sticky-footer.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../../resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,18 +35,18 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="#">Oh!Movie</a>
+                <a class="navbar-brand" href="index.html">Oh!Movie</a>
                 </div>
             
                 <div class="collapse navbar-collapse" id="navbar-collapse-1">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">카테고리</a></li>
+                        <li><a href="category.html">카테고리</a></li>
                         <li><a href="#">평가하기</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="navbar-form">
                             <form class="input-group custom-search-form">
-                                <input type="text" class="form-control" placeholder="Search">
+                                <input type="text" class="form-control search" placeholder="Search">
                                 <span class="input-group-btn">
                                     <button type="submit" class="btn btn-default">
                                         <i class="fa fa-search"></i>
@@ -80,8 +81,8 @@
                     <div class="box">
                         <div class="box-header with-border">
                             <h3 class="box-title">HOME PAGE</h3>
-                            <div class="br-wrapper br-theme-fontawesome-stars">
-                                <select id="example"> <!-- now hidden -->
+                            <!-- <div class="br-wrapper br-theme-fontawesome-stars">
+                                <select id="example">
                                     <option value="1">1</option>
                                     <option value="2">2</option>
                                     <option value="3">3</option>
@@ -89,38 +90,25 @@
                                     <option value="5">5</option>
                                 </select>
                             ...rating widget...
-                            </div>
-                                  
+                            </div> -->
                         </div>
                     </div>
                 </div>
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <td>id</td>
-                            <td>title</td>
-                            <td>original_title</td>
-                            <td>backdrop_path</td>
-                            <td>poster_path</td>
-                            <td>vote_average</td>
-                            <td>vote_count</td>
-                            <td>release_date</td>
-                            <td>popularity</td>
-                            <td>overview</td>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        
-                    </tbody>
-                </table>
-                <ul class="test">
+                <ul class="list">
 
                 </ul>
             </div>
         </section>
     </main>
-    <footer>
-        <strong>Copyright &copy; 2018 OhMoive. All rights reserved.</strong>
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <span class="footer-item"><a href="#">서비스 이용약관</a></span class>
+                <span class="footer-item"><a href="#">개인정보 처리방침</a></span class>
+                <span class="footer-item"><a href="#">도움말</a></span class>
+            </p>
+            <p class="text-muted"><strong>Copyright &copy; 2018 <a href="#">OhMoive</a>. All rights reserved.</strong></p>
+        </div>
     </footer>
     <!-- jQuery -->
     <script src="../../resources/vendor/jquery/jquery.min.js"></script>
@@ -134,6 +122,7 @@
     <!-- Custom Theme JavaScript -->
     <script src="../../resources/dist/js/sb-admin-2.js"></script>
     <script src="../../resources/dist/js/jquery.barrating.min.js"></script>
+    <script src="../../resources/dist/js/search.js"></script>
     <script>
         $(function() {
             $('#example').barrating({
@@ -141,38 +130,6 @@
             });
         });
     </script>
-    <script>
-
-        function createNode(element) {
-            return document.createElement(element);
-        }
-
-        function append(parent, el) {
-            return parent.appendChild(el);
-        }
-
-        const ul = document.querySelector('tbody')
-        fetch("https://api.themoviedb.org/3/search/movie?api_key=bfdc49ba22b11be34746dd5c861c3d27&query=%EC%96%B4%EB%B2%A4%EC%A0%B8%EC%8A%A4&language=ko-kr")
-        .then(respose => respose.json())
-        .then(data => {
-            let list = data.results;
-            return list.map(item => {
-                let tr = createNode('tr');
-                tr.innerHTML =
-                `    <td>${item.id}</td>
-                    <td>${item.title}</td>
-                    <td>${item.original_title}</td>
-                    <td>${item.backdrop_path}</td>
-                    <td>${item.poster_path}</td>
-                    <td>${item.vote_average}</td>
-                    <td>${item.vote_count}</td>
-                    <td>${item.release_date}</td>
-                    <td>${item.popularity}</td>
-                    <td>${item.overview}</td>`
-                append(ul, tr);
-            })
-        })
-        .catch(err => console.log(err))
-    </script>
+    
 </body>
 </html>
