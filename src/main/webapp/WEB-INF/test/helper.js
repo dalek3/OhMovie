@@ -1,4 +1,4 @@
-((global, doucment) => {
+((global, document) => {
     'use strict'
 
     /* DOM 선택 */
@@ -43,11 +43,11 @@
         value: {}
     });
 
-    Object.defineProperties(global._. {
+    Object.defineProperties(global,_,{
         // DOM
         els         : defineProp(els),
         el          : defineProp(el),
         // JavaScript
-        mixin       : defineProp(mixin);
+        mixin       : defineProp(mixin)
     });
 })(window, window.document);

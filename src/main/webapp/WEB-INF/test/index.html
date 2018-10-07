@@ -13,67 +13,64 @@
 
     <!-- Custom CSS -->
     <link href="../../resources/dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../../resources/dist/css/sticky-footer.css" rel="stylesheet">
+    <link href="../../resources/dist/css/style.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="../../resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="../../resources/dist/css/star/fontawesome-stars.css">
     <style>
-        body > .container {
-            padding: 60px 15px 0;
+        .navbar-form {
+            margin-right: 10px;
+            margin-left: 10px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">Oh!Movie</a>
+    <header class="header">
+            <nav class="navbar navbar-default top-fixed">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Oh!Movie</a>
+                    </div>
+                
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="category.html">카테고리</a></li>
+                            <li><a href="#">평가하기</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
+                                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-form">
+                                <form class="input-group custom-search-form">
+                                    <input type="text" class="form-control search" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default">
+                                            <i class="fa fa-microphone"></i>
+                                        </button>
+                                    </span>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            
-                <div class="collapse navbar-collapse" id="navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li><a href="category.html">카테고리</a></li>
-                        <li><a href="#">평가하기</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="navbar-form">
-                            <form class="input-group custom-search-form">
-                                <input type="text" class="form-control search" placeholder="Search">
-                                <span class="input-group-btn">
-                                    <button type="submit" class="btn btn-default">
-                                        <i class="fa fa-search"></i>
-                                    </button>
-                                </span>
-                            </form>
-                        </li>
-                        <li class="dropdown">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                                <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                            </a>
-                            <ul class="dropdown-menu dropdown-user">
-                                <li><a href="#"><i class="fa fa-user fa-fw"></i> 마이페이지</a>
-                                </li>
-                                <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a>
-                                </li>
-                                <li class="divider"></li>
-                                <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-
-                </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header>
     <main class="container">
         <section class="content">
             <div class="row">
@@ -103,9 +100,9 @@
     <footer class="footer">
         <div class="container">
             <p>
-                <span class="footer-item"><a href="#">서비스 이용약관</a></span class>
-                <span class="footer-item"><a href="#">개인정보 처리방침</a></span class>
-                <span class="footer-item"><a href="#">도움말</a></span class>
+                <span class="footer-item"><a href="#">서비스 이용약관</a></span>
+                <span class="footer-item"><a href="#">개인정보 처리방침</a></span>
+                <span class="footer-item"><a href="#">도움말</a></span>
             </p>
             <p class="text-muted"><strong>Copyright &copy; 2018 <a href="#">OhMoive</a>. All rights reserved.</strong></p>
         </div>
