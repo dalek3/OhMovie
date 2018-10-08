@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
-body, h1, h3, li, a, ul, p, dl, dt, dd, figure, figcaption{
+
+:root {
     font-family: 'Noto Sans', sans-serif;
+    font-size: 14px;
+}
+
+body, h1, h2, h3, li, a, ul, p, dl, dt, dd, figure, figcaption, button {
+    
     font-weight: 400;
-    font-size: 15px;
     
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    border: 0;
+    background: none;
 }
 
 .fw700 {
@@ -14,17 +21,22 @@ body, h1, h3, li, a, ul, p, dl, dt, dd, figure, figcaption{
 }
 
 h1 {
-    font-size: 4rem;
+    font-size: 3rem;
     margin: 10px 0 20px 0;
 }
 
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
 h3 {
-    font-size: 3rem;
+    /* font-size: 3rem; */
     font-weight: 700;
 }
 
 a {
-    font-size: 1.75rem;
+    /* font-size: 1.75rem; */
     color: #6985F4;
     font-weight: 700;
 }
@@ -46,12 +58,12 @@ em {
 }
 
 dt {
-    font-size: 1.75rem;
+    /* font-size: 1.75rem; */
     font-weight: 700;
     color: #8c8c8c;
 }
 dd {
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
 }
 
 .wrap {
@@ -76,7 +88,12 @@ dd {
     color: #6985F4;
 }
 
+main {
+    margin-top: 100px;
+}
+
 .ContentJumbotron-wrap {
+    margin-top: -100px;
     padding-top: 100px;
     display: flex;
     color: #fff;
@@ -103,7 +120,7 @@ dd {
 }
 
 .ContentJumbotron__Poster p {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-weight: 700;
     text-align: center;
 
@@ -155,7 +172,7 @@ dd {
 
 .ContentJumbotron-user-panel {
     margin-top: 80px;
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
 
 .ContentJumbotron-user-panel ul{
@@ -189,7 +206,7 @@ dd {
 }
 
 .ContentJumbotron-user-panel i {
-    font-size: 4rem;
+    font-size: 3rem;
 }
 
 .br-wrapper {
