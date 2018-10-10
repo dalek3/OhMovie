@@ -5,7 +5,7 @@
     font-size: 14px;
 }
 
-body, h1, h2, h3, li, a, ul, p, dl, dt, dd, figure, figcaption, button {
+body, h1, h2, h3, li, a, ul, p, dl, dt, dd, figure, figcaption, button, input {
     
     font-weight: 400;
     
@@ -39,6 +39,7 @@ a {
     /* font-size: 1.75rem; */
     color: #6985F4;
     font-weight: 700;
+    text-decoration: none;
 }
 
 a:hover {
@@ -213,8 +214,8 @@ main {
     margin-top: 5px;
 }
 
-.br-theme-fontawesome-stars .br-widget a{
-    font-size: 3rem;
+.ContentJumbotron-user-panel .br-theme-fontawesome-stars .br-widget a{
+    font-size: 2rem;
 }
 
 .section-panels {
@@ -361,4 +362,160 @@ footer {
     padding: 30px 0;
     margin: 0 auto;
     width: 1000px;
+}
+
+
+/* 로그인, 회원가입 */
+.auth {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0,0,0,.23), 0 10px 40px rgba(0,0,0,.19)
+}
+
+.title-bar {
+    padding: 16px;
+    border-radius: 5px 5px 0 0;
+    background: #6985F4;
+    
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: none;
+}
+
+.title-bar a{
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.contents {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents form {
+    width: 460px;
+}
+
+.contents h2 {
+    margin-bottom: 20px;
+}
+
+.contents p {
+    margin-bottom: 15px;
+}
+
+.input input {
+    width: 100%;
+    height: 44px;
+    padding: 10px;
+    border-radius: 5px;
+    background: #f5f5f5;
+    
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.input input:focus {
+    outline: none;
+    border: 1px solid #6985F4;
+}
+
+.input input[type=submit] {
+    background: #6985F4;
+    color: #fff;
+    cursor: pointer;
+}
+
+.label {
+    font-size: 1.14rem;
+}
+
+
+/* 별점 페이지 */
+
+.ReviewMorePage-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ReviewMorePage-header {
+    width: 600px;
+    padding: 20px 0;
+
+    text-align: center;
+    border: 1px solid #d7d7d7;
+    border-radius: 5px 5px 0 0;
+}
+
+.ReviewMorePage-countingHeader {
+    margin-bottom: 10px;
+}
+
+.FilterBar-wrapper {
+    width: 600px;
+    border-left: 1px solid #d7d7d7;
+    border-right: 1px solid #d7d7d7;
+
+}
+
+.FilterBar {
+    margin: 10px 50px;
+}
+
+.FilterBar-DropDown {
+    display: inline-block;
+    vertical-align: top;
+    background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxwYXRoIGZpbGw9IiNBMEEwQTAiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTExLjY2MyAxNS44N2wtNS40OTQtNWEuNS41IDAgMCAxIC4zMzctLjg3aDEwLjk4OGEuNS41IDAgMCAxIC4zMzcuODdsLTUuNDk0IDVhLjUuNSAwIDAgMS0uNjc0IDB6Ii8+Cjwvc3ZnPgo=) no-repeat center;;
+    background-size: contain;
+    width:24px;
+    height:24px;
+}
+
+.ReviewMorePage-contents {
+    display: flex;
+    border: 1px solid #d7d7d7;
+    border-radius: 0 0 5px 5px;
+    width: 600px;
+    margin-bottom: 100px;
+}
+
+.ReviewMorePage-reviews {
+    margin: 0 50px;
+}
+
+.ContentListWithRatingControl {
+    display: flex;
+    padding: 15px 0;
+}
+
+.ContentListWithRatingControl-thumbnail {
+    width: 100px;
+    height: 145px;
+    border: 1px solid #d7d7d7;
+    border-radius: 10px;
+}
+
+.ContentListWithRatingControl-thumbnail img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ContentListWithRatingControl-detail {
+    margin-left: 30px;
+}
+
+.br-theme-fontawesome-stars .br-widget a{
+    font-size:3rem;
 }

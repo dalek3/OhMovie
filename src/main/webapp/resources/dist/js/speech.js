@@ -18,7 +18,7 @@ recognition.maxAlternatives = 1;
 
 // 음성 인식 시작하기
 var output = document.querySelector('.search');
-var btn = document.querySelector('.btn');
+var btn = document.querySelector('.btn-search');
 // 음성 인식시작전 버튼 클릭
 btn.onclick = function () {
     recognition.start();

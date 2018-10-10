@@ -23,4 +23,5 @@
     </section>
 </main>
 <script src="resources/dist/js/search.js"></script>
+<script src="resources/dist/js/speech.js"></script>
 <%@ include file="include/footer.jsp" %>

@@ -14,7 +14,7 @@ fetch("https://api.themoviedb.org/3/discover/movie?api_key=bfdc49ba22b11be34746d
     return list.map(item => {
         let li = createNode('li');
         li.innerHTML =
-            `    <a href="${item.id}">
+            `    <a href="/item/${item.id}">
                     <img src="https://image.tmdb.org/t/p/w185${item.poster_path}" alt="${item.title}">
                     <p>${item.title}</p>
                 </a>
