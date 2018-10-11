@@ -62,7 +62,7 @@
 	                                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
 	                                    <li class="divider"></li>
 	                                    <li>
-	                                    	<!-- <a href="/customLogout"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a> -->
+	                                    		<!-- <a href="/customLogout"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a> -->
 	                                    	<form action="/customLogout" method="post">
 												<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 												<button><i class="fa fa-sign-out fa-fw"></i>로그아웃</button>
