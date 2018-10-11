@@ -11,6 +11,8 @@ import com.ohmovie.vo.MemberVO;
 
 public class CustomUser extends User {
 
+	private static final long serialVersionUID = 1L;
+	
 	private MemberVO member;
 	
 	public MemberVO getMember() {
@@ -23,7 +25,7 @@ public class CustomUser extends User {
 	}
 	
 	public CustomUser(MemberVO vo) {
-		super(vo.getU_id(), vo.getU_pw(), vo.getAuthList().stream()
+		super(vo.getuId(), vo.getuPw(), vo.getAuthList().stream()
 		.map(auth -> new SimpleGrantedAuthority(auth.getAuth())).collect(Collectors.toList()));
 		
 		this.member = vo;

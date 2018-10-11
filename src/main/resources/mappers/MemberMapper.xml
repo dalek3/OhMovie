@@ -4,39 +4,25 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ohmovie.mapper.MemberMapper">
 	
-	<!-- <select id="login" resultType="MemberVO">
-		select uid, upw, uname from user where uid = #{uid} and upw = #{upw}
-	</select>
-	
-	<update id="keepLogin">
-		update user set sessionKey = #{sessionId}, sessionLimit = #{next}
-		where uid = #{uid}
-	</update>
-	
-	<select id="checkUserWithSessionKey" resultType="MemberVO">
-		select * from user where sessionKey = #{value}
-		and sessionLimit > now()
-	</select>
-	 -->
-	 
 	 <resultMap type="MemberVO" id="memberMap">
-	 	<id property="u_id" column="u_id"/>
-	 	<result property="u_id" column="u_id"/>
-	 	<result property="u_pw" column="u_pw"/>
-	 	<result property="u_name" column="u_name"/>
+	 	<id property="uId" column="u_idx"/>
+	 	<result property="uIdx" column="u_idx"/>
+	 	<result property="uId" column="u_id"/>
+	 	<result property="uPw" column="u_pw"/>
+	 	<result property="uName" column="u_name"/>
 	 	<result property="regDate" column="regDate"/>
 	 	<result property="updateDate" column="updateDate"/>
 	 	<collection property="authList" resultMap="authMap"></collection>
 	 </resultMap>
 	 
 	 <resultMap type="com.ohmovie.vo.AuthVO" id="authMap">
-	 	<result property="u_id" column="u_id"/>
+	 	<!-- <result property="u_id" column="u_id"/> -->
 	 	<result property="auth" column="auth"/>
 	 </resultMap>
 	 
 	 <select id="read" resultMap="memberMap">
-	 	select mem.u_id, u_pw, u_name, enabled, regdate, updatedate, auth 
-	 	from member mem left outer join member_auth auth on mem.u_id = auth.u_id
-	 	where mem.u_id = #{u_id}
+	 	select mem.u_idx, mem.u_id, u_pw, u_name, enabled, regdate, updatedate, auth 
+	 	from member mem left outer join member_auth auth on mem.u_idx = auth.u_idx
+	 	where mem.u_id = #{uId}
 	 </select>
 </mapper>

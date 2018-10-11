@@ -9,7 +9,7 @@
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 	    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"></property>
 	    <!-- home: 3306, school: 3308 -->
-	    <property name="url"             value="jdbc:mysql://127.0.0.1:3308/ohmovie?serverTimezone=Asia/Seoul&amp;useSSL=true&amp;characterEncoding=UTF8"></property>
+	    <property name="url"             value="jdbc:mysql://127.0.0.1:3306/ohmovie?serverTimezone=Asia/Seoul&amp;useSSL=true&amp;characterEncoding=UTF8"></property>
 	    <property name="username"        value="movie"></property>
 	    <property name="password"        value="movie"></property>
 	</bean>

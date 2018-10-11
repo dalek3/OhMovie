@@ -2,15 +2,9 @@ package com.ohmovie.vo;
 
 public class AuthVO {
 	
-	private String u_id;
 	private String auth;
+	// private String uType;		// 회원구분(USER:일반, ROOKIE:나도평론가, CRITIC:평론가)
 	
-	public String getU_id() {
-		return u_id;
-	}
-	public void setU_id(String u_id) {
-		this.u_id = u_id;
-	}
 	public String getAuth() {
 		return auth;
 	}
@@ -20,7 +14,7 @@ public class AuthVO {
 	
 	@Override
 	public String toString() {
-		return "AuthVO [u_id=" + u_id + ", auth=" + auth + "]";
+		return "AuthVO [ auth=" + auth + "]";
 	}
 	
 }

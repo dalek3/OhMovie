@@ -26,11 +26,9 @@ public class MemberMapperTests {
 	public void testRead() {
 		
 
-		log.info(mapper.read("admin90").toString());
-
-//		log.info(vo);
-		
-//		vo.getAuthList().forEach(authVO -> log.info(authVO));
+		log.info(mapper.read("admin00").toString());
+		log.info(mapper.read("user00").toString());
+		log.info(mapper.read("member00").toString());
 		
 	}
 	
