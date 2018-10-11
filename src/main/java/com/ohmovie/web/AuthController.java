@@ -11,17 +11,26 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/auth/*")
 public class AuthController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(AuthController.class);
+	private static final Logger log = LoggerFactory.getLogger(AuthController.class);
 	
 	@GetMapping(value="/login")
-	String login(Model model) throws Exception {
-		logger.info("login");
-		return "auth/login";
+	public void login(String error, String logout,Model model) throws Exception {
+		
+		log.info("error: " + error);
+		log.info("logout: " + logout);
+		
+		if (error != null) {
+			model.addAttribute("error", "Login Error Check Your Accout");
+		}
+		
+		if (logout != null) {
+			model.addAttribute("logout", "logout!!");
+		}
+		
 	}
 	
 	@GetMapping(value="/register")
-	String register(Model model) throws Exception {
-		logger.info("register");
-		return "auth/register";
+	public void register(Model model) throws Exception {
+		log.info("register");
 	}
 }

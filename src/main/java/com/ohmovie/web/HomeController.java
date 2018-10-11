@@ -9,32 +9,32 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
 	
-	private static final Logger logger = LoggerFactory.getLogger(HomeController.class);
+	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
 	
 
 	@GetMapping(value = "/")
 	public String home(Model model) {
-		logger.info("index");
+		log.info("index");
 		
 		return "index";
 	}
 
 	@GetMapping(value = "/category")
 	public String category(Model model) {
-		logger.info("category");
+		log.info("category");
 		
 		return "category";
 	}
 
 	@GetMapping(value = "/rating")
 	public String rating(Model model) {
-		logger.info("rating");
+		log.info("rating");
 		return "rating";
 	}
 	
 	@GetMapping(value = "/search")
 	public String search(Model model) {
-		logger.info("search");
+		log.info("search");
 		
 		return "search";
 	}
