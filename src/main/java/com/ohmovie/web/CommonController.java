@@ -20,12 +20,6 @@ public class CommonController {
 		model.addAttribute("msg", "Access Denied");
 	}
 	
-	@GetMapping("/customLogout")
-	public void logoutGET() {
-		
-		log.info("custom logout");
-	}
-	
 	@PostMapping("/customLogout")
 	public void logoutPOST() {
 		

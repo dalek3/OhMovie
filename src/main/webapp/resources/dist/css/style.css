@@ -67,6 +67,10 @@ dd {
     /* font-size: 1.5rem; */
 }
 
+body {
+    background: #f9f9f9;
+}
+
 .wrap {
     display: flex;
     flex-direction: column;
@@ -225,6 +229,7 @@ main {
     width: 1000px;
     border: 1px solid #e3e3e3;
     border-radius: 10px;
+    background: #fff;
 }
 
 .section-panel {
@@ -377,7 +382,7 @@ footer {
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    box-shadow: 0 6px 12px rgba(0,0,0,.23), 0 10px 40px rgba(0,0,0,.19)
+    box-shadow: 0 6px 12px rgba(0,0,0,.23), 0 10px 40px rgba(0,0,0,.19);
 }
 
 .title-bar {
@@ -441,13 +446,13 @@ footer {
     font-size: 1.14rem;
 }
 
-
 /* 별점 페이지 */
 
 .ReviewMorePage-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .ReviewMorePage-header {
@@ -457,6 +462,7 @@ footer {
     text-align: center;
     border: 1px solid #d7d7d7;
     border-radius: 5px 5px 0 0;
+    background: #fff;
 }
 
 .ReviewMorePage-countingHeader {
@@ -467,7 +473,7 @@ footer {
     width: 600px;
     border-left: 1px solid #d7d7d7;
     border-right: 1px solid #d7d7d7;
-
+    background: #fff;
 }
 
 .FilterBar {
@@ -489,6 +495,8 @@ footer {
     border-radius: 0 0 5px 5px;
     width: 600px;
     margin-bottom: 100px;
+    background: #fff;
+
 }
 
 .ReviewMorePage-reviews {
@@ -518,4 +526,189 @@ footer {
 
 .br-theme-fontawesome-stars .br-widget a{
     font-size:3rem;
+}
+
+/* profile 페이지 */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+#profile-wrap {
+    margin: 0 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+}
+
+#profile {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+}
+
+#profile-header-wrap a {
+    color:#fff;
+}
+
+#profile-header-wrap h2 {
+    color:#fff;
+}
+
+#profile-header-wrap p {
+    color:#fff;
+}
+
+#profile-header-wrap {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    background: radial-gradient(circle at 20% 50%, rgba(14.12%, 14.51%, 16.86%, 0.98) 0%, rgba(0%, 14.51%, 16.86%, 0.88) 100%);
+}
+
+#profile-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 45px;
+}
+
+#profile-header figure {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+#profile-header .avatar img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+}
+
+#profile-header .profile-counts {
+    display: flex;
+}
+
+#profile-header .profile-count {
+    margin-right: 10px;
+}
+
+#profile-header .profile-count span{
+    display: block;
+    text-align: center;
+}
+
+#profile-nav ul{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    border-bottom:1px solid #e3e3e3;
+}
+
+#profile-nav a {
+    padding: 20px 30px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#profile-nav a:hover {
+    border-bottom :3px solid #6985F4;
+}
+
+#profile-contents {
+    min-height: 400px;
+    border: 1px solid #e3e3e3;
+    border-radius: 5px;
+    margin: 20px;
+}
+
+/* setting */
+
+#setting-wrap {
+    margin: 0 50px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background:#fff;
+}
+
+#setting {
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+}
+
+#setting-header {
+    padding: 30px 50px 10px;
+    background:#6985F4;
+    border-radius: 10px 10px 0 0 ;
+}
+
+#setting-header h2 {
+    width: 100px;
+    padding-bottom: 10px;
+    color:#fff;
+}
+
+#setting-contents {
+    padding: 25px 50px 50px;
+}
+
+#setting-contents button {
+    outline:none;
+    border: 1px solid #adb5bd;
+    padding: 10px;
+    
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+#setting-contents a {
+    padding-bottom: 10px;
+    border-bottom: 3px solid #000;
+
+    color:#000;
+    font-size: 1.25rem;
+}
+
+.setting-content ul {
+    margin: 30px 0;
+}
+
+.setting-content li {
+    display: flex;
+    margin: 20px 0;
+    font-size: 1.25rem;
+}
+
+.setting-content .name {
+    width: 130px;
+    color:#888;
+}
+
+
+#setting-footer {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+#setting-footer a {
+    border-bottom: 3px solid #000;
+    margin: 10px 0;
+
+    color:#000;
+    font-size: 1.25rem;
+}
+
+#setting-footer button {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+
+    font-size: 1.5rem;
+    
+    color: #fff;
+    background: #6985F4;
 }

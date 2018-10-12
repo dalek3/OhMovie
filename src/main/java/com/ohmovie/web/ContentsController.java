@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class ContentsController {
 
 	@GetMapping(value="/item/{id}")
-	String item(Model model) throws Exception {
+	public String item(Model model) throws Exception {
 		
 		return "contents/item";
 	}

@@ -11,19 +11,19 @@
     <title>Oh!Movie</title>
     <!-- Bootstrap Core CSS -->
     
-    <link href="../resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<c:url value='/resources/vendor/bootstrap/css/bootstrap.min.css'/>" rel="stylesheet">
 
     <!-- MetisMenu CSS -->
-    <link href="../resources/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="<c:url value='/resources/vendor/metisMenu/metisMenu.min.css'/>" rel="stylesheet">
     
     <!-- Custom Fonts -->
-    <link href="../resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="../resources/dist/css/star/fontawesome-stars.css">
+    <link href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css'/>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/dist/css/star/fontawesome-stars.css'/>">
 
     <!-- Custom CSS -->
-    <link href="../resources/dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../resources/dist/css/list.css" rel="stylesheet">
-    <link href="../resources/dist/css/style.css" rel="stylesheet">
+    <link href="<c:url value='/resources/dist/css/sb-admin-2.css'/>" rel="stylesheet">
+    <link href="<c:url value='/resources/dist/css/list.css'/>" rel="stylesheet">
+    <link href="<c:url value='/resources/dist/css/style.css'/>" rel="stylesheet">
 
 </head>
 <body>
@@ -58,8 +58,8 @@
 	                                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
 	                                </a>
 	                                <ul class="dropdown-menu dropdown-user">
-	                                    <li><a href="#"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
-	                                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
+	                                    <li><a href="/profile/"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
+	                                    <li><a href="/setting"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
 	                                    <li class="divider"></li>
 	                                    <li>
 	                                    		<!-- <a href="/customLogout"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a> -->

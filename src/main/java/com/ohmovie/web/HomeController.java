@@ -11,7 +11,6 @@ public class HomeController {
 	
 	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
 	
-
 	@GetMapping(value = "/")
 	public String home(Model model) {
 		log.info("index");
@@ -20,23 +19,29 @@ public class HomeController {
 	}
 
 	@GetMapping(value = "/category")
-	public String category(Model model) {
+	public void category(Model model) {
 		log.info("category");
 		
-		return "category";
 	}
 
 	@GetMapping(value = "/rating")
-	public String rating(Model model) {
+	public void rating(Model model) {
 		log.info("rating");
-		return "rating";
+		
 	}
 	
 	@GetMapping(value = "/search")
-	public String search(Model model) {
+	public void search(Model model) {
 		log.info("search");
 		
-		return "search";
 	}
+
+	@GetMapping(value = "/setting")
+	public void setting(Model model) {
+		log.info("setting");
+		
+	}
+	
+
 	
 }
