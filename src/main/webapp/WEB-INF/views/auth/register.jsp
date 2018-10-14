@@ -12,14 +12,14 @@
     <title>Document</title>
     <link href="../resources/dist/css/style.css" rel="stylesheet">
 </head>
-
+<!-- 하나라도 입력하지않거나 오류가 나면 버튼 작동안하도록 -->
 <body>
     <div class="auth">
         <div class="inner">
             <a class="title-bar" href="/">OhMovie</a>
             <section class="contents">
                 <h2>회원가입</h2>
-                <form method="POST" autocomplete="off">
+                <form method="POST" autocomplete="off" onsubmit="return validate()"">
                     <p class="input">
                         <input id="name" type="text" name="u_name" placeholder="이름(닉네임)">
                     </p>
@@ -39,76 +39,75 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        // function createNode(element) {
-        //     return document.createElement(element);
-        // }
-
-        // function append(parent, el) {
-        //     return parent.appendChild(el);
-        // }
-
-        // function remove(parent, el) {
-        //     return parent.removeChild(el);
-        // }
-
-        // let contents = document.querySelector('.contents')
-        // let name = document.querySelector('#name')
-        // let email = document.querySelector('#email')
-        // let pw = document.querySelector('#pw')
-        // let submit = document.querySelector('#submit')
-        // let div = ''
-
-        // function valid() {
-        //     if (!name.value) {
-        //         if (div) {
-        //             remove(name, div)
-        //         }
-        //         div = createNode('div')
-        //         div.innerHTML = `이름을 입력해주세요.`
-        //         append(name, div);
-        //     } else {
-        //         if (div) {
-        //             remove(name, div)
-        //         }
-        //     }
-
-        //     if (!email.value) {
-        //         alert('이메일를 입력하세요.')
-        //     }
-
-        //     // if(pw.value === '') {
-        //     // alert('비밀번호를 입력하세요.')
-        //     // }
-        // }
-        
         function el(selector, context) {
             if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
             context = !context ? document : context.nodeType === 1 ? context : el(String(context));
             return context.querySelector(selector);
-        }
+        };
 
-        el('#name').addEventListener("mouseout",() => {
-            let name = el('#name').value
+        let markingErrorMessage = (targetElement, message) => {
+            let $targetElement = $(targetElement);
+            $targetElement.siblings('.error-message').remove();
+            $targetElement.after('<span class="error-message" style="color: red;">' + message + '</span>')
+        };
+
+        el('#email').addEventListener("blur",() => {
+            let email = el('#email').value
             let isValid = true;
             let regx = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
             
-            if(!regx.test(name)) {
-                if(name !== "") {
-                    markingErrorMessage('#name', "정확하지 않은 이메일 입니다.");
-                    console.log(name);
+            if(!regx.test(email)) {
+                if(email !== "") {
+                    markingErrorMessage('#email', "정확하지 않은 이메일 입니다.");
+                } else {
+                    markingErrorMessage('#email', "이메일을 작성해주세요.");
                 }
                 isValid = false;
             } else {
+                $('#email').siblings('.error-message').remove();
+            }
+        });
+
+        function validate() {
+            let member = {
+                name: el('#name').value,
+                email: el('#email').value,
+                pw: el('#pw').value
+            };
+
+            if(!member.name){
+                markingErrorMessage('#name', '이름을 작성해주세요');
+                return false;
+            } else {
                 $('#name').siblings('.error-message').remove();
             }
-        })
 
-        var markingErrorMessage = function (targetElement, message) {
-            var $targetElement = $(targetElement);
-            $targetElement.siblings('.error-message').remove();
-            $targetElement.after('<span class="error-message" style="color: red;">'+message+'</span>')
+            if(!member.email){
+                markingErrorMessage('#email', '이메일을 작성해주세요');
+                return false;
+            } else {
+                $('#email').siblings('.error-message').remove();
+                let regx = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
+                if(!regx.test(member.email)) {
+                    if(member.email !== "") {
+                        markingErrorMessage('#email', "정확하지 않은 이메일 입니다.");
+                        return false;
+                    }
+                }
+            }
+
+            if(!member.pw){
+                markingErrorMessage('#pw', '비밀번호를 작성해주세요');
+                return false;
+            } else {
+                $('#pw').siblings('.error-message').remove();
+                let regpw = /^[`~!@@#$%^&*|₩₩₩'₩";:₩/?0-9a-z]{8,}$/gi;
+                if(!regpw.test(member.pw)) {
+                    markingErrorMessage('#pw', '비밀번호의 길이는 8 이상');
+                    return false;
+                }
+            }
         };
-
     </script>
 </body>
 

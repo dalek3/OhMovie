@@ -13,7 +13,6 @@
 </head>
 
 <body>
-	
     <div class="auth">
         <div class="inner">
             <a class="title-bar" href="/">OhMovie</a>
