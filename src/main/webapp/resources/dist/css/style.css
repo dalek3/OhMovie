@@ -426,7 +426,6 @@ footer {
     padding: 10px;
     border-radius: 5px;
     background: #f5f5f5;
-    
     font-size: 1.25rem;
     font-weight: 700;
 }
@@ -436,9 +435,14 @@ footer {
     border: 1px solid #6985F4;
 }
 
-.input input[type=submit] {
-    background: #6985F4;
+.input #btnSave {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    font-weight: 700;
     color: #fff;
+    background: #6985F4;
     cursor: pointer;
 }
 

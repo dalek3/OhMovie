@@ -7,6 +7,7 @@ import javax.sql.DataSource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -18,23 +19,17 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 })
 public class MemberTests {
 
+	@Autowired
 	private PasswordEncoder pwencoder;
 	
+	@Autowired
 	private DataSource ds;
 	
-	public void setPwencoder(PasswordEncoder pwencoder) {
-		this.pwencoder = pwencoder;
-	}
-
-	public void setDs(DataSource ds) {
-		this.ds = ds;
-	}
-	
-	@Test
+	/*@Test
 	public void testInsertMember() {
 		String sql = "insert into member(u_id, u_pw, u_name) values (?,?,?)";
 		
-		for(int i = 0; i < 10; i++) {
+		for(int i = 0; i < 100; i++) {
 			Connection con = null;
 			PreparedStatement pstmt = null;
 			
@@ -45,13 +40,13 @@ public class MemberTests {
 				pstmt.setString(2, pwencoder.encode("pw" + i));
 				
 				if(i < 80) {
-					pstmt.setString(1, "user"+i);
+					pstmt.setString(1, "user"+ i + "@gmail.com");
 					pstmt.setString(3, "일반사용자"+i);
 				} else if(i < 90) {
-					pstmt.setString(1, "manager" + i);
+					pstmt.setString(1, "manager" + i + "@gmail.com");
 					pstmt.setString(3, "운영자" + i);
 				} else {
-					pstmt.setString(1, "admin" + i);
+					pstmt.setString(1, "admin" + i + "@gmail.com");
 					pstmt.setString(3, "관리자" + i);
 				}
 				
@@ -77,6 +72,57 @@ public class MemberTests {
 				
 			}
 		}
-	}
+	}*/
 	
+	@Test
+	public void testInsertAuth() {
+		
+		String sql = "insert into member_auth (u_idx, auth) values (?,?)";
+		
+		for(int i = 0; i < 100; i++) {
+			
+			Connection con = null;
+			PreparedStatement pstmt = null;
+			
+			try {
+				con = ds.getConnection();
+				pstmt = con.prepareStatement(sql);
+				
+				if(i < 80) {
+					
+					pstmt.setInt(1, i);
+					pstmt.setString(2, "ROLE_USER");
+					
+				} else if (i < 90) {
+					
+					pstmt.setInt(1, i);
+					pstmt.setString(2, "ROLE_MEMBER");
+				} else {
+
+					pstmt.setInt(1, i);
+					pstmt.setString(2, "ROLE_ADMIN");
+				}
+				
+				pstmt.executeUpdate();
+			} catch(Exception e) {
+				e.printStackTrace();
+			} finally {
+				if(pstmt != null) {
+					try {
+						pstmt.close();
+					} catch(Exception e) {
+						
+					}
+				}
+
+				if(con != null) {
+					try {
+						con.close();
+					} catch(Exception e) {
+						
+					}
+				}
+			}
+		}
+	}
 }

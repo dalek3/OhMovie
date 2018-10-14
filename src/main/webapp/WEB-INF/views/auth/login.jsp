@@ -13,8 +13,7 @@
 </head>
 
 <body>
-	<%-- <div><c:out value="${error}"/></div> --%>
-	<%-- <div><c:out value="${logout}"/></div> --%>
+	
     <div class="auth">
         <div class="inner">
             <a class="title-bar" href="/">OhMovie</a>
@@ -22,13 +21,14 @@
                 <h2>로그인</h2>
                 <form action="/login" method="POST" autocomplete="off">
                     <p class="input">
-                        <input type="text" name="username" placeholder="이메일" required>
+                        <input type="text" id="name" name="username" placeholder="이메일">
                     </p>
                     <p class="input">
-                        <input type="password" name="password" placeholder="비밀번호(8자이상)" required>
+                        <input type="password" name="password" placeholder="비밀번호">
                     </p>
+                    <p style="color:red;"><c:out value="${error}"/></p>
                     <p class="input">
-                        <input type="submit" value="로그인">
+                        <button id="btnSave">로그인</button>
                     </p>
                     <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 </form>
@@ -40,5 +40,4 @@
         </div>
     </div>
 </body>
-
 </html>

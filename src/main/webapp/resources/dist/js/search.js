@@ -28,7 +28,7 @@ const ul = document.querySelector('.list')
 function _callApi() {
     if (result !== '') {
         fetch("https://api.themoviedb.org/3/search/movie?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr&include_adult=false&query=" + result)
-        .then(respose => respose.json())
+        .then(response => response.json())
         .then(data => {
             let list = data.results;
             return list.map(item => {

@@ -14,19 +14,17 @@ public class AuthController {
 	private static final Logger log = LoggerFactory.getLogger(AuthController.class);
 	
 	@GetMapping(value="/login")
-	public void login(String error, String logout,Model model) throws Exception {
-		
+	public void loginGET(String error, String logout, Model model) throws Exception {	
 		log.info("error: " + error);
 		log.info("logout: " + logout);
 		
 		if (error != null) {
-			model.addAttribute("error", "Login Error Check Your Accout");
-		}
+			model.addAttribute("error", "잘못된 이메일/비밀번호 입니다.");
+		}		
 		
 		if (logout != null) {
 			model.addAttribute("logout", "logout!!");
 		}
-		
 	}
 	
 	@GetMapping(value="/register")

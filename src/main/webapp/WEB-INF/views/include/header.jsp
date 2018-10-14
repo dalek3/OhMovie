@@ -10,18 +10,13 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oh!Movie</title>
     <!-- Bootstrap Core CSS -->
-    
     <link href="<c:url value='/resources/vendor/bootstrap/css/bootstrap.min.css'/>" rel="stylesheet">
 
-    <!-- MetisMenu CSS -->
-    <link href="<c:url value='/resources/vendor/metisMenu/metisMenu.min.css'/>" rel="stylesheet">
-    
     <!-- Custom Fonts -->
     <link href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css'/>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<c:url value='/resources/dist/css/star/fontawesome-stars.css'/>">
 
     <!-- Custom CSS -->
-    <link href="<c:url value='/resources/dist/css/sb-admin-2.css'/>" rel="stylesheet">
     <link href="<c:url value='/resources/dist/css/list.css'/>" rel="stylesheet">
     <link href="<c:url value='/resources/dist/css/style.css'/>" rel="stylesheet">
 
@@ -63,7 +58,7 @@
 	                                    <li class="divider"></li>
 	                                    <li>
 	                                    		<!-- <a href="/customLogout"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a> -->
-	                                    	<form action="/customLogout" method="post">
+	                                    	<form action="/logout" method="post">
 												<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
 												<button><i class="fa fa-sign-out fa-fw"></i>로그아웃</button>
 											</form>

@@ -18,11 +18,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="<c:url value='/resources/vendor/bootstrap/js/bootstrap.min.js'/>"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-    <script src="<c:url value='/resources/vendor/metisMenu/metisMenu.min.js'/>"></script>
-
     <!-- Custom Theme JavaScript -->
-    <script src="<c:url value='/resources/dist/js/sb-admin-2.js'/>"></script>
     <script src="<c:url value='/resources/dist/js/jquery.barrating.min.js'/>"></script>
     <script src="<c:url value='/resources/dist/js/search.js'/>"></script>
     <script src="<c:url value='/resources/dist/js/speech.js'/>"></script>
