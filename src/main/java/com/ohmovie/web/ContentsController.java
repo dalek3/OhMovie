@@ -12,5 +12,11 @@ public class ContentsController {
 		
 		return "contents/item";
 	}
+
+	@GetMapping(value="/item/{id}/reviews")
+	public String reviews(Model model) throws Exception {
+		
+		return "contents/reviews";
+	}
 	
 }

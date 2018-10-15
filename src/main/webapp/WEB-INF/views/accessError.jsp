@@ -8,6 +8,6 @@
 <title>accessError</title>
 </head>
 <body>
-	<h2><c:out value="${msg}"></c:out></h2>
+    <h2><c:out value="${msg}"></c:out></h2>
 </body>
 </html>

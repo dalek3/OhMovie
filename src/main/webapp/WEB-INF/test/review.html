@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Movie Review Page</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../../resources/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../../resources/dist/css/style.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../../resources/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../../resources/dist/css/star/fontawesome-stars.css">
+
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <nav class="navbar navbar-default top-fixed">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1"
+                            aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="index.html">Oh!Movie</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbar-collapse-1">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="category.html">카테고리</a></li>
+                            <li><a href="#">평가하기</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="#"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
+                                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul class="nav navbar-nav">
+                            <li class="navbar-form">
+                                <form class="input-group custom-search-form">
+                                    <input type="text" class="form-control search" placeholder="Search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default">
+                                            <i class="fa fa-microphone"></i>
+                                        </button>
+                                    </span>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+<!-- 주소는 영화 id 주소로 
+    ex) review/12134
+-->
+<main>
+    <div id="review-wrap">
+        <div id="review">
+            <div id="review-header">
+                <h2>리뷰</h2>
+            </div>
+            <div id="review-contents">
+                <div id="review__Poster">
+                    <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
+                    <!-- videos Trailer -->
+                    <a href="https://www.youtube.com/watch?v=pzD9zGcUNrw">
+                        <p>트레일러 보기</p>
+                    </a>
+                    <!-- 봤어요수 리스트수 좋아요수 -->
+                </div>
+                <section class="review-content">
+                    <div class="review-info">
+                        <div class="reviews-detail-info">
+                            <figure>
+                                <img src="https://secure.gravatar.com/avatar/1a0a467fedafd8cd28e78ec2ce36116b?rating=PG&amp;size=80&amp;border=&amp;default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar80.e477ca3c.png"
+                                alt="Mycho">
+                                <figcaption>
+                                    <p class="attribution">
+                                        <a href="/mycho/film/venom-2018/" class="context">유저 이름Mycho</a>
+                                        등급
+                                    </p>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="reviews-detail-content">
+                            <h3>영화제목</h3>
+                            <span class="rating rated-9">
+                                ★★★★½
+                            </span>
+                            <div class="body-text collapsible-text">
+                                <div class="date">2018/10/07</div>
+                                <div class="collapsed-text">
+                                    <p>
+                                        Venom is a film i've waited for since before even Raimi's Spiderman.
+                                        After Blade came out Columbia/TriStar announced that they were making a Venom solo film without
+                                        Spiderman involved in an article in Total Film or Empire (I don't remember which) and could hardly
+                                        contain my excitement.......
+                                        <a href="#" class="reveal js-reveal">
+                                            더보기
+                                        </a>
+                                    </p>
+                                </div>
+                            </div>
+                            <ul class="review-like">
+                                <li>
+                                    좋아요
+                                </li>
+                                <li>
+                                    좋아요수
+                                </li>
+                                <li>
+                                    신고하기
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="footer-wrap">
+    <footer>
+        <p>
+            <span class="footer-item"><a href="#">서비스 이용약관</a></span>
+            <span class="footer-item"><a href="#">개인정보 처리방침</a></span>
+            <span class="footer-item"><a href="#">도움말</a></span>
+        </p>
+        <p class="text-muted"><strong>Copyright &copy; 2018 <a href="#">OhMoive</a>. All rights reserved.</strong></p>
+    </footer>
+</div>
+</div>
+
+<!-- jQuery -->
+<script src="../../resources/vendor/jquery/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../../resources/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../../resources/dist/js/jquery.barrating.min.js"></script>
+<script src="../../resources/dist/js/search.js"></script>
+<script>
+    $(function () {
+        $('#example').barrating({
+            theme: 'fontawesone-stars'
+        });
+    });
+</script>
+</body>
+
+</html>

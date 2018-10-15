@@ -14,8 +14,14 @@ public class ProfileController {
 		return "/profile/stats";
 	}
 	
-	@GetMapping("/comment")
-	public void comment() throws Exception {
+	@GetMapping("/reviews")
+	public void reviews() throws Exception {
 		
 	}
+	
+	@GetMapping("/review")
+	public void review() throws Exception {
+		
+	}
+	
 }

@@ -16,7 +16,6 @@
 	 </resultMap>
 	 
 	 <resultMap type="com.ohmovie.vo.AuthVO" id="authMap">
-	 	<!-- <result property="u_id" column="u_id"/> -->
 	 	<result property="auth" column="auth"/>
 	 </resultMap>
 	 

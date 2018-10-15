@@ -15,7 +15,7 @@
 	
 		<security:intercept-url pattern="/rating" access="authenticated"/>
 		
-		<security:intercept-url pattern="/profile/**" access="authenticated"/>
+		<!-- <security:intercept-url pattern="/profile/**" access="authenticated"/> -->
 		
 		<security:intercept-url pattern="/setting" access="authenticated"/>
 		

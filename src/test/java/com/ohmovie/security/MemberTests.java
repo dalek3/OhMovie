@@ -24,8 +24,8 @@ public class MemberTests {
 	
 	@Autowired
 	private DataSource ds;
-	
-	/*@Test
+	/*
+	@Test
 	public void testInsertMember() {
 		String sql = "insert into member(u_id, u_pw, u_name) values (?,?,?)";
 		
