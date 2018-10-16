@@ -22,7 +22,7 @@ public class CustomUserDetailsService implements UserDetailsService{
 		
 		log.warn("Load User By UserName : " + userName);
 		
-		MemberVO vo = memberDAO.read(userName);
+		MemberVO vo = memberDAO.login(userName);
 		
 		log.warn("queried by member mapper: " + vo);
 		return vo == null ? null : new CustomUser(vo);

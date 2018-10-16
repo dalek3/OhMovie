@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
-        <main class="container">
+        <main>
             <div id="profile-wrap">
                 <div id="profile">
                     <div id="profile-header-wrap">
@@ -22,11 +22,8 @@
                                 </div>
                                 <figcaption>
                                     <h2>
-                                        유저이름
+                                        ${member.uName}
                                     </h2>
-                                    <p>
-                                        레벨(평론가/유저)
-                                    </p>
                                 </figcaption>
                             </figure>
 
@@ -39,11 +36,11 @@
 
                     <div id="profile-nav">
                         <ul>
-                            <li><a href="#">취향분석</a></li>
-                            <li><a href="#">좋아요</a></li>
-                            <li><a href="#">평가작품</a></li>
-                            <li><a href="#">보고싶어요</a></li>
-                            <li><a href="#">컬랙션</a></li>
+                            <li><a href="/profile/${member.uIdx}">취향분석</a></li>
+                            <li><a href="/profile/${member.uIdx}/#">좋아요</a></li>
+                            <li><a href="/profile/${member.uIdx}/diary">평가작품</a></li>
+                            <li><a href="/profile/${member.uIdx}/#">보고싶어요</a></li>
+                            <li><a href="/profile/${member.uIdx}/#">컬랙션</a></li>
                         </ul>
                     </div>
 

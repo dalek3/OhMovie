@@ -13,6 +13,7 @@
     <link href="<c:url value='/resources/vendor/bootstrap/css/bootstrap.min.css'/>" rel="stylesheet">
 
     <!-- Custom Fonts -->
+    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css'/>" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="<c:url value='/resources/dist/css/star/fontawesome-stars.css'/>">
 
@@ -54,7 +55,7 @@
                                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
                                     </a>
                                     <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="/profile/"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
+                                        <li><a href="/profile/<sec:authentication property='principal.member.uIdx' />"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
                                         <li><a href="/setting"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
                                         <li class="divider"></li>
                                         <li>

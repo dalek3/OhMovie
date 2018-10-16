@@ -19,16 +19,9 @@
     <script src="<c:url value='/resources/vendor/bootstrap/js/bootstrap.min.js'/>"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script src="<c:url value='/resources/dist/js/jquery.barrating.min.js'/>"></script>
+    <script src="<c:url value='/resources/dist/js/common.js'/>"></script>
     <script src="<c:url value='/resources/dist/js/search.js'/>"></script>
     <script src="<c:url value='/resources/dist/js/speech.js'/>"></script>
-    <script>
-        $(function () {
-            $('#example').barrating({
-                theme: 'fontawesone-stars'
-            });
-        });
-    </script>
 </body>
 
 </html>

@@ -15,9 +15,15 @@ public class MemberDAOImpl implements MemberDAO {
 	private static String namespace = "com.ohmovie.mapper.MemberMapper";
 	
 	@Override
-	public MemberVO read(String u_id) {
+	public MemberVO login(String u_id) {
 		
-		return session.selectOne(namespace+ ".read", u_id);
+		return session.selectOne(namespace+ ".login", u_id);
+	}
+
+	@Override
+	public MemberVO read(Integer u_idx) {
+		
+		return session.selectOne(namespace+ ".read", u_idx);
 	}
 
 }

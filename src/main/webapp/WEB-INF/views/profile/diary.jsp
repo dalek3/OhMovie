@@ -4,52 +4,88 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
 <!-- 리뷰작성시 날짜를 기입하면 다이어리에 저장 -->
-<main class="container">
-    <div id="review-wrap">
-        <div id="review">
-            <div id="review-header">
-                <h2>리뷰</h2>
-            </div>
-            <div id="review-contents">
-                <section class="review-content">
-                    <div id="review__Poster">
-                        <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                        <!-- videos Trailer -->
-                        <a href="https://www.youtube.com/watch?v=pzD9zGcUNrw">
-                            <p>트레일러 보기</p>
-                        </a>
-                        <!-- 봤어요수 리스트수 좋아요수 -->
-                    </div>
-                    <div class="review-info">
-                        <p>프로필사진</p>
-                        <p>유저이름</p>
-                        <h3>영화제목</h3>
-                        <p>별점</p>
-                        <p>날짜</p>
-                        <p>
-                            스스로 부여한 형식의 장벽을 창의성의 발판으로.
-                        </p>
+    <main>
+        <div id="profile-wrap">
+            <div id="profile">
+                <div id="profile-header-wrap">
+                    <section id="profile-header">
+    
+                        <div class="profile-counts">
+                            <div class="profile-count"><a href="#"><span>0</span>영화</a></div>
+                            <div class="profile-count"><a href="#"><span>0</span>팔로우</a></div>
+                            <div class="profile-count"><a href="#"><span>0</span>팔로잉</a></div>
+                        </div>
+    
+                        <figure>
+                            <div class="avatar">
+                                <img src="https://secure.gravatar.com/avatar/e6d54aacfb88e045648ceb2fef4e6ffc?rating=PG&size=220&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar220.c0a51ba6.png"
+                                    alt="프로필사진">
+                            </div>
+                            <figcaption>
+                                <h2>
+                                    ${member.uName}
+                                </h2>
+                            </figcaption>
+                        </figure>
+    
                         <ul>
-                            <li>
-                                좋아요
-                            </li>
-                            <li>
-                                좋아요수
-                            </li>
-                            <li>
-                                신고하기
-                            </li>
+                            <li><a href="#">the-favourite.tumblr.com</a></li>
+                            <li><a href="#">josegoeswest</a></li>
+                        </ul>
+                    </section>
+                </div>
+    
+                <div id="profile-nav">
+                    <ul>
+                       <li><a href="/profile/${member.uIdx}">취향분석</a></li>
+                       <li><a href="/profile/${member.uIdx}/#">좋아요</a></li>
+                       <li><a href="/profile/${member.uIdx}/diary">평가작품</a></li>
+                       <li><a href="/profile/${member.uIdx}/#">보고싶어요</a></li>
+                       <li><a href="/profile/${member.uIdx}/#">컬랙션</a></li>
+                    </ul>
+                </div>
+    
+                <section id="profile-contents">
+                    <div id="contents-nav">
+                        <ul>
+                            <li><a href="/profile/${member.uIdx}/diary">봤어요</a></li>
+                            <li><a href="/profile/${member.uIdx}/diary">다이어리</a></li>
+                            <li><a href="/profile/${member.uIdx}/diary">리뷰</a></li>
+                            <li><a href="/profile/${member.uIdx}/diary">평점</a></li>
                         </ul>
                     </div>
+                    <div id="diary-table">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>월</th>
+                                    <th>일</th>
+                                    <th>제목</th>
+                                    <th>출시일</th>
+                                    <th>평점</th>
+                                    <th>좋아요</th>
+                                    <th>리뷰</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- for문 -->
+                                <tr>
+                                    <td>2018-10</td>
+                                    <td>16</td>
+                                    <td>
+                                        포스터
+                                        영화제목
+                                    </td>
+                                    <td>2018</td>
+                                    <td>평점</td>
+                                    <td>좋아요</td>
+                                    <td>리뷰링크</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </section>
-                <div id="review-footer">
-                    <h3>댓글</h3>
-                    <sec:authorize access="isAuthenticated()">
-                        <button>저장</button>
-                    </sec:authorize>
-                </div>
             </div>
         </div>
-    </div>
-</main>
+    </main>
 <%@ include file="../include/footer.jsp" %>

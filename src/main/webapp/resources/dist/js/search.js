@@ -1,15 +1,3 @@
-function createNode(element) {
-    return document.createElement(element);
-}
-
-function append(parent, el) {
-    return parent.appendChild(el);
-}
-
-function remove(parent, el) {
-    return parent.removeChild(el);
-}
-
 // 검색
 let input = document.querySelector('.search');
 let result = ''

@@ -4,5 +4,6 @@ import com.ohmovie.vo.MemberVO;
 
 public interface MemberDAO {
 
-	public MemberVO read(String u_id);
+	public MemberVO login(String u_id);
+	public MemberVO read(Integer u_idx);
 }

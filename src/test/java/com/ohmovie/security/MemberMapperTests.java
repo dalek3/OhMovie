@@ -25,9 +25,9 @@ public class MemberMapperTests {
 	public void testRead() {
 		
 
-		log.info(mapper.read("admin00").toString());
-		log.info(mapper.read("user00").toString());
-		log.info(mapper.read("member00").toString());
+		log.info(mapper.login("admin00").toString());
+		log.info(mapper.login("user00").toString());
+		log.info(mapper.login("member00").toString());
 		
 	}
 	

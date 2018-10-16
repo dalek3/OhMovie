@@ -214,14 +214,6 @@ main {
     font-size: 3rem;
 }
 
-.br-wrapper {
-    margin-top: 5px;
-}
-
-.ContentJumbotron-user-panel .br-theme-fontawesome-stars .br-widget a{
-    font-size: 2rem;
-}
-
 .section-panels {
     display: flex;
     flex-direction: column;
@@ -624,7 +616,7 @@ footer {
     min-height: 400px;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
-    margin: 20px;
+    margin: 30px;
 }
 
 /* setting */
@@ -794,4 +786,54 @@ footer {
 
 .review-like {
     display: flex;
+}
+
+/* contents-nav */
+
+#contents-nav ul{
+    display: flex;
+    /* justify-content: center; */
+    padding: 10px 0;
+    border-bottom:1px solid #e3e3e3;
+}
+
+#contents-nav a {
+    padding: 10px 30px;
+    color: #000;
+    word-break: keep-all;
+}
+
+#contents-nav a:hover {
+    border-bottom :3px solid #6985F4;
+}
+
+#diary-table {
+    margin: 20px;
+}
+
+
+/* https://github.com/GeekLaunch/star-rating */
+
+.rating {
+    display: flex;
+    flex-direction: column;
+}
+
+x-star-rating {
+    font-family: 'Ionicons';
+    display: inline-flex;
+    cursor: pointer;
+    font-size: 2rem;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+x-star-rating > .star::after {
+    content: '\f3ae';
+    color: #777;
+}
+
+x-star-rating > .star.full::after {
+    content: '\f2fc';
+    color: #fd0;
 }

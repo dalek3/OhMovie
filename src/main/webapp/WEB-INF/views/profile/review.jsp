@@ -13,15 +13,15 @@
                 <h2>리뷰</h2>
             </div>
             <div id="review-contents">
+                <div id="review__Poster">
+                    <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
+                    <!-- videos Trailer -->
+                    <a href="https://www.youtube.com/watch?v=pzD9zGcUNrw">
+                        <p>트레일러 보기</p>
+                    </a>
+                    <!-- 봤어요수 리스트수 좋아요수 -->
+                </div>
                 <section class="review-content">
-                    <div id="review__Poster">
-                        <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                        <!-- videos Trailer -->
-                        <a href="https://www.youtube.com/watch?v=pzD9zGcUNrw">
-                            <p>트레일러 보기</p>
-                        </a>
-                        <!-- 봤어요수 리스트수 좋아요수 -->
-                    </div>
                     <div class="review-info">
                         <div class="reviews-detail-info">
                             <figure>
