@@ -2,6 +2,14 @@ const ContentJumbotron = document.querySelector('.ContentJumbotron')
 const section_panel = document.querySelector('.section-panel')
 const ContentPeople = document.querySelector('.ContentPeople')
 
+function showLoading() {
+    $("#loading").show();
+}
+
+function hideLoading() {
+    $("#loading").hide();
+}
+
 function genres(data) {
     let genre = ''
     for (const i in data.genres) {
@@ -14,15 +22,13 @@ function genres(data) {
 }
 
 if (item !== '') {
+	showLoading();
     fetch("https://api.themoviedb.org/3/movie/" + item + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
     .then(response => response.json())
     .then(data => {
         ContentJumbotron.innerHTML = 
             `    <div class="ContentJumbotron__Poster">
                     <img src="https://image.tmdb.org/t/p/w300${data.poster_path}" alt="${data.title} 포스터">
-                    <a href="https://www.youtube.com/watch?v=pzD9zGcUNrw">
-                        <p>트레일러 보기</p>
-                    </a>
                     <!-- 봤어요수 리스트수 좋아요수 -->
                 </div>
 
@@ -196,4 +202,6 @@ if (item !== '') {
 
     })
     .catch(err => console.log(err))
+    
+    hideLoading();
 }

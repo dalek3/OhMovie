@@ -4,9 +4,14 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
         <main>
+        	<!-- 로딩처리하기 -->
+			<div id="loading">
+			    <p><img src="loading.gif" /> Please Wait</p>
+			</div>
             <div class="ContentJumbotron-wrap">
-                <section class="ContentJumbotron">
+                <section class="ContentJumbotron" >
                     <!-- item.js -->
+                    
                 </section>
             </div>
             <div class="section-panels">
@@ -367,6 +372,7 @@
         <script>
             let item = ${ item };
         </script>
+        <script src="<c:url value='/resources/vendor/jquery/jquery.min.js'/>"></script>
         <script src="<c:url value='/resources/dist/js/common.js'/>"></script>
         <script src="<c:url value='/resources/dist/js/item.js'/>"></script>
         <script src="<c:url value='/resources/dist/js/StarRating.js' />"></script>

@@ -112,24 +112,14 @@ main {
 }
 
 .ContentJumbotron__Poster {
-    width: 220px;
-    height: 370px;
-    border: 1px solid #e3e3e3;
-    border-radius: 10px;
-    background: #fff;
-}
+ 	margin-top: 20px;
+ }
 
 .ContentJumbotron__Poster img{
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-}
-
-.ContentJumbotron__Poster p {
-    /* font-size: 2rem; */
-    font-weight: 700;
-    text-align: center;
-
-    padding: 10px;
+    width: 220px;
+    height: 314px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
 }
 
 .ContentJumbotron-PaneInner {
@@ -724,22 +714,15 @@ footer {
 }
 
 #review__Poster {
-    width: 140px;
-    height: 240px;
-    border: 1px solid #e3e3e3;
-    border-radius: 10px;
-    background: #fff;
+
 }
 
 #review__Poster img{
-    width: 100%;
-    border-radius: 10px 10px 0 0;
-}
-
-#review__Poster p {
-    font-weight: 700;
-    text-align: center;
-    padding: 10px;
+    
+    width: 140px;
+    height: 200px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
 }
 
 #review-header {

@@ -15,7 +15,7 @@
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css'/>" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="<c:url value='/resources/dist/css/star/fontawesome-stars.css'/>">
+
 
     <!-- Custom CSS -->
     <link href="<c:url value='/resources/dist/css/list.css'/>" rel="stylesheet">
