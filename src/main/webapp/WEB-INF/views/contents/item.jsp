@@ -4,28 +4,17 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
         <main>
-        	<!-- 로딩처리하기 -->
-			<div id="loading">
-			    <p><img src="loading.gif" /> Please Wait</p>
-			</div>
             <div class="ContentJumbotron-wrap">
                 <section class="ContentJumbotron" >
                     <!-- item.js -->
-                    
                 </section>
             </div>
             <div class="section-panels">
-                <section class="section-panel">
+                <section class="section-panel ContentOverview">
                     <!-- item.js -->
                 </section>
-                <section class="section-panel">
-                    <div class="section-panel-header">
-                        <h3>출연/제작</h3>
-                    </div>
-                    <!-- cast -->
-                    <ul class="ContentPeople">
-                        <!-- item.js -->
-                    </ul>
+                <section class="section-panel ContentPeoples">
+                    <!-- item.js -->
                 </section>
 
                 <!-- <section class="section-panel">
@@ -370,10 +359,9 @@
             </div>
         </main>
         <script>
+            // restcontroller를 통해서 전달하기
             let item = ${ item };
         </script>
-        <script src="<c:url value='/resources/vendor/jquery/jquery.min.js'/>"></script>
-        <script src="<c:url value='/resources/dist/js/common.js'/>"></script>
         <script src="<c:url value='/resources/dist/js/item.js'/>"></script>
         <script src="<c:url value='/resources/dist/js/StarRating.js' />"></script>
  <%@ include file="../include/footer.jsp" %>
