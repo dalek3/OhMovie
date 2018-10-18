@@ -18,7 +18,6 @@
 
 
     <!-- Custom CSS -->
-    <link href="<c:url value='/resources/dist/css/list.css'/>" rel="stylesheet">
     <link href="<c:url value='/resources/dist/css/style.css'/>" rel="stylesheet">
 
 </head>

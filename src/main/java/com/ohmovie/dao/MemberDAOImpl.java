@@ -31,11 +31,18 @@ public class MemberDAOImpl implements MemberDAO {
 	public void insert(MemberVO vo) {
 		session.insert(namespace + ".insert", vo);
 	}
+	
+	@Override
+	public void insertAuth(String u_id) {
+		session.insert(namespace + ".insertAuth", u_id);	
+	}
 
 	@Override
-	public MemberVO selectByEmail(String u_id) {
+	public String selectByEmail(String u_id) {
 		
 		return session.selectOne(namespace + ".selectByEmail", u_id);
 	}
+
+
 
 }

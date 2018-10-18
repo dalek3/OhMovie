@@ -4,7 +4,7 @@
 <%@ page session="false"%>
 <html>
 <head>
-    <title>Home</title>
+    <title>Oh!Movie</title>
 </head>
 <body>
     <h1>${errorMsg}</h1>

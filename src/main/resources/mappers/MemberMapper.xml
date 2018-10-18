@@ -10,8 +10,6 @@
 	 	<result property="uId" column="u_id"/>
 	 	<result property="uPw" column="u_pw"/>
 	 	<result property="uName" column="u_name"/>
-	 	<result property="regDate" column="regDate"/>
-	 	<result property="lastDate" column="lastDate"/>
 	 	<collection property="authList" resultMap="authMap"></collection>
 	 </resultMap>
 	 
@@ -28,19 +26,23 @@
 	 <select id="login" resultMap="memberLoginMap">
 	 	select mem.u_idx, mem.u_id, u_pw, u_name, enabled, regdate, lastdate, auth 
 	 	from member mem left outer join member_auth auth on mem.u_idx = auth.u_idx
-	 	where mem.u_id = #{uId}
+	 	where mem.u_id = #{uId};
 	 </select>
 	 
 	 <select id="read" resultMap="memberMap">
-	 	select u_idx, u_name from member where u_idx = #{uIdx}
+	 	select u_idx, u_name from member where u_idx = #{uIdx};
 	 </select>
 	 
-	 <select id="selectByEmail" resultMap="memberLoginMap">
-	 	select u_id from member where u_id = #{uId}
+	 <select id="selectByEmail" resultType="String">
+	 	select u_id from member where u_id = #{uId};
 	 </select>
 	
 	 <insert id="insert">
 	 	insert into member (u_id, u_pw, u_name) values (#{uId}, #{uPw}, #{uName});
-	 </insert> 
+	 </insert>
+	 
+	 <insert id="insertAuth">
+	 	insert into member_auth (u_idx) SELECT member.u_idx FROM member WHERE member.u_id = #{uId};
+	 </insert>
 	 
 </mapper>

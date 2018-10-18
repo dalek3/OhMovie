@@ -21,113 +21,22 @@
                     </div>
                 </div>
 
+                <figure class="loading-spinner">
+                    <img src="https://loading.io/spinners/lava-lamp/index.lava-lamp-preloader.svg">
+                    <figcaption>데이터 로딩 중 ...</figcaption>
+                </figure>
                 <section class="ReviewMorePage-contents">
                     <ul class="ReviewMorePage-reviews">
-                        <li class="ContentListWithRatingControl">
-                            <div class="ContentListWithRatingControl-thumbnail">
-                                <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                            </div>
-                            <div class="ContentListWithRatingControl-detail">
-                                <!-- title -->
-                                <h3 class="ContentListWithRatingControl-title">제목</h3>
-                                <!-- release_date・genres・production_countries -->
-                                <div class="ContentListWithRatingControl-information">
-                                    연도・장르・나라
-                                </div>
-                                <div class="RatingControl">
-                                    평가
-                                    <div class="br-wrapper br-theme-fontawesome-stars">
-                                        <select class="example">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="ContentListWithRatingControl">
-                            <div class="ContentListWithRatingControl-thumbnail">
-                                <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                            </div>
-                            <div class="ContentListWithRatingControl-detail">
-                                <!-- title -->
-                                <h3 class="ContentListWithRatingControl-title">제목</h3>
-                                <!-- release_date・genres・production_countries -->
-                                <div class="ContentListWithRatingControl-information">
-                                    연도・장르・나라
-                                </div>
-                                <div class="RatingControl">
-                                    평가
-                                    <div class="br-wrapper br-theme-fontawesome-stars">
-                                        <select class="example">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="ContentListWithRatingControl">
-                            <div class="ContentListWithRatingControl-thumbnail">
-                                <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                            </div>
-                            <div class="ContentListWithRatingControl-detail">
-                                <!-- title -->
-                                <h3 class="ContentListWithRatingControl-title">제목</h3>
-                                <!-- release_date・genres・production_countries -->
-                                <div class="ContentListWithRatingControl-information">
-                                    연도・장르・나라
-                                </div>
-                                <div class="RatingControl">
-                                    평가
-                                    <div class="br-wrapper br-theme-fontawesome-stars">
-                                        <select class="example">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="ContentListWithRatingControl">
-                            <div class="ContentListWithRatingControl-thumbnail">
-                                <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                            </div>
-                            <div class="ContentListWithRatingControl-detail">
-                                <!-- title -->
-                                <h3 class="ContentListWithRatingControl-title">제목</h3>
-                                <!-- release_date・genres・production_countries -->
-                                <div class="ContentListWithRatingControl-information">
-                                    연도・장르・나라
-                                </div>
-                                <div class="RatingControl">
-                                    평가
-                                    <div class="br-wrapper br-theme-fontawesome-stars">
-                                        <select class="example">
-                                            <option value="1">1</option>
-                                            <option value="2">2</option>
-                                            <option value="3">3</option>
-                                            <option value="4">4</option>
-                                            <option value="5">5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                       
                     </ul>
                 </section>
             </div>
         </main>
     </div>
+
+    <script src="/resources/dist/js/common.js"></script>
+    <script src="resources/dist/js/rating.js"></script>
+    <script src="resources/dist/js/StarRating.js"></script>
 
     <!-- jQuery -->
     <script src="resources/vendor/jquery/jquery.min.js"></script>
@@ -135,19 +44,10 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
 
-    <!-- Metis Menu Plugin JavaScript -->
-
     <!-- Custom Theme JavaScript -->
-    <script src="resources/dist/js/jquery.barrating.min.js"></script>
     <script src="resources/dist/js/search.js"></script>
     <script src="resources/dist/js/speech.js"></script>
-    <script>
-        $(function () {
-            $('.example').barrating({
-                theme: 'fontawesone-stars'
-            });
-        });
-    </script>
+
 </body>
 
 </html>

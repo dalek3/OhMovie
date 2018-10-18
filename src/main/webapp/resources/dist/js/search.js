@@ -11,7 +11,7 @@
         }
         _callApi();
     }
-    input.addEventListener('keyup', onKeyDetection);
+    input.addEventListener('input', onKeyDetection);
 
     // 영화리스트 불러오기
     const ul = document.querySelector('.list')
@@ -23,16 +23,21 @@
             .then(data => {
                 let movies = data.results;
                 return movies.map(movie => {
+                    let id = movie.id;
+                    let title = movie.title;
+                    let vote_average = movie.vote_average;
+                    let vote_count = movie.vote_count;
+                    let popularity = movie.popularity;
                     let poster   = movie.poster_path ? ''.concat('https://image.tmdb.org/t/p/w185', movie.poster_path) : blank_poster;
                     let li = _.createNode('li');
                     li.innerHTML =
-                        `    <a href="/item/${movie.id}">
-                            <img src="${poster}" alt="${movie.title} 포스터">
-                            <p>${movie.title}</p>
+                        `    <a href="/item/${id}">
+                            <img src="${poster}" alt="${title} 포스터">
+                            <p>${title}</p>
                             </a>
-                            <p>${movie.vote_average} ${movie.vote_count} ${movie.popularity}</p>`
+                            <p>${vote_average} ${vote_count} ${popularity}</p>`
                     _.append(ul, li);
-                })
+                });
             })
             .catch(err => console.log(err))
         }

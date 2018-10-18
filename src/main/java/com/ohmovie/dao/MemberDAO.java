@@ -9,7 +9,9 @@ public interface MemberDAO {
 	
 	public LoginDTO read(Integer u_idx);
 	
-	public MemberVO selectByEmail(String u_id);
+	public String selectByEmail(String u_id);
 	
 	public void insert(MemberVO vo);
+	
+	public void insertAuth(String u_id);
 }

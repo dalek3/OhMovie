@@ -510,8 +510,8 @@ footer {
     margin-left: 30px;
 }
 
-.br-theme-fontawesome-stars .br-widget a{
-    font-size:3rem;
+.RatingControl {
+    padding: 20px 0;
 }
 
 /* profile 페이지 */
@@ -648,7 +648,6 @@ footer {
     
     font-size: 1.25rem;
     font-weight: 700;
-
 }
 
 #setting-contents a {
@@ -713,10 +712,6 @@ footer {
     border-radius: 10px;
 }
 
-#review__Poster {
-
-}
-
 #review__Poster img{
     
     width: 140px;
@@ -746,7 +741,6 @@ footer {
 .review-content {
     display: flex;
     flex-direction: column;
-    width: 85%;
 }
 
 .review-content ul {
@@ -763,10 +757,6 @@ footer {
     width: 20%;;
 }
 
-.review-info {
-    padding-left: 50px;
-}
-
 .review-like {
     display: flex;
 }
@@ -775,7 +765,6 @@ footer {
 
 #contents-nav ul{
     display: flex;
-    /* justify-content: center; */
     padding: 10px 0;
     border-bottom:1px solid #e3e3e3;
 }
@@ -806,9 +795,9 @@ x-star-rating {
     font-family: 'Ionicons';
     display: inline-flex;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 3rem;
     justify-content: center;
-    padding-top: 10px;
+    padding: 10px 0;
 }
 
 x-star-rating > .star::after {
@@ -820,3 +809,36 @@ x-star-rating > .star.full::after {
     content: '\f2fc';
     color: #fd0;
 }
+
+/* search */
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.list li{
+    margin: 1.25rem 2rem;
+}
+
+
+/* --------------------------------------------
+ * Ajax 로딩 스피너 디자인 */
+ .loading-spinner {
+    position: fixed;
+    z-index: 10;
+    top: 50%;
+    left: 50%;
+    width: 80px;
+    margin: 0;
+    color: #ff878c;
+    font-size: 12px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .loading-spinner img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }

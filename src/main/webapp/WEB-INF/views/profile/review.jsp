@@ -25,7 +25,7 @@
                                     alt="Mycho">
                                 <figcaption>
                                     <p class="attribution">
-                                        <a href="/mycho/film/venom-2018/" class="context">유저 이름Mycho</a>
+                                        <a href="/profile/100" class="context">유저 이름Mycho</a>
                                         등급
                                     </p>
                                 </figcaption>

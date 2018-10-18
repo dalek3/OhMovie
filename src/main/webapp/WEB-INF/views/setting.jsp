@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="include/header.jsp" %>
-	<main class="container">
+	<main>
         <div id="setting-wrap">
             <div id="setting">
                 <div id="setting-header">
@@ -15,11 +15,11 @@
                         <ul>
                             <li>
                                 <div class="name">닉네임</div>
-                                <input type="text" name=u_name value="밤비">
+                                <input type="text" name=u_name value="${uName}">
                             </li>
                             <li>
                                 <div class="name">이메일</div>
-                                user00@gmail.com
+                                ${uId}
                             </li>
                             <li>
                                 <div class="name">비밀번호</div>

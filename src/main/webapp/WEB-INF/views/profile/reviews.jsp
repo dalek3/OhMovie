@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
-<main class="container">
+<main>
     <div id="profile-wrap">
         <div id="profile">
             <div id="profile-header-wrap">
@@ -39,21 +39,21 @@
 
             <div id="profile-nav">
                 <ul>
-                    <li><a href="#">취향분석</a></li>
-                    <li><a href="#">좋아요</a></li>
-                    <li><a href="#">평가작품</a></li>
-                    <li><a href="#">보고싶어요</a></li>
-                    <li><a href="#">컬랙션</a></li>
+                    <li><a href="/profile/${member.uIdx}">취향분석</a></li>
+                    <li><a href="/profile/${member.uIdx}/#">좋아요</a></li>
+                    <li><a href="/profile/${member.uIdx}/diary">평가작품</a></li>
+                    <li><a href="/profile/${member.uIdx}/#">보고싶어요</a></li>
+                    <li><a href="/profile/${member.uIdx}/#">컬랙션</a></li>
                 </ul>
             </div>
 
             <section id="profile-contents">
                 <div id="contents-nav">
                     <ul>
-                        <li><a href="#">봤어요</a></li>
-                        <li><a href="#">다이어리</a></li>
-                        <li><a href="#">리뷰</a></li>
-                        <li><a href="#">평점</a></li>
+                        <li><a href="/profile/${member.uIdx}/diary">봤어요</a></li>
+                        <li><a href="/profile/${member.uIdx}/diary">다이어리</a></li>
+                        <li><a href="/profile/${member.uIdx}/reviews">리뷰</a></li>
+                        <li><a href="/profile/${member.uIdx}/diary">평점</a></li>
                     </ul>
                 </div>
                 <div id="review">

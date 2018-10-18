@@ -9,7 +9,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Oh!Movie</title>
     <link href="../resources/dist/css/style.css" rel="stylesheet">
 </head>
 <!-- 하나라도 입력하지않거나 오류가 나면 버튼 작동안하도록 -->
@@ -39,13 +39,9 @@
             </section>
         </div>
     </div>
+    <script src="<c:url value='/resources/dist/js/common.js'/>"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
-        function el(selector, context) {
-            if (typeof selector !== 'string' || selector.trim().length === 0) { return null; }
-            context = !context ? document : context.nodeType === 1 ? context : el(String(context));
-            return context.querySelector(selector);
-        };
 
         let markingErrorMessage = (targetElement, message) => {
             let $targetElement = $(targetElement);
@@ -53,8 +49,8 @@
             $targetElement.after('<span class="error-message" style="color: red;">' + message + '</span>')
         };
 
-        el('#email').addEventListener("blur",() => {
-            let email = el('#email').value
+        _.el('#email').addEventListener("blur",() => {
+            let email = _.el('#email').value
             let isValid = true;
             let regx = /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/;
             
@@ -72,9 +68,9 @@
 
         function validate() {
             let member = {
-                name: el('#name').value,
-                email: el('#email').value,
-                pw: el('#pw').value
+                name: _.el('#name').value,
+                email: _.el('#email').value,
+                pw: _.el('#pw').value
             };
 
             if(!member.name){

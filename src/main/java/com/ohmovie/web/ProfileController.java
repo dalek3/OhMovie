@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ohmovie.dao.MemberDAO;
 import com.ohmovie.vo.LoginDTO;
-import com.ohmovie.vo.MemberVO;
 
 @RequestMapping("/profile/*")
 @Controller

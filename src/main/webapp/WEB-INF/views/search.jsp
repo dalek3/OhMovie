@@ -4,13 +4,13 @@
     pageEncoding="UTF-8"%>
 <%@ include file="include/header.jsp" %>
 
-<main class="container">
-    <section class="content">
-        <div class="row">
-            <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title">검색결과</h3>
-                    <div class="row">
+<main>
+    <section>
+        <div>
+            <div>
+                <div>
+                    <h3>검색결과</h3>
+                    <div>
                         <p>''검색결과</p>
                         <p>검색결과가 없어요</p>
                         <ul class="list">

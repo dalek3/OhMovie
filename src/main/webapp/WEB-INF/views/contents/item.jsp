@@ -7,6 +7,10 @@
             <div class="ContentJumbotron-wrap">
                 <section class="ContentJumbotron" >
                     <!-- item.js -->
+                    <figure class="loading-spinner">
+                        <img src="https://loading.io/spinners/lava-lamp/index.lava-lamp-preloader.svg" alt>
+                        <figcaption>데이터 로딩 중 ...</figcaption>
+                    </figure>
                 </section>
             </div>
             <div class="section-panels">
@@ -77,7 +81,7 @@
                                             alt="Mycho">
                                         <figcaption>
                                             <p class="attribution">
-                                                <a href="/mycho/film/venom-2018/" class="context">평론가 이름Mycho</a>
+                                                <a href="/profile/100">평론가 이름</a>
                                                 <p>소속</p>
                                                 <p>등급</p>
                                             </p>
@@ -116,7 +120,7 @@
                                             alt="Mycho">
                                         <figcaption>
                                             <p class="attribution">
-                                                <a href="/mycho/film/venom-2018/" class="context">유저 이름Mycho</a>
+                                                <a href="/profile/100">평론가 이름</a>
                                             </p>
                                         </figcaption>
                                     </figure>
@@ -153,7 +157,7 @@
                                             alt="Mycho">
                                         <figcaption>
                                             <p class="attribution">
-                                                <a href="/mycho/film/venom-2018/" class="context">유저 이름Mycho</a>
+                                                <a href="/profile/100">평론가 이름</a>
                                             </p>
                                         </figcaption>
                                     </figure>
@@ -199,7 +203,7 @@
                                             alt="Mycho">
                                         <figcaption>
                                             <p class="attribution">
-                                                <a href="/mycho/film/venom-2018/" class="context">유저 이름Mycho</a>
+                                                <a href="/profile/100">평론가 이름</a>
                                                 등급
                                             </p>
                                         </figcaption>
@@ -237,7 +241,7 @@
                                             alt="Mycho">
                                         <figcaption>
                                             <p class="attribution">
-                                                <a href="/mycho/film/venom-2018/" class="context">유저 이름Mycho</a>
+                                                <a href="/profile/100">평론가 이름</a>
                                             </p>
                                         </figcaption>
                                     </figure>
@@ -274,7 +278,7 @@
                                             alt="Mycho">
                                         <figcaption>
                                             <p class="attribution">
-                                                <a href="/mycho/film/venom-2018/" class="context">유저 이름Mycho</a>
+                                                <a href="/profile/100">평론가 이름</a>
                                             </p>
                                         </figcaption>
                                     </figure>

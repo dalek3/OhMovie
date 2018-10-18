@@ -202,5 +202,6 @@
                         ${listItem}
                     </ul>`
         })
-        .catch(err => console.log(err))        
+        .catch(err => console.log(err))
+        _.css(spinner, 'display', 'none');
 })(window);

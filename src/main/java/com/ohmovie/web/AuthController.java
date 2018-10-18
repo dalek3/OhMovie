@@ -1,6 +1,5 @@
 package com.ohmovie.web;
 
-import org.apache.ibatis.javassist.bytecode.DuplicateMemberException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,20 +52,22 @@ public class AuthController {
 	@PostMapping(value="/register")
 	public String registerPOST(@ModelAttribute MemberVO vo, String error, Model model ) throws Exception {
 		log.info("registerPOST");
-		MemberVO member = memberDAO.selectByEmail(vo.getuId());
-		
+		String member = memberDAO.selectByEmail(vo.getuId());
+		log.info("registerPOST : " + member);
 		if(member == null) {
 			
 			BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 			vo.setuPw(passwordEncoder.encode(vo.getuPw()));
 			memberDAO.insert(vo);
+
+			// 권한 설정
+			memberDAO.insertAuth(vo.getuId());
+			
+			// 회원가입시 로그인 또는 이메일 인증
+			
 			return "redirect:/";
 		}
 				
-		// 권한 설정
-		
-		// 회원가입시 로그인
-		
 		return "redirect:/auth/register?error";
 	}
 }
