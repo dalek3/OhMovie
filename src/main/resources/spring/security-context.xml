@@ -13,6 +13,8 @@
 	
 	<security:http>
 	
+		
+		  
 		<security:intercept-url pattern="/rating" access="authenticated"/>
 		
 		<!-- <security:intercept-url pattern="/profile/**" access="authenticated"/> -->

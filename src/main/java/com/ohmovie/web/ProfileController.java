@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ohmovie.dao.MemberDAO;
+import com.ohmovie.vo.LoginDTO;
 import com.ohmovie.vo.MemberVO;
 
 @RequestMapping("/profile/*")
@@ -23,7 +24,7 @@ public class ProfileController {
 	
 	@GetMapping("/{idx}")
 	public String profile(Model model,@PathVariable Integer idx) throws Exception {
-		MemberVO member = memberDAO.read(idx);
+		LoginDTO member = memberDAO.read(idx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
 		return "/profile/stats";
@@ -31,7 +32,7 @@ public class ProfileController {
 
 	@GetMapping("/{idx}/reviews")
 	public String reviews(Model model,@PathVariable Integer idx) throws Exception {
-		MemberVO member = memberDAO.read(idx);
+		LoginDTO member = memberDAO.read(idx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
 		return "/profile/reviews";
@@ -39,7 +40,7 @@ public class ProfileController {
 	
 	@GetMapping("/{idx}/review")
 	public String review(Model model,@PathVariable Integer idx) throws Exception {
-		MemberVO member = memberDAO.read(idx);
+		LoginDTO member = memberDAO.read(idx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
 		return "/profile/review";
@@ -47,7 +48,7 @@ public class ProfileController {
 	
 	@GetMapping("/{idx}/diary")
 	public String diary(Model model,@PathVariable Integer idx) throws Exception {
-		MemberVO member = memberDAO.read(idx);
+		LoginDTO member = memberDAO.read(idx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
 		return "/profile/diary";

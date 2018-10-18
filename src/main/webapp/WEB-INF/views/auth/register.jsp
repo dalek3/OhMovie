@@ -21,17 +21,19 @@
                 <h2>회원가입</h2>
                 <form method="POST" autocomplete="off" onsubmit="return validate()"">
                     <p class="input">
-                        <input id="name" type="text" name="u_name" placeholder="이름(닉네임)">
+                        <input id="name" type="text" name="uName" placeholder="이름(닉네임)">
                     </p>
                     <p class="input">
-                        <input id="email" type="text" name="u_id" placeholder="이메일">
+                        <input id="email" type="text" name="uId" placeholder="이메일">
                     </p>
                     <p class="input">
-                        <input id="pw" type="password" name="u_pw" placeholder="비밀번호(8자이상)">
+                        <input id="pw" type="password" name="uPw" placeholder="비밀번호(8자이상)">
                     </p>
+                    <p style="color:red;"><c:out value="${error}"/></p>
                     <p class="input">
                         <button id="btnSave">가입하기</button>
                     </p>
+                    <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                 </form>
                 <p class="label">이미 가입하셨나요? <a href="/auth/login">로그인</a></p>
             </section>

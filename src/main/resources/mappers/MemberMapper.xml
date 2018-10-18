@@ -15,7 +15,7 @@
 	 	<collection property="authList" resultMap="authMap"></collection>
 	 </resultMap>
 	 
- 	 <resultMap type="MemberVO" id="memberMap">
+ 	 <resultMap type="LoginDTO" id="memberMap">
 	 	<id property="uIdx" column="u_idx"/>
 	 	<result property="uIdx" column="u_idx"/>
 	 	<result property="uName" column="u_name"/>
@@ -35,5 +35,12 @@
 	 	select u_idx, u_name from member where u_idx = #{uIdx}
 	 </select>
 	 
+	 <select id="selectByEmail" resultMap="memberLoginMap">
+	 	select u_id from member where u_id = #{uId}
+	 </select>
+	
+	 <insert id="insert">
+	 	insert into member (u_id, u_pw, u_name) values (#{uId}, #{uPw}, #{uName});
+	 </insert> 
 	 
 </mapper>
