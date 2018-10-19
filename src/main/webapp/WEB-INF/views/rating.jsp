@@ -33,21 +33,9 @@
             </div>
         </main>
     </div>
-
-    <script src="/resources/dist/js/common.js"></script>
-    <script src="resources/dist/js/rating.js"></script>
-    <script src="resources/dist/js/StarRating.js"></script>
-
-    <!-- jQuery -->
-    <script src="resources/vendor/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="resources/vendor/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- Custom Theme JavaScript -->
-    <script src="resources/dist/js/search.js"></script>
-    <script src="resources/dist/js/speech.js"></script>
-
+<%@ include file="include/common.jsp" %>
+<script src="resources/dist/js/rating.js"></script>
+<script src="resources/dist/js/StarRating.js"></script>
 </body>
 
 </html>

@@ -34,6 +34,7 @@ public class ProfileController {
 		LoginDTO member = memberDAO.read(idx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
+		model.addAttribute("item", idx);
 		return "/profile/reviews";
 	}
 	
@@ -42,6 +43,7 @@ public class ProfileController {
 		LoginDTO member = memberDAO.read(idx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
+		
 		return "/profile/review";
 	}
 	

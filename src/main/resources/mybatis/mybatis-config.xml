@@ -7,7 +7,9 @@
     <!-- 마이바티스의 작동 규칙정의 : 기본 캐시 사용여부 -->
     <settings>
         <setting name="cacheEnabled" value="false"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+
 
     <!-- XML Mapper에서 paramType이나 resultType에 사용하는 클래스의 이름을 축약해서 사용가능하게 해줌 -->
     <typeAliases>

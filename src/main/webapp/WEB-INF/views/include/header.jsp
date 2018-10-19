@@ -10,15 +10,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Oh!Movie</title>
     <!-- Bootstrap Core CSS -->
-    <link href="<c:url value='/resources/vendor/bootstrap/css/bootstrap.min.css'/>" rel="stylesheet">
+    <link rel="stylesheet" href="<c:url value='/resources/vendor/bootstrap/css/bootstrap.min.css'/>">
 
     <!-- Custom Fonts -->
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css'/>" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css'/>">
 
 
     <!-- Custom CSS -->
-    <link href="<c:url value='/resources/dist/css/style.css'/>" rel="stylesheet">
+    <link rel="stylesheet" href="<c:url value='/resources/dist/css/owl/owl.carousel.css'/>">
+    <link rel="stylesheet" href="<c:url value='/resources/dist/css/owl/owl.theme.default.css'/>">
+    <link rel="stylesheet" href="<c:url value='/resources/dist/css/style.css'/>" >
 
 </head>
 <body>
@@ -57,7 +59,7 @@
                                         <li><a href="/profile/<sec:authentication property='principal.member.uIdx' />"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
                                         <li><a href="/setting"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
                                         <li class="divider"></li>
-                                        <li>
+                                        <li class="logout">
                                                 <!-- <a href="/customLogout"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a> -->
                                             <form action="/logout" method="post">
                                                 <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">

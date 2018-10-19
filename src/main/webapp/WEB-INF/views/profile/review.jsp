@@ -71,3 +71,7 @@
     </div>
 </main>
 <%@ include file="../include/footer.jsp" %>
+<%@ include file="../include/common.jsp" %>
+</body>
+
+</html>

@@ -3,7 +3,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
-<!-- 리뷰작성시 날짜를 기입하면 다이어리에 저장 -->
     <main>
         <div id="profile-wrap">
             <div id="profile">
@@ -89,3 +88,7 @@
         </div>
     </main>
 <%@ include file="../include/footer.jsp" %>
+<%@ include file="../include/common.jsp" %>
+</body>
+
+</html>

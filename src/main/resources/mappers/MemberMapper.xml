@@ -4,7 +4,7 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.ohmovie.mapper.MemberMapper">
 	
-	 <resultMap type="MemberVO" id="memberLoginMap">
+	 <resultMap type="MemberVO" id="memberMap">
 	 	<id property="uIdx" column="u_idx"/>
 	 	<result property="uIdx" column="u_idx"/>
 	 	<result property="uId" column="u_id"/>
@@ -13,23 +13,17 @@
 	 	<collection property="authList" resultMap="authMap"></collection>
 	 </resultMap>
 	 
- 	 <resultMap type="LoginDTO" id="memberMap">
-	 	<id property="uIdx" column="u_idx"/>
-	 	<result property="uIdx" column="u_idx"/>
-	 	<result property="uName" column="u_name"/>
-	 </resultMap>
-	 
-	 <resultMap type="com.ohmovie.vo.AuthVO" id="authMap">
+	 <resultMap type="AuthVO" id="authMap">
 	 	<result property="auth" column="auth"/>
 	 </resultMap>
 	 
-	 <select id="login" resultMap="memberLoginMap">
+	 <select id="login" resultMap="memberMap">
 	 	select mem.u_idx, mem.u_id, u_pw, u_name, enabled, regdate, lastdate, auth 
 	 	from member mem left outer join member_auth auth on mem.u_idx = auth.u_idx
 	 	where mem.u_id = #{uId};
 	 </select>
 	 
-	 <select id="read" resultMap="memberMap">
+	 <select id="read" resultType="LoginDTO">
 	 	select u_idx, u_name from member where u_idx = #{uIdx};
 	 </select>
 	 

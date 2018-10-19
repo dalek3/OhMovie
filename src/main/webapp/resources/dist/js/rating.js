@@ -9,7 +9,7 @@
         let contents = data.results;
         return contents.map(item => {
             let title = item.title;
-            let poster   = item.poster_path ? ''.concat('https://image.tmdb.org/t/p/w300', item.poster_path) : blank_poster;
+            let poster = item.poster_path ? ''.concat('https://image.tmdb.org/t/p/w300', item.poster_path) : blank_poster;
             let year = item.release_date.substr(0, 4);
             let template = _.createNode('li');
             _.addClass(template, 'ContentListWithRatingControl')

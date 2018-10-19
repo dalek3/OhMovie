@@ -21,9 +21,7 @@
                                 alt="프로필사진">
                         </div>
                         <figcaption>
-                            <h2>
-                                유저이름
-                            </h2>
+                            <h2>${member.uName}</h2>
                             <p>
                                 레벨(평론가/유저)
                             </p>
@@ -60,164 +58,6 @@
                     <div id="review-contents">
                         <section class="review-content">
                             <!-- for문 -->
-                            <div class="review-info">
-                                <div class="reviews-detail-content" style="display:flex">
-                                    <div id="review__Poster">
-                                        <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                                        <!-- 봤어요수 리스트수 좋아요수 -->
-                                    </div>
-                                    <div class="review-content" style="padding-left: 40px;">
-                                        <h3>영화제목</h3>
-                                        <span class="rating rated-9">
-                                            ★★★★½
-                                        </span>
-                                        <div class="body-text collapsible-text">
-                                            <div class="date">2018/10/07</div>
-                                            <div class="collapsed-text">
-                                                <p>
-                                                    Venom is a film i've waited for since before even Raimi's
-                                                    Spiderman.
-                                                    After Blade came out Columbia/TriStar announced that they were
-                                                    making a Venom solo film without
-                                                    Spiderman involved in an article in Total Film or Empire (I don't
-                                                    remember which) and could hardly
-                                                    contain my excitement.......
-                                                    <a href="#" class="reveal js-reveal">
-                                                        더보기
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <ul class="review-like">
-                                            <li>
-                                                좋아요
-                                            </li>
-                                            <li>
-                                                좋아요수
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-info">
-                                <div class="reviews-detail-content" style="display:flex">
-                                    <div id="review__Poster">
-                                        <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                                        <!-- 봤어요수 리스트수 좋아요수 -->
-                                    </div>
-                                    <div class="review-content" style="padding-left: 40px;">
-                                        <h3>영화제목</h3>
-                                        <span class="rating rated-9">
-                                            ★★★★½
-                                        </span>
-                                        <div class="body-text collapsible-text">
-                                            <div class="date">2018/10/07</div>
-                                            <div class="collapsed-text">
-                                                <p>
-                                                    Venom is a film i've waited for since before even Raimi's
-                                                    Spiderman.
-                                                    After Blade came out Columbia/TriStar announced that they were
-                                                    making a Venom solo film without
-                                                    Spiderman involved in an article in Total Film or Empire (I don't
-                                                    remember which) and could hardly
-                                                    contain my excitement.......
-                                                    <a href="#" class="reveal js-reveal">
-                                                        더보기
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <ul class="review-like">
-                                            <li>
-                                                좋아요
-                                            </li>
-                                            <li>
-                                                좋아요수
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-info">
-                                <div class="reviews-detail-content" style="display:flex">
-                                    <div id="review__Poster">
-                                        <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                                        <!-- 봤어요수 리스트수 좋아요수 -->
-                                    </div>
-                                    <div class="review-content" style="padding-left: 40px;">
-                                        <h3>영화제목</h3>
-                                        <span class="rating rated-9">
-                                            ★★★★½
-                                        </span>
-                                        <div class="body-text collapsible-text">
-                                            <div class="date">2018/10/07</div>
-                                            <div class="collapsed-text">
-                                                <p>
-                                                    Venom is a film i've waited for since before even Raimi's
-                                                    Spiderman.
-                                                    After Blade came out Columbia/TriStar announced that they were
-                                                    making a Venom solo film without
-                                                    Spiderman involved in an article in Total Film or Empire (I don't
-                                                    remember which) and could hardly
-                                                    contain my excitement.......
-                                                    <a href="#" class="reveal js-reveal">
-                                                        더보기
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <ul class="review-like">
-                                            <li>
-                                                좋아요
-                                            </li>
-                                            <li>
-                                                좋아요수
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="review-info">
-                                <div class="reviews-detail-content" style="display:flex">
-                                    <div id="review__Poster">
-                                        <img src="https://image.tmdb.org/t/p/w300/mN226GIDSMhWBpqPJopGlLk3qXn.jpg" alt="더넌">
-                                        <!-- 봤어요수 리스트수 좋아요수 -->
-                                    </div>
-                                    <div class="review-content" style="padding-left: 40px;">
-                                        <h3>영화제목</h3>
-                                        <span class="rating rated-9">
-                                            ★★★★½
-                                        </span>
-                                        <div class="body-text collapsible-text">
-                                            <div class="date">2018/10/07</div>
-                                            <div class="collapsed-text">
-                                                <p>
-                                                    Venom is a film i've waited for since before even Raimi's
-                                                    Spiderman.
-                                                    After Blade came out Columbia/TriStar announced that they were
-                                                    making a Venom solo film without
-                                                    Spiderman involved in an article in Total Film or Empire (I don't
-                                                    remember which) and could hardly
-                                                    contain my excitement.......
-                                                    <a href="#" class="reveal js-reveal">
-                                                        더보기
-                                                    </a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <ul class="review-like">
-                                            <li>
-                                                좋아요
-                                            </li>
-                                            <li>
-                                                좋아요수
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-
                         </section>
                     </div>
                 </div>
@@ -226,3 +66,12 @@
     </div>
 </main>
 <%@ include file="../include/footer.jsp" %>
+<%@ include file="../include/common.jsp" %>
+
+<script>
+    let user = ${item};
+</script>
+<script src="<c:url value='/resources/dist/js/ProfileReviews.js'/>"></script>
+</body>
+
+</html>

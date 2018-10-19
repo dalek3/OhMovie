@@ -34,12 +34,16 @@
                         <h3>SNS연동</h3>
                         <ul>
                             <li>
-                                <div class="name">페이스북 연동</div>
-                                <button></button>
+                                <div class="switcher">
+                                    <input id="switch-1" class="a11y-hidden" type="checkbox">
+                                    <label for="switch-1">페이스북 연동</label>
+                                </div>
                             </li>
                             <li>
-                                <div class="name">라인 연동</div>
-                                <button></button>
+                                <div class="switcher">
+                                    <input id="switch-2" class="a11y-hidden" type="checkbox">
+                                    <label for="switch-2">라인 연동</label>
+                                </div>
                             </li>
                         </ul>
                     </section>
@@ -60,3 +64,7 @@
         </div>
     </main>
 <%@ include file="include/footer.jsp" %>
+<%@ include file="include/common.jsp" %>
+</body>
+
+</html>

@@ -85,6 +85,9 @@
                 </div>
             </section>
         </main>
-        <script src="resources/dist/js/category.js"></script>
+<%@ include file="include/common.jsp" %>
+<script src="resources/dist/js/category.js"></script>
 
-<%@ include file="include/footer.jsp" %>
+</body>
+
+</html>

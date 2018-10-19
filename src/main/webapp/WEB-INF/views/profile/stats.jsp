@@ -21,9 +21,7 @@
                                         alt="프로필사진">
                                 </div>
                                 <figcaption>
-                                    <h2>
-                                        ${member.uName}
-                                    </h2>
+                                    <h2>${member.uName}</h2>
                                 </figcaption>
                             </figure>
 
@@ -51,3 +49,7 @@
             </div>
         </main>
 <%@ include file="../include/footer.jsp" %>
+<%@ include file="../include/common.jsp" %>
+</body>
+
+</html>

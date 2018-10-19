@@ -4,61 +4,84 @@ import java.util.Date;
 
 public class ReviewVO {
 	
-	private int rNo;
-	private int uNo;
-	private int mNO;
+	private Integer rIdx;
+	private Integer uIdx;
+	private Integer mIdx;
 	private String rContent;
-	private int rFlag;
+	private Date watchdate;
+	private Integer liked;
 	private Date writedate;
-	private int like;
-	
-	public int getrNo() {
-		return rNo;
+	private Date updatedate;
+
+	public Integer getrIdx() {
+		return rIdx;
 	}
-	public void setrNo(int rNo) {
-		this.rNo = rNo;
+
+	public void setrIdx(Integer rIdx) {
+		this.rIdx = rIdx;
 	}
-	public int getuNo() {
-		return uNo;
+
+	public Integer getuIdx() {
+		return uIdx;
 	}
-	public void setuNo(int uNo) {
-		this.uNo = uNo;
+
+	public void setuIdx(Integer uIdx) {
+		this.uIdx = uIdx;
 	}
-	public int getmNO() {
-		return mNO;
+
+	public Integer getmIdx() {
+		return mIdx;
 	}
-	public void setmNO(int mNO) {
-		this.mNO = mNO;
+
+	public void setmIdx(Integer mIdx) {
+		this.mIdx = mIdx;
 	}
+
 	public String getrContent() {
 		return rContent;
 	}
+
 	public void setrContent(String rContent) {
 		this.rContent = rContent;
 	}
-	public int getrFlag() {
-		return rFlag;
+
+	public Date getWatchdate() {
+		return watchdate;
 	}
-	public void setrFlag(int rFlag) {
-		this.rFlag = rFlag;
+
+	public void setWatchdate(Date watchdate) {
+		this.watchdate = watchdate;
 	}
+
+	public Integer getLike() {
+		return liked;
+	}
+
+	public void setLike(Integer liked) {
+		this.liked = liked;
+	}
+
 	public Date getWritedate() {
 		return writedate;
 	}
+
 	public void setWritedate(Date writedate) {
 		this.writedate = writedate;
 	}
-	public int getLike() {
-		return like;
+
+	public Date getUpdatedate() {
+		return updatedate;
 	}
-	public void setLike(int like) {
-		this.like = like;
+
+	public void setUpdatedate(Date updatedate) {
+		this.updatedate = updatedate;
 	}
-	
+
 	@Override
 	public String toString() {
-		return "ReviewVO [rNo=" + rNo + ", uNo=" + uNo + ", mNO=" + mNO + ", rContent=" + rContent + ", rFlag=" + rFlag
-				+ ", writedate=" + writedate + ", like=" + like + "]";
+		return "ReviewVO [rIdx=" + rIdx + ", uIdx=" + uIdx + ", mIdx=" + mIdx + ", rContent=" + rContent
+				+ ", watchdate=" + watchdate + ", liked=" + liked + ", writedate=" + writedate + ", updatedate="
+				+ updatedate + "]";
 	}
 	
 }

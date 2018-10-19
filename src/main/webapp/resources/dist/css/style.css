@@ -85,12 +85,15 @@ body {
 }
 
 .navbar-form {
-    margin-right: 10px;
-    margin-left: 10px;
+    margin:0 10px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
     color: #6985F4;
+}
+
+.dropdown-user .logout {
+    margin:10px 20px;
 }
 
 main {
@@ -486,7 +489,7 @@ footer {
 }
 
 .ReviewMorePage-reviews {
-    margin: 0 50px;
+    margin: 10px 50px;
 }
 
 .ContentListWithRatingControl {
@@ -668,12 +671,6 @@ footer {
     font-size: 1.25rem;
 }
 
-.setting-content .name {
-    width: 130px;
-    color:#888;
-}
-
-
 #setting-footer {
     display: flex;
     justify-content: space-between;
@@ -828,7 +825,7 @@ x-star-rating > .star.full::after {
  .loading-spinner {
     position: fixed;
     z-index: 10;
-    top: 50%;
+    top: 70%;
     left: 50%;
     width: 80px;
     margin: 0;
@@ -842,3 +839,105 @@ x-star-rating > .star.full::after {
     height: auto;
     margin-bottom: 10px;
   }
+
+/* Switcher UI 디자인 */
+
+.switcher {
+  margin: 1rem 0;
+  font-size: 16px;
+}
+
+/* 크기 설정 클래스 */
+.switcher.is-xsmall { font-size: 12px; }
+.switcher.is-small  { font-size: 14px; }
+.switcher.is-large  { font-size: 18px; }
+.switcher.is-xlarge { font-size: 20px; }
+
+
+/* 초기 상태(Initial State) ------------------------------- */
+
+.switcher input[type="checkbox"] {
+  position: absolute !important;
+  z-index: 10;
+}
+
+.switcher label {
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  padding-left: 3.5em;  
+  font-weight: bold;
+  color: #98afc7;
+}
+
+.switcher *,
+.switcher *::before,
+.switcher *::after {
+  box-sizing: border-box;
+  transition: all 0.35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+
+}
+
+.switcher label::before {
+  content: '';
+  position: absolute;
+  top: -0.45em;
+  left: 0;
+  width: 3em;
+  height: 2em;
+  background: #e3edfa;
+  border-radius: 3em;
+  box-shadow: inset 0 0 2px 1px rgba(0,0,0,0.05);
+}
+
+.switcher label::after {
+  content: '';
+  position: absolute;
+  top: -0.3em;
+  left: 0.1em;
+  width: 1.75em;
+  height: 1.75em;
+  border-radius: 3em;
+  background: #fff;
+}
+
+
+/* 종료 상태(Final State) --------------------------------- */
+
+.switcher input:checked + label {
+  color: #253467;
+}
+
+.switcher input:checked + label::before {
+  box-shadow: inset 0 0 0 2em #6985F4;
+}
+
+.switcher input:checked + label::after {
+  transform:  translateX(1em);
+}
+
+
+/* 포커스 상태(Focus State) --------------------------------- */
+
+.switcher input:focus + label::before {
+  box-shadow: inset 0 0 0 2em #d0d0d0;
+}
+
+.switcher input:checked:focus + label::before {
+  box-shadow: inset 0 0 0 2em #6985F4;
+  border: 1px solid #6985F4;
+}
+
+/* ------------------------------------------------------ */
+
+/* 접근성(accessibility, a11y) 감춤 */
+.a11y-hidden {
+  overflow: hidden;
+  position: absolute !important;
+  clip:     rect(0,0,0,0);
+  width:    1px;
+  height:   1px;
+  margin:   -1px;
+  border:   0;
+  padding:  0;
+}

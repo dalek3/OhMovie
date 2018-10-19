@@ -362,10 +362,14 @@
                 </section>
             </div>
         </main>
-        <script>
-            // restcontroller를 통해서 전달하기
-            let item = ${ item };
-        </script>
-        <script src="<c:url value='/resources/dist/js/item.js'/>"></script>
-        <script src="<c:url value='/resources/dist/js/StarRating.js' />"></script>
- <%@ include file="../include/footer.jsp" %>
+        <%@ include file="../include/footer.jsp" %>
+<%@ include file="../include/common.jsp" %>
+<script>
+    // restcontroller를 통해서 전달하기
+    let item = ${ item };
+</script>
+<script src="<c:url value='/resources/dist/js/item.js'/>"></script>
+<script src="<c:url value='/resources/dist/js/StarRating.js' />"></script>
+</body>
+
+</html>
