@@ -14,6 +14,7 @@ import com.ohmovie.vo.MemberVO;
 public class CustomUserDetailsService implements UserDetailsService{
 
 	private static final Logger log = LoggerFactory.getLogger(CustomUserDetailsService.class);
+	
 	@Autowired
 	private MemberDAO memberDAO;
 	

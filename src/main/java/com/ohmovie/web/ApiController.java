@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ohmovie.dao.ReviewDAO;
+import com.ohmovie.vo.ContentDTO;
 import com.ohmovie.vo.ReviewVO;
 
 @RestController
@@ -18,9 +19,18 @@ public class ApiController {
 	@Autowired
 	private ReviewDAO reviewDAO;
 	
-	@GetMapping("/{idx}/reviews")
-	public List<ReviewVO> reviews(@PathVariable Integer idx) {
-		List<ReviewVO> reviews = reviewDAO.readReview(idx);
-		return reviews;
+	@GetMapping("/{uIdx}/reviews")
+	public List<ReviewVO> userReviews(@PathVariable Integer uIdx) {
+		return reviewDAO.readReviews(uIdx);
+	}
+
+	@GetMapping("/{uIdx}/review/{mIdx}")
+	public ContentDTO userReview(@PathVariable Integer uIdx, @PathVariable Integer mIdx) {
+		return reviewDAO.readReview(uIdx, mIdx);
+	}
+	
+	@GetMapping("/{mIdx}/contentReviews")
+	public List<ContentDTO> contentReviews(@PathVariable Integer mIdx) {
+		return reviewDAO.itemReview(mIdx);
 	}
 }

@@ -3,7 +3,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="include/header.jsp" %>
-        <main>
+        <main class="container">
             <div class="ReviewMorePage-wrapper">
                 <div class="ReviewMorePage-header">
                     <h2 class="ReviewMorePage-countingHeader">100</h2>

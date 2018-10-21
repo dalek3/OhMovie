@@ -12,7 +12,6 @@
     <title>Oh!Movie</title>
     <link href="../resources/dist/css/style.css" rel="stylesheet">
 </head>
-<!-- 하나라도 입력하지않거나 오류가 나면 버튼 작동안하도록 -->
 <body>
     <div class="auth">
         <div class="inner">
@@ -40,7 +39,7 @@
         </div>
     </div>
     <script src="<c:url value='/resources/dist/js/common.js'/>"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="<c:url value='/resources/vendor/jquery/jquery.min.js'/>"></script>
     <script>
 
         let markingErrorMessage = (targetElement, message) => {

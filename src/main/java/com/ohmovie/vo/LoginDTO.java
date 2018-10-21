@@ -3,6 +3,7 @@ package com.ohmovie.vo;
 public class LoginDTO {
 	
 	private Integer uIdx;		// 회원 식별번호
+	private String uId;			// 아이디(email)
 	private String uName;
 	
 	public Integer getuIdx() {
@@ -10,6 +11,12 @@ public class LoginDTO {
 	}
 	public void setuIdx(Integer uIdx) {
 		this.uIdx = uIdx;
+	}
+	public String getuId() {
+		return uId;
+	}
+	public void setuId(String uId) {
+		this.uId = uId;
 	}
 	public String getuName() {
 		return uName;
@@ -20,7 +27,7 @@ public class LoginDTO {
 	
 	@Override
 	public String toString() {
-		return "LoginDTO [uIdx=" + uIdx + ", uName=" + uName + "]";
+		return "LoginDTO [uIdx=" + uIdx + ", uId=" + uId + ", uName=" + uName + "]";
 	}
-	
+		
 }

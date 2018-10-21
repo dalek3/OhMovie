@@ -23,33 +23,28 @@ public class AuthController {
 	@Autowired
 	private MemberDAO memberDAO;
 	
-	@GetMapping(value="/login")
+	@GetMapping("login")
 	public void loginGET(String error, String logout, Model model) throws Exception {	
 		log.info("error: " + error);
 		log.info("logout: " + logout);
-		
 		if (error != null) {
 			model.addAttribute("error", "잘못된 이메일/비밀번호 입니다.");
 		}		
-		
 		if (logout != null) {
 			model.addAttribute("logout", "logout!!");
 		}
 	}
 	
-	@GetMapping(value="/register")
+	@GetMapping("register")
 	public void registerGET(String error, Model model) throws Exception {
-
 		log.info("error: " + error);
-		
 		if (error != null) {
 			model.addAttribute("error", "이미 이메일 존재합니다.");
 		}
-		
 		log.info("registerGET");
 	}
 	
-	@PostMapping(value="/register")
+	@PostMapping("register")
 	public String registerPOST(@ModelAttribute MemberVO vo, String error, Model model ) throws Exception {
 		log.info("registerPOST");
 		String member = memberDAO.selectByEmail(vo.getuId());
@@ -63,11 +58,10 @@ public class AuthController {
 			// 권한 설정
 			memberDAO.insertAuth(vo.getuId());
 			
-			// 회원가입시 로그인 또는 이메일 인증
-			
+			// 회원가입시 로그인 또는 이메일 인증	
 			return "redirect:/";
 		}
-				
 		return "redirect:/auth/register?error";
 	}
+	
 }

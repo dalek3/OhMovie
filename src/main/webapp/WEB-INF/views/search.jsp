@@ -4,7 +4,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="include/header.jsp" %>
 
-<main>
+<main class="container">
     <section>
         <div>
             <div>
@@ -23,7 +23,7 @@
     </section>
 </main>
 <%@ include file="include/footer.jsp" %>
-<%@ include file="include/common.jsp" %
+<%@ include file="include/common.jsp" %>
 </body>
 
 </html>

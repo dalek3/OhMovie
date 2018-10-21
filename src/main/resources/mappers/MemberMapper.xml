@@ -18,25 +18,60 @@
 	 </resultMap>
 	 
 	 <select id="login" resultMap="memberMap">
-	 	select mem.u_idx, mem.u_id, u_pw, u_name, enabled, regdate, lastdate, auth 
-	 	from member mem left outer join member_auth auth on mem.u_idx = auth.u_idx
+	 	SELECT mem.u_idx, mem.u_id, u_pw, u_name, auth 
+	 	FROM `member` mem 
+	 	LEFT OUTER JOIN member_auth auth 
+	 	ON mem.u_idx = auth.u_idx
 	 	where mem.u_id = #{uId};
 	 </select>
 	 
-	 <select id="read" resultType="LoginDTO">
-	 	select u_idx, u_name from member where u_idx = #{uIdx};
+	 <select id="readIdx" resultType="LoginDTO">
+	 	SELECT u_idx, u_name 
+	 	FROM `member` 
+	 	WHERE u_idx = #{uIdx};
+	 </select>
+
+	 <select id="readId" resultType="MemberVO">
+	 	SELECT u_idx, u_id, u_name 
+	 	FROM `member` 
+	 	WHERE u_id = #{uId};
 	 </select>
 	 
 	 <select id="selectByEmail" resultType="String">
-	 	select u_id from member where u_id = #{uId};
+	 	SELECT u_id 
+	 	FROM `member` 
+	 	WHERE u_id = #{uId};
 	 </select>
 	
+	 <!-- 회원가입 -->
 	 <insert id="insert">
-	 	insert into member (u_id, u_pw, u_name) values (#{uId}, #{uPw}, #{uName});
+	 	INSERT INTO `member` (u_id, u_pw, u_name) 
+	 	VALUES (#{uId}, #{uPw}, #{uName});
 	 </insert>
 	 
 	 <insert id="insertAuth">
-	 	insert into member_auth (u_idx) SELECT member.u_idx FROM member WHERE member.u_id = #{uId};
+	 	INSERT INTO `member_auth` (u_idx) 
+	 	SELECT member.u_idx FROM `member` 
+	 	WHERE member.u_id = #{uId};
 	 </insert>
+	 	 
+	 <!-- 계정수정 -->
+	 <update id="updateMember">
+		UPDATE `member` 
+		SET u_name = #{uName} 
+		WHERE u_idx = #{uIdx}
+	 </update>
+	 
+	 <!-- 비밀번호 변경 -->
+	 <update id="updatePassword">
+		UPDATE `member`
+		SET u_pw = #{uPw}
+		WHERE u_idx = #{uIdx};
+	 </update>
+	 
+	 <!-- 계정삭제 -->
+	 <delete id="signout">
+	 	DELETE FROM member WHERE u_idx = #{uIdx} 
+	 </delete>
 	 
 </mapper>

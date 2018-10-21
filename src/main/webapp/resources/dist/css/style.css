@@ -85,7 +85,7 @@ body {
 }
 
 .navbar-form {
-    margin:0 10px;
+    margin:10px;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
@@ -291,6 +291,14 @@ main {
     width: 960px;
 }
 
+.review-info {
+    padding-left: 40px;
+}
+
+.reviewDetail__content {
+    padding-left: 40px;
+}
+
 .reviews-detail {
     width: 290px;
     margin-right:30px;
@@ -323,7 +331,6 @@ main {
 .reviews-detail-info p {
     margin-left: 10px;
 }
-
 
 .related-item-list {
     display: flex;
@@ -374,7 +381,6 @@ footer {
     padding: 16px;
     border-radius: 5px 5px 0 0;
     background: #6985F4;
-    
     color: #fff;
     font-size: 2rem;
     text-align: center;
@@ -447,7 +453,6 @@ footer {
 .ReviewMorePage-header {
     width: 600px;
     padding: 20px 0;
-
     text-align: center;
     border: 1px solid #d7d7d7;
     border-radius: 5px 5px 0 0;
@@ -519,12 +524,7 @@ footer {
 
 /* profile 페이지 */
 
-.container {
-    display: flex;
-    flex-direction: column;
-}
-
-#profile-wrap {
+.profile-wrap {
     margin: 0 50px 50px;
     display: flex;
     flex-direction: column;
@@ -532,80 +532,80 @@ footer {
     background: #fff;
 }
 
-#profile {
+.profile {
     width: 100%;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
 }
 
-#profile-header-wrap a {
+.profile-header-wrap a {
     color:#fff;
 }
 
-#profile-header-wrap h2 {
+.profile-header-wrap h2 {
     color:#fff;
 }
 
-#profile-header-wrap p {
+.profile-header-wrap p {
     color:#fff;
 }
 
-#profile-header-wrap {
+.profile-header-wrap {
     width: 100%;
     border-radius: 5px 5px 0 0;
     background: radial-gradient(circle at 20% 50%, rgba(14.12%, 14.51%, 16.86%, 0.98) 0%, rgba(0%, 14.51%, 16.86%, 0.88) 100%);
 }
 
-#profile-header {
+.profile-header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 45px;
 }
 
-#profile-header figure {
+.profile-header figure {
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-#profile-header .avatar img {
+.profile-header .avatar img {
     width: 110px;
     height: 110px;
     border-radius: 50%;
 }
 
-#profile-header .profile-counts {
+.profile-header .profile-counts {
     display: flex;
 }
 
-#profile-header .profile-count {
+.profile-header .profile-count {
     margin-right: 10px;
 }
 
-#profile-header .profile-count span{
+.profile-header .profile-count span{
     display: block;
     text-align: center;
 }
 
-#profile-nav ul{
+.profile-nav ul{
     display: flex;
     justify-content: center;
     padding: 20px 0;
     border-bottom:1px solid #e3e3e3;
 }
 
-#profile-nav a {
+.profile-nav a {
     padding: 20px 30px;
     color: #000;
     word-break: keep-all;
 }
 
-#profile-nav a:hover {
+.profile-nav a:hover {
     border-bottom :3px solid #6985F4;
 }
 
-#profile-contents {
+.profile-contents {
     min-height: 400px;
     border: 1px solid #e3e3e3;
     border-radius: 5px;
@@ -613,8 +613,7 @@ footer {
 }
 
 /* setting */
-
-#setting-wrap {
+.setting-wrap {
     margin: 0 50px 50px;
     display: flex;
     flex-direction: column;
@@ -622,29 +621,29 @@ footer {
     background:#fff;
 }
 
-#setting {
+.setting {
     width: 100%;
     border: 1px solid #e3e3e3;
     border-radius: 10px;
 }
 
-#setting-header {
+.setting-header {
     padding: 30px 50px 10px;
     background:#6985F4;
     border-radius: 10px 10px 0 0 ;
 }
 
-#setting-header h2 {
+.setting-header h2 {
     width: 100px;
     padding-bottom: 10px;
     color:#fff;
 }
 
-#setting-contents {
+.setting-contents {
     padding: 25px 50px 50px;
 }
 
-#setting-contents button {
+.setting-contents button {
     outline:none;
     border: 1px solid #adb5bd;
     padding: 10px;
@@ -653,7 +652,7 @@ footer {
     font-weight: 700;
 }
 
-#setting-contents a {
+.setting-contents a {
     padding-bottom: 10px;
     border-bottom: 3px solid #000;
 
@@ -671,13 +670,13 @@ footer {
     font-size: 1.25rem;
 }
 
-#setting-footer {
+.setting-footer {
     display: flex;
     justify-content: space-between;
     margin: 10px 0;
 }
 
-#setting-footer a {
+.setting-footer a {
     border-bottom: 3px solid #000;
     margin: 10px 0;
 
@@ -685,7 +684,29 @@ footer {
     font-size: 1.25rem;
 }
 
-#setting-footer button {
+.modal-footer .btn-custom {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+
+    font-size: 1.25rem;
+    
+    color: #fff;
+    background: #6985F4;
+}
+
+.setting-content .btn-custom {
+    border: none;
+    border-radius: 10px;
+    padding: 10px 10px;
+
+    font-size: 1.25rem;
+    
+    color: #fff;
+    background: #6985F4;
+}
+
+.setting-footer .btn-custom {
     border: none;
     border-radius: 10px;
     padding: 10px 20px;
@@ -697,39 +718,38 @@ footer {
 }
 
 /* review */
-#review-wrap {
+.review-wrap {
     margin: 0 50px 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-#review {
+.review {
     border: 1px solid #e3e3e3;
     border-radius: 10px;
 }
 
-#review__Poster img{
-    
+.review__Poster img{
     width: 140px;
     height: 200px;
     border: 1px solid #e3e3e3;
     border-radius: 10px;
 }
 
-#review-header {
-    padding: 30px 50px 10px;
+.review-header {
+    padding: 30px 20px 10px;
     background:#6985F4;
     border-radius: 10px 10px 0 0 ;
 }
 
-#review-header h2 {
+.review-header h2 {
     width: 590px;
     padding-bottom: 10px;
     color:#fff;
 }
 
-#review-contents {
+.review-contents {
     padding: 25px 50px 50px;
     background: #fff;
     display: flex;
@@ -750,33 +770,39 @@ footer {
     font-size: 1.25rem;
 }
 
-.review__Poster {
-    width: 20%;;
-}
-
 .review-like {
     display: flex;
 }
 
-/* contents-nav */
+.profile-review {
+    margin: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
+}
 
-#contents-nav ul{
+.profile-review-contents {
+    background: #fff;
+    display: flex;
+}
+
+/* contents-nav */
+.contents-nav ul{
     display: flex;
     padding: 10px 0;
     border-bottom:1px solid #e3e3e3;
 }
 
-#contents-nav a {
+.contents-nav a {
     padding: 10px 30px;
     color: #000;
     word-break: keep-all;
 }
 
-#contents-nav a:hover {
+.contents-nav a:hover {
     border-bottom :3px solid #6985F4;
 }
 
-#diary-table {
+.diary-table {
     margin: 20px;
 }
 

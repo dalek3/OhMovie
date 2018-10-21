@@ -3,11 +3,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
-<main>
-    <div id="profile-wrap">
-        <div id="profile">
-            <div id="profile-header-wrap">
-                <section id="profile-header">
+<main class="container">
+    <div class="profile-wrap">
+        <div class="profile">
+            <div class="profile-header-wrap">
+                <section class="profile-header">
 
                     <div class="profile-counts">
                         <div class="profile-count"><a href="#"><span>0</span>영화</a></div>
@@ -35,7 +35,7 @@
                 </section>
             </div>
 
-            <div id="profile-nav">
+            <div class="profile-nav">
                 <ul>
                     <li><a href="/profile/${member.uIdx}">취향분석</a></li>
                     <li><a href="/profile/${member.uIdx}/#">좋아요</a></li>
@@ -45,8 +45,8 @@
                 </ul>
             </div>
 
-            <section id="profile-contents">
-                <div id="contents-nav">
+            <section class="profile-contents">
+                <div class="contents-nav">
                     <ul>
                         <li><a href="/profile/${member.uIdx}/diary">봤어요</a></li>
                         <li><a href="/profile/${member.uIdx}/diary">다이어리</a></li>
@@ -54,8 +54,8 @@
                         <li><a href="/profile/${member.uIdx}/diary">평점</a></li>
                     </ul>
                 </div>
-                <div id="review">
-                    <div id="review-contents">
+                <div class="profile-review">
+                    <div class="profile-review-contents">
                         <section class="review-content">
                             <!-- for문 -->
                         </section>
@@ -69,9 +69,9 @@
 <%@ include file="../include/common.jsp" %>
 
 <script>
-    let user = ${item};
+    let userId = <c:out value="${uIdx}">uIdx</c:out>;
 </script>
-<script src="<c:url value='/resources/dist/js/ProfileReviews.js'/>"></script>
+<script src="<c:url value='/resources/dist/js/userReviews.js'/>"></script>
 </body>
 
 </html>

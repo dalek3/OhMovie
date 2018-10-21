@@ -3,11 +3,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../include/header.jsp" %>
-        <main>
-            <div id="profile-wrap">
-                <div id="profile">
-                    <div id="profile-header-wrap">
-                        <section id="profile-header">
+        <main class="container">
+            <div class="profile-wrap">
+                <div class="profile">
+                    <div class="profile-header-wrap">
+                        <section class="profile-header">
 
                             <div class="profile-counts">
                                 <div class="profile-count"><a href="#"><span>0</span>영화</a></div>
@@ -32,7 +32,7 @@
                         </section>
                     </div>
 
-                    <div id="profile-nav">
+                    <div class="profile-nav">
                         <ul>
                             <li><a href="/profile/${member.uIdx}">취향분석</a></li>
                             <li><a href="/profile/${member.uIdx}/#">좋아요</a></li>
@@ -42,8 +42,8 @@
                         </ul>
                     </div>
 
-                    <section id="profile-contents">
-
+                    <section class="profile-contents">
+                        <!-- contents -->
                     </section>
                 </div>
             </div>

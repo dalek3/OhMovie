@@ -2,14 +2,22 @@ package com.ohmovie.web;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import com.ohmovie.dao.MemberDAO;
 
 @Controller
 public class HomeController {
 	
 	private static final Logger log = LoggerFactory.getLogger(HomeController.class);
+	
+	@Autowired
+	private MemberDAO memberDAO;
 	
 	@GetMapping(value = "/")
 	public String home(Model model) {
@@ -35,7 +43,9 @@ public class HomeController {
 	
 	@GetMapping(value = "/setting")
 	public void setting(Model model) {
-		log.info("setting");	
+		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+		log.info(""+ memberDAO.readId(auth.getName()));
+		model.addAttribute("member", memberDAO.readId(auth.getName()));
 	}
 	
 }
