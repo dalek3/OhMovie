@@ -22,20 +22,20 @@ def read_data(fin):
     return info_li
 
 # 파일 입력
-fin_movie = 'movies2.csv'
+fin_movie = 'movies3.csv'
 movie_info_li = read_data(fin_movie)
 
 result_lines = []
 movie_plot_li = []
 
 for movie_info in movie_info_li:
-    try:
-        movie_plot = movie_info[2]
-    except KeyError:
-        print('incomplete json: %s' %(movie_info[0]))
-        movie_plot = ''
-    result_lines.append([movie_info[0], movie_info[1], movie_plot])
-    movie_plot_li.append(movie_plot)
+    if movie_info != []:
+        try:
+            movie_plot = movie_info[2]
+        except KeyError:
+            print('incomplete json: %s' %(movie_info[0]))
+        result_lines.append([movie_info[0], movie_info[1], movie_plot])
+        movie_plot_li.append(movie_plot)
 vectorizer2 = TfidfVectorizer(min_df=1, tokenizer=LemmaTokenizer(), stop_words='english')
 X = vectorizer2.fit_transform(movie_plot_li)
 
@@ -56,11 +56,12 @@ def similar_recommend_by_movie_id(movielens_id, m_id):
 # 비슷한것 찾기 json 파일 생성
 i = 1
 for movie_info in movie_info_li:
-    jsonResult = []
-    similar_recommend_by_movie_id(i, movie_info[1])
+    if movie_info != []:
+        jsonResult = []
+        similar_recommend_by_movie_id(i, movie_info[1])
 
-    with open('output2/%s_%s_%s_movie.json' % (i, movie_info[0], movie_info[1]), 'w', encoding='utf-8') as outfile:
-        retJson = json.dumps(jsonResult, indent=4, sort_keys=True, ensure_ascii=False)
-        outfile.write(retJson)
-    print("%s_json save"%movie_info[1])
-    i += 1
+        with open('output2/%s_%s_%s_movie.json' % (i, movie_info[0], movie_info[1]), 'w', encoding='utf-8') as outfile:
+            retJson = json.dumps(jsonResult, indent=4, sort_keys=True, ensure_ascii=False)
+            outfile.write(retJson)
+        print("%s_json save"%movie_info[1])
+        i += 1
