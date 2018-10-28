@@ -26,6 +26,17 @@
     let movieId = <c:out value="${mIdx}">mIdx</c:out>;
 </script>
 <script src="<c:url value='/resources/dist/js/userReview.js'/>"></script>
+<script>
+	let input = document.querySelector('.search');
+	
+	function onKeyDetection(e) {
+		setTimeout(() => {
+			let result = input.value;
+	        window.location.href = '/search?q='+result;
+		}, 1500);
+	}
+	input.addEventListener('keyup', onKeyDetection);
+</script>
 </body>
 
 </html>

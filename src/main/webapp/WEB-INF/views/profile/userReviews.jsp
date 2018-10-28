@@ -72,6 +72,17 @@
     let userId = <c:out value="${uIdx}">uIdx</c:out>;
 </script>
 <script src="<c:url value='/resources/dist/js/userReviews.js'/>"></script>
+<script>
+	let input = document.querySelector('.search');
+	
+	function onKeyDetection(e) {
+		setTimeout(() => {
+			let result = input.value;
+	        window.location.href = '/search?q='+result;
+		}, 1500);
+	}
+	input.addEventListener('keyup', onKeyDetection);
+</script>
 </body>
 
 </html>

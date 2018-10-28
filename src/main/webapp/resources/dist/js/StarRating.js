@@ -58,6 +58,16 @@ class StarRating extends HTMLElement {
                 starIndex = Math.floor((e.pageX - box.left) / box.width * this.stars.length);
 
             this.value = starIndex + 1;
+            let star =  this.value;
+            console.log(star);
+            fetch("/api/100/rating/" + movieId)
+            .then(response => response.json())
+            .then(() => {
+                ratingService.modify({uIdx: 100, mIdx:"" + movieId, rated: this.value})
+            })
+            .catch(() => {
+                ratingService.add({uIdx: 100, mIdx:"" + movieId, rated: this.value})   
+            })
 
             let rateEvent = new Event('rate');
             this.dispatchEvent(rateEvent);

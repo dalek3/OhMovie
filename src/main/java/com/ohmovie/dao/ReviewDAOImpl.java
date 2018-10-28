@@ -31,19 +31,32 @@ public class ReviewDAOImpl implements ReviewDAO {
 	}
 
 	@Override
-	public ContentDTO readReview(Integer uIdx, Integer mIdx) {
+	public ContentDTO readReview(Integer uIdx, String mIdx) {
 		
-		Map<String, Integer> paramMap = new HashMap<>();
+		Map<String, Object> paramMap = new HashMap<>();
 		
 		paramMap.put("uIdx", uIdx);
 		paramMap.put("mIdx", mIdx);
+		System.out.println(paramMap);
 		return session.selectOne(namespace + ".readReview", paramMap);
 	}
 	
 	@Override
-	public List<ContentDTO> itemReview(Integer mIdx) {
-
+	public List<ContentDTO> itemReview(String mIdx) {
+		System.out.println(mIdx);
 		return session.selectList(namespace + ".itemReview", mIdx);
+	}
+
+	@Override
+	public void deleteReview(Integer rIdx) {
+		
+		session.delete(namespace + ".deleteReview", rIdx);
+	}
+
+	@Override
+	public void updateReview(ReviewVO vo) {
+		
+		session.insert(namespace + ".updateReview", vo);
 	}
 
 }

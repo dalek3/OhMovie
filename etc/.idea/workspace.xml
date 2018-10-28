@@ -2,70 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a92e1d57-6765-4dd2-8529-68d5debd8d23" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/etc.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basic_REST_Server_v2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/links_tmdb.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/.ipynb_checkpoints/Untitled-checkpoint.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/README" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/Untitled.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/allbut.pl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/mku.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/movieRead.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/omdb.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/starStats.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/test.ipynb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/tf_idf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u.genre" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u.info" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u.item" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u.occupation" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u1.base" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u1.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u2.base" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u2.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u3.base" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u3.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u4.base" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u4.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u5.base" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/u5.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/ua.base" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/ua.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/ub.base" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/ub.test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-100k/utilmatix.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/links.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/movies_w_imgurl.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/ratings.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/tags.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/cosim.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/links.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/movies.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/ratings.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/tags.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/tf_idf.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/tf_idfToken.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ml-latest-small/tmdb_movieRead.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ratings.csv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/rating_sgd.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z01" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z02" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z03" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z04" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z05" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z06" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z07" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.z08" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/data.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tmdb_file2.py" beforeDir="false" afterPath="$PROJECT_DIR$/tmdb_total_file.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ratings.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating_sgd.py" beforeDir="false" afterPath="$PROJECT_DIR$/rating_sgd.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/java/com/ohmovie/web/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/ohmovie/web/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/contents/item.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/contents/item.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/item.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,9 +58,10 @@
     <session id="-1992030803">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -149,12 +91,12 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/rating_sgd.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <caret line="27" selection-start-line="27" selection-end-line="27" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -239,7 +181,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/05. Integration" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -334,6 +276,16 @@
     <entry file="file://$PROJECT_DIR$/movies3.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/rating_sgd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="513">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/tmdb_total_file.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -343,12 +295,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Basic_REST_Server_v2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tmdb_file.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmdb_save.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -356,15 +302,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rating_sgd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/tmdb_file.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Basic_REST_Server_v2.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>

@@ -6,7 +6,7 @@ public class ReviewVO {
 	
 	private Integer rIdx;
 	private Integer uIdx;
-	private Integer mIdx;
+	private String mIdx;
 	private String rContent;
 	private Date watchdate;
 	private Integer liked;
@@ -29,11 +29,11 @@ public class ReviewVO {
 		this.uIdx = uIdx;
 	}
 
-	public Integer getmIdx() {
+	public String getmIdx() {
 		return mIdx;
 	}
 
-	public void setmIdx(Integer mIdx) {
+	public void setmIdx(String mIdx) {
 		this.mIdx = mIdx;
 	}
 

@@ -4,23 +4,30 @@ import java.util.Date;
 
 public class ContentDTO {
 	
+	private Integer rIdx;
 	private Integer uIdx;
-	private Integer mIdx;
+	private String mIdx;
 	private String uName;
 	private String rContent;
 	private Date watchdate;
 	private Integer liked;
 	
+	public Integer getrIdx() {
+		return rIdx;
+	}
+	public void setrIdx(Integer rIdx) {
+		this.rIdx = rIdx;
+	}
 	public Integer getuIdx() {
 		return uIdx;
 	}
 	public void setuIdx(Integer uIdx) {
 		this.uIdx = uIdx;
 	}
-	public Integer getmIdx() {
+	public String getmIdx() {
 		return mIdx;
 	}
-	public void setmIdx(Integer mIdx) {
+	public void setmIdx(String mIdx) {
 		this.mIdx = mIdx;
 	}
 	public String getuName() {
@@ -50,8 +57,8 @@ public class ContentDTO {
 	
 	@Override
 	public String toString() {
-		return "ContentDTO [uIdx=" + uIdx + ", mIdx=" + mIdx + ", uName=" + uName + ", rContent=" + rContent
-				+ ", watchdate=" + watchdate + ", liked=" + liked + "]";
+		return "ContentDTO [rIdx=" + rIdx + ", uIdx=" + uIdx + ", mIdx=" + mIdx + ", uName=" + uName + ", rContent="
+				+ rContent + ", watchdate=" + watchdate + ", liked=" + liked + "]";
 	}
 	
 }

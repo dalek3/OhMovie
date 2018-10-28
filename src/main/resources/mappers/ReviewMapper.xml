@@ -7,22 +7,9 @@
 	 <select id="readReviews" resultType="ReviewVO">
 		SELECT * FROM review WHERE u_idx = #{uIdx}
 	 </select>
-
-	 <select id="readReview" resultType="ContentDTO">
-	 	SELECT mem.u_idx, mem.u_name, re.r_content, re.watchdate, re.liked 
-	 	FROM member mem
-	 	LEFT OUTER JOIN review re 
-	 	ON mem.u_idx = re.u_idx 
-		WHERE re.u_idx = #{uIdx}
-    	AND re.m_idx = #{mIdx}
-	 </select>
-	
-	 <insert id="insertReview">
-	 	INSERT INTO review (u_idx, m_idx, r_content) VALUES (#{uIdx}, #{mIdx}, #{rContent});
-	 </insert>
 	 
 	 <select id="itemReview" resultType="ContentDTO">
-	 	SELECT mem.u_idx, mem.u_name, re.r_content, re.watchdate, re.liked 
+	 	SELECT mem.u_idx, mem.u_name, re.r_idx, re.m_idx, re.r_content, re.watchdate, re.liked 
 	 	FROM member mem
 	 	LEFT OUTER JOIN review re 
 	 	ON mem.u_idx = re.u_idx 
@@ -30,4 +17,26 @@
 	 	LIMIT 3
 	 </select>
 	 
+	 <insert id="insertReview">
+	 	INSERT INTO review (u_idx, m_idx, r_content) 
+	 	VALUES (#{uIdx}, #{mIdx}, #{rContent});
+	 </insert>
+	 
+ 	 <select id="readReview" resultType="ContentDTO">
+	 	SELECT mem.u_idx, mem.u_name, re.r_content, re.watchdate, re.liked 
+	 	FROM member mem
+	 	LEFT OUTER JOIN review re 
+	 	ON mem.u_idx = re.u_idx 
+		WHERE re.u_idx = #{uIdx}
+    	AND re.m_idx = #{mIdx}
+	 </select>
+	 
+	 <delete id="deleteReview">
+	 	delete from review where r_idx = #{rIdx}
+	 </delete>
+	 
+	 <update id="updateReview">
+	 	update review set r_content = #{rContent}, updatedate = now() 
+	 	where r_idx = #{rIdx}
+	 </update>
 </mapper>

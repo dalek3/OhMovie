@@ -36,6 +36,17 @@
 <%@ include file="include/common.jsp" %>
 <script src="resources/dist/js/rating.js"></script>
 <script src="resources/dist/js/StarRating.js"></script>
+<script>
+	let input = document.querySelector('.search');
+	
+	function onKeyDetection(e) {
+		setTimeout(() => {
+			let result = input.value;
+	        window.location.href = '/search?q='+result;
+		}, 1500);
+	}
+	input.addEventListener('keyup', onKeyDetection);
+</script>
 </body>
 
 </html>

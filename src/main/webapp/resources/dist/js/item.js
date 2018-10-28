@@ -2,7 +2,11 @@
     const ContentJumbotron = document.querySelector('.ContentJumbotron')
     const ContentOverview = document.querySelector('.ContentOverview')
     const ContentPeoples = document.querySelector('.ContentPeoples')
+    const relatedItemList = document.querySelector('.related-item-list')
 
+    const blank_poster = 'https://ssl.pstatic.net/static/movie/2012/06/dft_img203x290.png';
+    const blank_cast = '/resources/dist/if_user_1287507.svg'
+    
     function genres(data) {
         let genre = ''
         for (const i in data.genres) {
@@ -41,30 +45,6 @@
                     ${data.release_date.substr(0, 4)}・${data.genres[0].name}・${data.production_countries[0].iso_3166_1}
                 </div>
                 <div class="ContentJumbotron_ContentRatings">
-                    <div class="critic-reviews reviews-score">
-                        <div class="score">90%</div>
-                        <div class="reviews-wrap">
-                            <h3 class="reviews-header">기자・평론가 평점</h3>
-                            <div class="score-stats">
-                                <div class="score-item">
-                                    <span>평균 평점</span>
-                                    <em>7.6/10</em>
-                                </div>
-                                <div class="score-item">
-                                    <span>긍정 리뷰</span>
-                                    <em>265</em>
-                                </div>
-                                <div class="score-item">
-                                    <span>참여 인원</span>
-                                    <em>285</em>
-                                </div>
-                                <div class="score-item">
-                                    <span>부정 리뷰</span>
-                                    <em>21</em>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="user-reviews reviews-score">
                         <div class="score">${data.vote_average*10}%</div>
                         <div class="reviews-wrap">
@@ -98,20 +78,20 @@
                         </a>
                         <a href="#">
                             <p>
-                                <i class="fa fa-heart"></i>
+                                <i class="fa fa-heart-o"></i>
                                 <span class="fw700">좋아요</span>
                             </p>
                         </a>
                         <a href="#">
                             <p>
-                                <i class="fa fa-bookmark"></i>
+                                <i class="fa fa-bookmark-o"></i>
                                 <span class="fw700">보고싶어요</span>
                             </p>
                         </a>
                     </li>
                     <li class="rating">
                         <span class="fw700">평가</span>
-                        <x-star-rating value="3" number="5"></x-star-rating>
+                        <x-star-rating value="0" number="5"></x-star-rating>
                     </li>
                     <li>
                         <!-- Trigger the modal with a button -->
@@ -170,19 +150,19 @@
     .then(response => response.json())
     .then(data => {
         let listItem = ''
-        for (let index = 0; index < 6; index++) {
-            let profile_path = data.cast[index].profile_path;
-            let name = data.cast[index].name;
-            let character = data.cast[index].character;
-
+        for (let i = 0; i < 6; i++) {
+            let content = data.cast[i] 
+            let name = content.name;
+            let character = content.character;
+            let profile_path = content.profile_path ? ''.concat('https://image.tmdb.org/t/p/w66_and_h66_face', content.profile_path) : blank_cast;
             listItem += 
                 `<li class="listItem">
                     <figure>
                         <div class="profilePhoto">
-                        <div class="ProfilePhoto__ProfilePhotoImage"></div>
-                        <div class="ProfilePhoto__DefaultImageContainer">
-                            <img src="https://image.tmdb.org/t/p/w66_and_h66_face${profile_path}" alt="cast">
-                        </div>
+                            <div class="ProfilePhoto__ProfilePhotoImage"></div>
+                            <div class="ProfilePhoto__DefaultImageContainer">
+                                <img src="${profile_path}" alt="cast">
+                            </div>
                         </div>
                         <figcaption class="profilePhoto__Info">
                             <div class="profilePhoto__Title">${name}</div>
@@ -198,6 +178,73 @@
             <ul class="ContentPeople">
                 ${listItem}
             </ul>`
+    })
+    .catch(err => console.log(err))
+
+    fetch("/api/similar/" + movieId)
+    .then(response => response.json())
+    .then(movies => {
+        if (movies.length !== 0) {
+            return movies.map(item => {
+                movie = item.similarId
+                fetch("https://api.themoviedb.org/3/movie/" + movie + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
+                .then(response => response.json())
+                .then(content => {
+                    let id = content.id;
+                    let title = content.title;
+                    let poster = content.poster_path ? ''.concat('https://image.tmdb.org/t/p/w300', content.poster_path) : blank_poster;
+                    let template = _.createNode('li');
+                    _.addClass(template, 'related-item')
+                    template.innerHTML =
+                        `<a href="/item/${id}">
+                            <figure>
+                                <div class="thumbnail-wrapper">
+                                    <img src="${poster}" alt="${title} 포스터">
+                                </div>
+                                <figcaption>
+                                    <h4>${title}</h4>
+                                    <p>${content.vote_average}/예상평점</p>
+                                </figcaption>
+                            </figure>
+                        </a>`
+                    _.append(relatedItemList, template);
+                    
+                })
+                .catch(err => console.log(err))
+            })
+        } else {
+            fetch("https://api.themoviedb.org/3/movie/" + movieId + "/similar?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr&page=1")
+            .then(response => response.json())
+            .then(data => {
+                movies = data.results;
+                for ( let i = 0; i < 5; i++) {
+                    let content = movies[i];
+                    let id = content.id;
+                    let title = content.title;
+                    let poster = content.poster_path ? ''.concat('https://image.tmdb.org/t/p/w300', content.poster_path) : blank_poster;
+                    let template = _.createNode('li');
+                    _.addClass(template, 'related-item')
+                    template.innerHTML =
+                        `<a href="/item/${id}">
+                            <figure>
+                                <div class="thumbnail-wrapper">
+                                    <img src="${poster}" alt="${title} 포스터">
+                                </div>
+                                <figcaption>
+                                    <h4>${title}</h4>
+                                    <p>${content.vote_average}/예상평점</p>
+                                </figcaption>
+                            </figure>
+                        </a>`
+                    _.append(relatedItemList, template);
+                }
+            })
+            .catch(() => {
+                let template = _.createNode('p');
+                template.innerHTML = `비슷한 영화를 찾을 수 없습니다.`
+                _.append(relatedItemList, template);
+            })
+        }
     })
     .catch(err => console.log(err))
 

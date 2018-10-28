@@ -8,29 +8,19 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.ohmovie.dao.ReviewDAO;
-import com.ohmovie.vo.ContentDTO;
-import com.ohmovie.vo.ReviewVO;
+import com.ohmovie.dao.MovieDAO;
+import com.ohmovie.vo.MovieVO;
 
 @RestController
 @RequestMapping("/api/*")
 public class ApiController {
-	
+		
 	@Autowired
-	private ReviewDAO reviewDAO;
-	
-	@GetMapping("/{uIdx}/reviews")
-	public List<ReviewVO> userReviews(@PathVariable Integer uIdx) {
-		return reviewDAO.readReviews(uIdx);
+	private MovieDAO movieDAO;
+
+	@GetMapping("/similar/{mIdx}")
+	public List<MovieVO> Movie(@PathVariable String mIdx) {
+		return movieDAO.readMovie(mIdx);
 	}
 
-	@GetMapping("/{uIdx}/review/{mIdx}")
-	public ContentDTO userReview(@PathVariable Integer uIdx, @PathVariable Integer mIdx) {
-		return reviewDAO.readReview(uIdx, mIdx);
-	}
-	
-	@GetMapping("/{mIdx}/contentReviews")
-	public List<ContentDTO> contentReviews(@PathVariable Integer mIdx) {
-		return reviewDAO.itemReview(mIdx);
-	}
 }

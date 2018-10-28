@@ -130,6 +130,21 @@
     <%@ include file="include/common.jsp" %>
     <script src="<c:url value='/resources/dist/js/owl.carousel.js'/>"></script>
     <script>
+	    let input = document.querySelector('.search');
+	    let regx = /^http:\/\/localhost:8080\/search\?q\=[0-9a-zA-Z%]*$/;
+        
+	    if(regx.test(document.referrer)) {
+            input.focus();    
+	    }
+
+	    function onKeyDetection(e) {
+	    	setTimeout(() => {
+	    		let result = input.value;
+	            window.location.href = '/search?q='+result;
+			}, 1500);
+	    }
+	    input.addEventListener('keyup', onKeyDetection);
+	    
         $(document).ready(function () {
             var owl1 = $('.owl-carousel1');
             var owl2 = $('.owl-carousel2');

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ohmovie.mapper.RatingMapper">
+	 
+	 <insert id="insertRating">
+	 	INSERT INTO member_rating (u_idx, m_idx, rated) 
+	 	VALUES (#{uIdx}, #{mIdx}, #{rated});
+	 </insert>
+	 
+	 <update id="updateRating">
+	 	update member_rating set rated = #{rated} 
+	 	where u_idx = #{uIdx} and m_idx = #{mIdx}
+	 </update>
+	 
+  	 <select id="readRating" resultType="RatingVO">
+	 	SELECT * 
+	 	FROM member_rating 
+		WHERE u_idx = #{uIdx}
+    	AND m_idx = #{mIdx}
+	 </select>
+</mapper>

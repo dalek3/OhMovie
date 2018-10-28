@@ -6,13 +6,17 @@ import com.ohmovie.vo.ContentDTO;
 import com.ohmovie.vo.ReviewVO;
 
 public interface ReviewDAO {
-
-	public void insertReview(ReviewVO vo);
 	
 	public List<ReviewVO> readReviews(Integer uIdx);
-	
-	public ContentDTO readReview(Integer uIdx, Integer mIdx);
 
-	public List<ContentDTO> itemReview(Integer mIdx);
+	public List<ContentDTO> itemReview(String mIdx);
+	
+	public void insertReview(ReviewVO vo);
+	
+	public ContentDTO readReview(Integer uIdx, String mIdx);
+	
+	public void deleteReview(Integer rIdx);
+	
+	public void updateReview(ReviewVO vo);
 	
 }

@@ -1,27 +1,31 @@
 ((global) => {
     // 검색
     let input = document.querySelector('.search');
-    let result = ''
     let blank_poster = 'https://ssl.pstatic.net/static/movie/2012/06/dft_img203x290.png';
-
+    input.focus();
+    input.value = result
+    _callApi();
     function onKeyDetection(e) {
-        result = input.value;
-        while (ul.hasChildNodes()) {
-            _.remove(ul, ul.firstChild)
-        }
-        _callApi();
+    	setTimeout(() => {
+    		result = input.value;
+    		if (result !== '') {
+    			window.location.href = '/search?q='+result;
+    		} else {
+    			window.location.href = '/';
+    		}
+		}, 1100);
     }
-    input.addEventListener('input', onKeyDetection);
+    input.addEventListener('keyup', onKeyDetection);
 
     // 영화리스트 불러오기
     const ul = document.querySelector('.list')
-    
     function _callApi() {
-        if (result !== '') {
-            fetch("https://api.themoviedb.org/3/search/movie?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr&include_adult=false&query=" + result)
-            .then(response => response.json())
-            .then(data => {
-                let movies = data.results;
+        fetch("https://api.themoviedb.org/3/search/movie?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr&include_adult=false&query=" + result)
+        .then(response => response.json())
+        .then(data => {
+
+            let movies = data.results;
+            if (movies.length !== 0) {
                 return movies.map(movie => {
                     let id = movie.id;
                     let title = movie.title;
@@ -38,9 +42,14 @@
                             <p>${vote_average} ${vote_count} ${popularity}</p>`
                     _.append(ul, li);
                 });
-            })
-            .catch(err => console.log(err))
-        }
+            } else {
+            	let li = _.createNode('li');
+            	li.innerHTML = `<p>검색결과가 없어요</p>`;
+                _.append(ul, li);
+            }
+        })
+        .catch(err => console.log(err))
+       
     }
 
 })(window);

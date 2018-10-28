@@ -9,5 +9,4 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="<c:url value='/resources/dist/js/common.js'/>"></script>
-<script src="<c:url value='/resources/dist/js/search.js'/>"></script>
 <script src="<c:url value='/resources/dist/js/speech.js'/>"></script>

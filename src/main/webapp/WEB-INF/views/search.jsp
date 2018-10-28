@@ -11,11 +11,9 @@
                 <div>
                     <h3>검색결과</h3>
                     <div>
-                        <p>''검색결과</p>
-                        <p>검색결과가 없어요</p>
+                        <p>'${query}' 검색결과</p>
                         <ul class="list">
                         </ul>
-                        <p>''님, 이 작품들은 어떠세요?</p>
                     </div>
                 </div>
             </div>
@@ -23,7 +21,11 @@
     </section>
 </main>
 <%@ include file="include/footer.jsp" %>
+<script>
+	let result = "${query}";
+</script>
 <%@ include file="include/common.jsp" %>
+<script src="<c:url value='/resources/dist/js/search.js'/>"></script>
 </body>
 
 </html>

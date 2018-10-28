@@ -31,9 +31,10 @@ public class HomeController {
 		log.info("category");
 	}
 	
-	@GetMapping(value = "/search")
-	public void search(Model model) {
-		log.info("search");	
+	@GetMapping(value = "/search", params = { "q" })
+	public void search(Model model, String q) {
+		log.info("search q = " + q);
+		model.addAttribute("query", q);
 	}
 	
 	@GetMapping(value = "/rating")

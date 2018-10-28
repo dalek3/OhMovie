@@ -85,6 +85,16 @@
 <%@ include file="include/footer.jsp" %>
 <%@ include file="include/common.jsp" %>
 <script>
+	let input = document.querySelector('.search');
+	
+	function onKeyDetection(e) {
+		setTimeout(() => {
+			let result = input.value;
+	        window.location.href = '/search?q='+result;
+		}, 1500);
+	}
+	input.addEventListener('keyup', onKeyDetection);
+	
     $('#myModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
     })
