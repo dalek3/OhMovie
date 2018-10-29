@@ -9,7 +9,7 @@
 	 </select>
 	 
 	 <select id="itemReview" resultType="ContentDTO">
-	 	SELECT mem.u_idx, mem.u_name, re.r_idx, re.m_idx, re.r_content, re.watchdate, re.liked 
+	 	SELECT mem.u_idx, mem.u_name, re.m_idx, re.r_content, re.watchdate, re.liked 
 	 	FROM member mem
 	 	LEFT OUTER JOIN review re 
 	 	ON mem.u_idx = re.u_idx 
@@ -32,11 +32,11 @@
 	 </select>
 	 
 	 <delete id="deleteReview">
-	 	delete from review where r_idx = #{rIdx}
+	 	delete from review where u_idx = #{rIdx} and m_idx = #{mIdx}
 	 </delete>
 	 
 	 <update id="updateReview">
 	 	update review set r_content = #{rContent}, updatedate = now() 
-	 	where r_idx = #{rIdx}
+	 	where u_idx = #{rIdx} and m_idx = #{mIdx}
 	 </update>
 </mapper>

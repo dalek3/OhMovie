@@ -5,12 +5,8 @@
 <%@ include file="include/header.jsp" %>
         <main class="container">
             <div class="ReviewMorePage-wrapper">
-                <div class="ReviewMorePage-header">
-                    <h2 class="ReviewMorePage-countingHeader">100</h2>
-                    <p>살면서 영화 본 시간, 50일 돌파! 무려 1200시간!</p>
-                    <p>상태바</p>
-                </div>
-                <div class="FilterBar-wrapper">
+                <div class="ReviewMorePage-header"></div>
+                <!-- <div class="FilterBar-wrapper">
                     <div class="FilterBar">
                         <button class="FilterBar-titleButton">
                             <span class="FilterBar-DropDown"></span>
@@ -19,7 +15,7 @@
                             </span>
                         </button>
                     </div>
-                </div>
+                </div> -->
 
                 <figure class="loading-spinner">
                     <img src="https://loading.io/spinners/lava-lamp/index.lava-lamp-preloader.svg">
@@ -34,6 +30,7 @@
         </main>
     </div>
 <%@ include file="include/common.jsp" %>
+<script src="<c:url value='/resources/dist/js/crating.js' />"></script>
 <script src="resources/dist/js/rating.js"></script>
 <script src="resources/dist/js/StarRating.js"></script>
 <script>

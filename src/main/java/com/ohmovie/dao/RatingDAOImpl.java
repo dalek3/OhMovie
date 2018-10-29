@@ -1,6 +1,7 @@
 package com.ohmovie.dao;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import org.apache.ibatis.session.SqlSession;
@@ -37,6 +38,18 @@ public class RatingDAOImpl implements RatingDAO {
 		paramMap.put("mIdx", mIdx);
 		System.out.println(paramMap);
 		return session.selectOne(namespace + ".readRating", paramMap);
+	}
+
+	@Override
+	public List<RatingVO> readRatings(Integer uIdx) {
+
+		return session.selectList(namespace + ".readRatings", uIdx);
+	}
+
+	@Override
+	public int countRatings(Integer uIdx) {
+
+		return session.selectOne(namespace + ".countRatings", uIdx);
 	}
 
 }

@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class ReviewVO {
 	
-	private Integer rIdx;
 	private Integer uIdx;
 	private String mIdx;
 	private String rContent;
@@ -12,14 +11,6 @@ public class ReviewVO {
 	private Integer liked;
 	private Date writedate;
 	private Date updatedate;
-
-	public Integer getrIdx() {
-		return rIdx;
-	}
-
-	public void setrIdx(Integer rIdx) {
-		this.rIdx = rIdx;
-	}
 
 	public Integer getuIdx() {
 		return uIdx;
@@ -79,7 +70,7 @@ public class ReviewVO {
 
 	@Override
 	public String toString() {
-		return "ReviewVO [rIdx=" + rIdx + ", uIdx=" + uIdx + ", mIdx=" + mIdx + ", rContent=" + rContent
+		return "ReviewVO [uIdx=" + uIdx + ", mIdx=" + mIdx + ", rContent=" + rContent
 				+ ", watchdate=" + watchdate + ", liked=" + liked + ", writedate=" + writedate + ", updatedate="
 				+ updatedate + "]";
 	}

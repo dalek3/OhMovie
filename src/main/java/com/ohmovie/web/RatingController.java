@@ -1,5 +1,7 @@
 package com.ohmovie.web;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,16 @@ public class RatingController {
 	
 	@Autowired
 	private RatingDAO ratingDAO;
+	
+	@GetMapping("/{uIdx}/ratings/counts")
+	public int countRatings(@PathVariable Integer uIdx) {
+		return ratingDAO.countRatings(uIdx);
+	}
+	
+	@GetMapping("/{uIdx}/ratings")
+	public List<RatingVO> userRatings(@PathVariable Integer uIdx){
+		return ratingDAO.readRatings(uIdx);
+	}
 	
 	@GetMapping("/{uIdx}/rating/{mIdx}")
 	public RatingVO userRating(@PathVariable Integer uIdx,

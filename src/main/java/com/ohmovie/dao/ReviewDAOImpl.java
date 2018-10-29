@@ -48,9 +48,13 @@ public class ReviewDAOImpl implements ReviewDAO {
 	}
 
 	@Override
-	public void deleteReview(Integer rIdx) {
+	public void deleteReview(Integer uIdx, String mIdx) {
+		Map<String, Object> paramMap = new HashMap<>();
 		
-		session.delete(namespace + ".deleteReview", rIdx);
+		paramMap.put("uIdx", uIdx);
+		paramMap.put("mIdx", mIdx);
+		System.out.println(paramMap);
+		session.delete(namespace + ".deleteReview", paramMap);
 	}
 
 	@Override

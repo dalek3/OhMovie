@@ -31,6 +31,10 @@ class StarRating extends HTMLElement {
         this.value = this.value;
     }
 
+    get id () {
+        return this.getAttribute('id');
+    }
+
     highlight (index) {
         this.stars.forEach((star, i) => {
             star.classList.toggle('full', i <= index);
@@ -60,13 +64,16 @@ class StarRating extends HTMLElement {
             this.value = starIndex + 1;
             let star =  this.value;
             console.log(star);
-            fetch("/api/100/rating/" + movieId)
+            fetch("/api/100/rating/" + this.id)
             .then(response => response.json())
             .then(() => {
-                ratingService.modify({uIdx: 100, mIdx:"" + movieId, rated: this.value})
+                ratingService.modify({ uIdx: 100, mIdx: "" + this.id, rated: this.value})
             })
             .catch(() => {
-                ratingService.add({uIdx: 100, mIdx:"" + movieId, rated: this.value})   
+                ratingService.add({ uIdx: 100, mIdx: "" + this.id, rated: this.value})
+                setTimeout(() => {
+                    ratingService.counts(100);
+                }, 100);
             })
 
             let rateEvent = new Event('rate');

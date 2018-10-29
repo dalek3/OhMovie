@@ -20,4 +20,17 @@
 		WHERE u_idx = #{uIdx}
     	AND m_idx = #{mIdx}
 	 </select>
+	 
+	 <select id="readRatings" resultType="RatingVO">
+	 	SELECT * 
+	 	FROM member_rating
+	 	WHERE u_idx = #{uIdx}
+	 </select>
+	 
+	 <select id="countRatings" resultType="int">
+	 	SELECT COUNT(m_idx)
+	 	FROM member_rating
+	 	WHERE u_idx = #{uIdx}
+	 </select>
+	 
 </mapper>

@@ -15,7 +15,7 @@ public interface ReviewDAO {
 	
 	public ContentDTO readReview(Integer uIdx, String mIdx);
 	
-	public void deleteReview(Integer rIdx);
+	public void deleteReview(Integer uIdx, String mIdx);
 	
 	public void updateReview(ReviewVO vo);
 	

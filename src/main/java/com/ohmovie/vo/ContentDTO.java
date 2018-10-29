@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class ContentDTO {
 	
-	private Integer rIdx;
 	private Integer uIdx;
 	private String mIdx;
 	private String uName;
@@ -12,12 +11,6 @@ public class ContentDTO {
 	private Date watchdate;
 	private Integer liked;
 	
-	public Integer getrIdx() {
-		return rIdx;
-	}
-	public void setrIdx(Integer rIdx) {
-		this.rIdx = rIdx;
-	}
 	public Integer getuIdx() {
 		return uIdx;
 	}
@@ -57,7 +50,7 @@ public class ContentDTO {
 	
 	@Override
 	public String toString() {
-		return "ContentDTO [rIdx=" + rIdx + ", uIdx=" + uIdx + ", mIdx=" + mIdx + ", uName=" + uName + ", rContent="
+		return "ContentDTO [uIdx=" + uIdx + ", mIdx=" + mIdx + ", uName=" + uName + ", rContent="
 				+ rContent + ", watchdate=" + watchdate + ", liked=" + liked + "]";
 	}
 	

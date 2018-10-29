@@ -6,57 +6,54 @@
         <main class="container">
             <section class="content">
                 <div class="row">
-                    <div class="col-md-2">
-                        <p>필터</p>
-                        <p>연도</p>
-                        <ul>
-                            <li>전체</li>
-                            <li>Upcoming</li>
-                            <li>상영중</li>
-                            <li>2010년대</li>
-                            <li>2000년대</li>
-                            <li>1990년대</li>
-                            <li>1980년대</li>
-                            <li>1970년대</li>
-                            <li>1960년대</li>
-                            <li>1950년대</li>
-                            <li>1940년대</li>
-                            <li>1930년대</li>
-                            <li>1920년대</li>
-                            <li>1910년대</li>
-                            <li>1900년대</li>
-                            <li>1890년대</li>
-                            <li>1890년대</li>
-                            <li>1880년대</li>
-                            <li>1870년대</li>
-                        </ul>
-                        <p>장르</p>
-                        <ul>
-                            <li>전체</li>
-                            <li>SF</li>
-                            <li>TV영화</li>
-                            <li>가족</li>
-                            <li>공포</li>
-                            <li>다큐멘터리</li>
-                            <li>드라마</li>
-                            <li>로멘스</li>
-                            <li>모험</li>
-                            <li>미스터리</li>
-                            <li>서부</li>
-                            <li>스릴러</li>
-                            <li>애니메이션</li>
-                            <li>액션</li>
-                            <li>역사</li>
-                            <li>음악</li>
-                            <li>전쟁</li>
-                            <li>코미디</li>
-                            <li>판타지</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-10">
+                    <div class="col-md-14">
                         <div class="box">
                             <div class="box-header with-border">
                                 <h3 class="box-title">카테고리</h3>
+                                    연도
+                                    <select name="year" id="">
+                                        <option value="">전체</option>
+                                        <option value="">Upcoming</option>
+                                        <option value="">상영중</option>
+                                        <option value="">2010년대</option>
+                                        <option value="">2000년대</option>
+                                        <option value="">1990년대</option>
+                                        <option value="">1980년대</option>
+                                        <option value="">1970년대</option>
+                                        <option value="">1960년대</option>
+                                        <option value="">1950년대</option>
+                                        <option value="">1940년대</option>
+                                        <option value="">1930년대</option>
+                                        <option value="">1920년대</option>
+                                        <option value="">1910년대</option>
+                                        <option value="">1900년대</option>
+                                        <option value="">1890년대</option>
+                                        <option value="">1890년대</option>
+                                        <option value="">1880년대</option>
+                                        <option value="">1870년대</option>
+                                    </select>
+                                    장르
+                                    <select name="genre" id="">
+                                        <option value="">전체</option>
+                                        <option value="">SF</option>
+                                        <option value="">TV영화</option>
+                                        <option value="">가족</option>
+                                        <option value="">공포</option>
+                                        <option value="">다큐멘터리</option>
+                                        <option value="">드라마</option>
+                                        <option value="">로멘스</option>
+                                        <option value="">모험</option>
+                                        <option value="">미스터리</option>
+                                        <option value="">서부</option>
+                                        <option value="">스릴러</option>
+                                        <option value="">애니메이션</option>
+                                        <option value="">액션</option>
+                                        <option value="">역사</option>
+                                        <option value="">음악</option>
+                                        <option value="">전쟁</option>
+                                        <option value="">코미디</option>
+                                        <option value="">판타지</option>
+                                    </select>
                                 <div class="row">
                                     <p class="col-md-3 ">총 개의 작품이 검색되었어요</p>
                                     <div class="col-md-offset-8 col-md-1 dropdown">
@@ -78,7 +75,6 @@
                                 </div>
                             </div>
                         </div>
-        
                         <ul class="list">
                         </ul>
                     </div>

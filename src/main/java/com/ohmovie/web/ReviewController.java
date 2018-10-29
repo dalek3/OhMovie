@@ -49,17 +49,21 @@ public class ReviewController {
 		reviewDAO.insertReview(vo);
 	}
 	
-	@DeleteMapping(value = "/review/{rIdx}")
-	public void remove(@PathVariable("rIdx") Integer rIdx) {
-		log.info("remove: " + rIdx);
+	@DeleteMapping(value = "{uIdx}/review/{rIdx}")
+	public void remove(@PathVariable("uIdx") Integer uIdx,
+			@PathVariable("mIdx") String mIdx) {
+		log.info("remove: " + uIdx + ", " + mIdx);
 		
-		reviewDAO.deleteReview(rIdx);
+		reviewDAO.deleteReview(uIdx, mIdx);
 	}
 	
 	@RequestMapping(method = {RequestMethod.PUT, RequestMethod.PATCH},
-			value = "/review/{rIdx}")
-	public void modify(@RequestBody ReviewVO vo, @PathVariable("rIdx") Integer rIdx) {
-		vo.setrIdx(rIdx);
+			value = "{uIdx}/review/{mIdx}")
+	public void modify(@RequestBody ReviewVO vo,
+			@PathVariable("uIdx") Integer uIdx,
+			@PathVariable("mIdx") String mIdx) {
+		vo.setuIdx(uIdx);
+		vo.setmIdx(mIdx);
 		
 		log.info("modify: " + vo);
 		reviewDAO.updateReview(vo);

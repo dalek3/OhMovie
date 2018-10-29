@@ -30,9 +30,23 @@ let ratingService = (() => {
         .catch(err => console.log(err))
     }
 
+    let counts = uIdx => {
+        const ReviewMorePageHeader = _.el('.ReviewMorePage-header');
+        // fetch(`/api/${uIdx}/ratings/counts`)
+        fetch(`/api/100/ratings/counts`)
+        .then(response => response.json())
+        .then(count => {
+            console.log(count);
+            
+            ReviewMorePageHeader.innerHTML =
+            `<h2 class="ReviewMorePage-countingHeader">${count}</h2>`
+        });
+    }
+
     return {
         add,
         modify,
-        get
+        get,
+        counts
     }; 
 })();
