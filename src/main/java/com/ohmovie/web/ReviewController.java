@@ -33,7 +33,8 @@ public class ReviewController {
 	}
 
 	@GetMapping("/{uIdx}/review/{mIdx}")
-	public ContentDTO userReview(@PathVariable Integer uIdx, @PathVariable String mIdx) {
+	public ContentDTO userReview(@PathVariable Integer uIdx,
+			@PathVariable Integer mIdx) {
 		return reviewDAO.readReview(uIdx, mIdx);
 	}
 	
@@ -49,10 +50,10 @@ public class ReviewController {
 		reviewDAO.insertReview(vo);
 	}
 	
-	@DeleteMapping(value = "{uIdx}/review/{rIdx}")
+	@DeleteMapping(value = "{uIdx}/review/{mIdx}")
 	public void remove(@PathVariable("uIdx") Integer uIdx,
-			@PathVariable("mIdx") String mIdx) {
-		log.info("remove: " + uIdx + ", " + mIdx);
+			@PathVariable("mIdx") Integer mIdx) {
+		log.info("remove: " + uIdx);
 		
 		reviewDAO.deleteReview(uIdx, mIdx);
 	}
@@ -61,7 +62,7 @@ public class ReviewController {
 			value = "{uIdx}/review/{mIdx}")
 	public void modify(@RequestBody ReviewVO vo,
 			@PathVariable("uIdx") Integer uIdx,
-			@PathVariable("mIdx") String mIdx) {
+			@PathVariable("mIdx") Integer mIdx) {
 		vo.setuIdx(uIdx);
 		vo.setmIdx(mIdx);
 		

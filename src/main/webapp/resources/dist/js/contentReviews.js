@@ -1,23 +1,22 @@
 const contentReviews = _.el('.ContentReviews');
 const review_content = _.el('.reviews');
 
-fetch("/api/" + movieId + "/contentReviews")
+fetch("/api/" + mIdx + "/contentReviews")
 .then(response => response.json())
 .then(data => {
     let header = 
         `<div class="section-panel-header">
             <h3>유저 리뷰</h3>
-            ${data.length !== 0 ? `<a href="${movieId}/reviews/">모두 보기 &gt;</a>` : ``}
+            ${data.length !== 0 ? `<a href="${mIdx}/reviews/">모두 보기 &gt;</a>` : ``}
         </div>`
     _.prependChild(contentReviews, header);
     if (data.length !== 0) {
         return data.map(item => {
-            let rIdx = item.rIdx;
             let uIdx = item.uIdx;
             let uName = item.uName;
             let content = item.rContent;
             review_content.innerHTML +=
-            `<li class="reviews-detail" data-rno=${rIdx}>
+            `<li class="reviews-detail">
                 <div class="reviews-detail-content">
                     <span class="rating rated-9">★★★★½</span>
                     <div class="body-text collapsible-text">
@@ -36,7 +35,7 @@ fetch("/api/" + movieId + "/contentReviews")
                             alt="${uName} 프로필">
                         <figcaption>
                             <p class="attribution">
-                                <a href="/profile/${uIdx}/review/${movieId}">${uName}</a>
+                                <a href="/profile/${uIdx}/review/${mIdx}">${uName}</a>
                             </p>
                         </figcaption>
                     </figure>

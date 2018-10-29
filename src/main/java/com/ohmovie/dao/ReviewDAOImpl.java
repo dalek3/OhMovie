@@ -31,7 +31,7 @@ public class ReviewDAOImpl implements ReviewDAO {
 	}
 
 	@Override
-	public ContentDTO readReview(Integer uIdx, String mIdx) {
+	public ContentDTO readReview(Integer uIdx, Integer mIdx) {
 		
 		Map<String, Object> paramMap = new HashMap<>();
 		
@@ -43,12 +43,12 @@ public class ReviewDAOImpl implements ReviewDAO {
 	
 	@Override
 	public List<ContentDTO> itemReview(String mIdx) {
-		System.out.println(mIdx);
+		
 		return session.selectList(namespace + ".itemReview", mIdx);
 	}
 
 	@Override
-	public void deleteReview(Integer uIdx, String mIdx) {
+	public void deleteReview(Integer uIdx, Integer mIdx) {
 		Map<String, Object> paramMap = new HashMap<>();
 		
 		paramMap.put("uIdx", uIdx);

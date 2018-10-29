@@ -10,7 +10,7 @@ public interface RatingDAO {
 	
 	public void updateRating(RatingVO vo);
 	
-	public RatingVO readRating(Integer uIdx, String mIdx);
+	public RatingVO readRating(Integer uIdx, Integer mIdx);
 	
 	public List<RatingVO> readRatings(Integer uIdx);
 

@@ -17,9 +17,9 @@ public class MovieDAOImpl implements MovieDAO {
 	private static final String namespace = "com.ohmovie.mapper.MovieMapper";
 	
 	@Override
-	public List<MovieVO> readMovie(String mId) {
+	public List<MovieVO> readMovie(Integer mIdx) {
 		
-		return session.selectList(namespace + ".readMovie", mId);
+		return session.selectList(namespace + ".readMovie", mIdx);
 	}
 
 }

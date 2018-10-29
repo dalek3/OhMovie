@@ -9,15 +9,15 @@ import org.springframework.web.bind.annotation.PathVariable;
 public class ContentsController {
 
 	
-	@GetMapping(value="/item/{movieId}")
-	public String item(Model model, @PathVariable Integer movieId) throws Exception {	
-		model.addAttribute("movieId", movieId);
+	@GetMapping(value="/item/{mIdx}")
+	public String item(Model model, @PathVariable Integer mIdx) throws Exception {	
+		model.addAttribute("mIdx", mIdx);
 		return "contents/item";
 	}
 
-	@GetMapping(value="/item/{movieId}/reviews")
-	public String reviews(Model model, @PathVariable Integer movieId) throws Exception {
-		model.addAttribute("movieId", movieId);
+	@GetMapping(value="/item/{mIdx}/reviews")
+	public String reviews(Model model, @PathVariable Integer mIdx) throws Exception {
+		model.addAttribute("mIdx", mIdx);
 		return "contents/reviews";
 	}
 	

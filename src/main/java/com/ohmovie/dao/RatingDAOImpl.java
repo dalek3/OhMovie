@@ -31,12 +31,12 @@ public class RatingDAOImpl implements RatingDAO {
 	}
 
 	@Override
-	public RatingVO readRating(Integer uIdx, String mIdx) {
+	public RatingVO readRating(Integer uIdx, Integer mIdx) {
 		Map<String, Object> paramMap = new HashMap<>();
 		
 		paramMap.put("uIdx", uIdx);
 		paramMap.put("mIdx", mIdx);
-		System.out.println(paramMap);
+
 		return session.selectOne(namespace + ".readRating", paramMap);
 	}
 

@@ -4,9 +4,9 @@
     
     let blank_poster = 'https://ssl.pstatic.net/static/movie/2012/06/dft_img203x290.png';
     
-    ratingService.counts(100);
+    ratingService.counts(uIdx);
 
-    fetch(`/api/100/ratings`)
+    fetch(`/api/${uIdx}/ratings`)
     .then(response => response.json())
     .then(result => {
         for (let page = 1; page < 10; page++) {
@@ -23,7 +23,7 @@
                         for (const i in result) {
                             if (result.hasOwnProperty(i)) {
                                 let movieId = result[i].mIdx
-                                if (id == movieId) {
+                                if (id === movieId) {
                                     items.pop()
                                     break;
                                 }

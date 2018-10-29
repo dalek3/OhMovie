@@ -30,20 +30,22 @@
         </main>
     </div>
 <%@ include file="include/common.jsp" %>
-<script src="<c:url value='/resources/dist/js/crating.js' />"></script>
+<script>
+    let uIdx = <sec:authentication property='principal.member.uIdx' />
+    let input = document.querySelector('.search');
+    
+    function onKeyDetection(e) {
+        setTimeout(() => {
+            let result = input.value;
+            window.location.href = '/search?q='+result;
+        }, 1500);
+    }
+    input.addEventListener('keyup', onKeyDetection);
+</script>
+<script src="<c:url value='/resources/dist/js/ratingService.js' />"></script>
 <script src="resources/dist/js/rating.js"></script>
 <script src="resources/dist/js/StarRating.js"></script>
-<script>
-	let input = document.querySelector('.search');
-	
-	function onKeyDetection(e) {
-		setTimeout(() => {
-			let result = input.value;
-	        window.location.href = '/search?q='+result;
-		}, 1500);
-	}
-	input.addEventListener('keyup', onKeyDetection);
-</script>
+
 </body>
 
 </html>

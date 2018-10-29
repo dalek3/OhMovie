@@ -27,7 +27,7 @@
         return response;
     }
 
-    fetch("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
+    fetch("https://api.themoviedb.org/3/movie/" + mIdx + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
     .then(validateResponse)
     .then(response => response.json())
     .then(data => {
@@ -66,41 +66,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="ContentJumbotron-user-panel ">
-                <ul>
-                    <li class="user-panel">
-                        <a href="#">
-                            <p>
-                                <i class="fa fa-eye"></i>
-                                <span class="fw700">봤어요</span>
-                            </p>
-                        </a>
-                        <a href="#">
-                            <p>
-                                <i class="fa fa-heart-o"></i>
-                                <span class="fw700">좋아요</span>
-                            </p>
-                        </a>
-                        <a href="#">
-                            <p>
-                                <i class="fa fa-bookmark-o"></i>
-                                <span class="fw700">보고싶어요</span>
-                            </p>
-                        </a>
-                    </li>
-                    <li class="rating">
-                        <span class="fw700">평가</span>
-                        <x-star-rating value="0" number="5"></x-star-rating>
-                    </li>
-                    <li>
-                        <!-- Trigger the modal with a button -->
-                        <span class="fw700" data-toggle="modal" data-target="#myModal">리뷰 &amp; 다이어리</span>
-                    </li>
-                    <li>
-                        <a href="#"><span class="fw700">공유</span></a>
-                    </li>
-                </ul>
             </div>`
 
         ContentOverview.innerHTML =
@@ -146,7 +111,7 @@
     })
     .catch(err => console.log(err))
 
-    fetch("https://api.themoviedb.org/3/movie/" + movieId + "/credits?api_key=bfdc49ba22b11be34746dd5c861c3d27")
+    fetch("https://api.themoviedb.org/3/movie/" + mIdx + "/credits?api_key=bfdc49ba22b11be34746dd5c861c3d27")
     .then(response => response.json())
     .then(data => {
         let listItem = ''
@@ -181,7 +146,7 @@
     })
     .catch(err => console.log(err))
 
-    fetch("/api/similar/" + movieId)
+    fetch("/api/similar/" + mIdx)
     .then(response => response.json())
     .then(movies => {
         if (movies.length !== 0) {
@@ -213,7 +178,7 @@
                 .catch(err => console.log(err))
             })
         } else {
-            fetch("https://api.themoviedb.org/3/movie/" + movieId + "/similar?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr&page=1")
+            fetch("https://api.themoviedb.org/3/movie/" + mIdx + "/similar?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr&page=1")
             .then(response => response.json())
             .then(data => {
                 movies = data.results;

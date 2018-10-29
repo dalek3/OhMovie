@@ -11,7 +11,7 @@ let ratingService = (() => {
 
     let modify = rating => {
         console.log("rating modify");
-        fetch("/api/rating/" + rating.uIdx + "/" + rating.mIdx, {
+        fetch(`/api/rating/${rating.uIdx}/${rating.mIdx}`, {
             method: 'PUT',
             body: JSON.stringify(rating),
             headers: { 'Content-type': 'application/json' }
@@ -21,7 +21,7 @@ let ratingService = (() => {
 
     let get = (uIdx, mIdx) => {
         console.log('rating get');
-        fetch("/api/" + uIdx + "/rating/" + mIdx)
+        fetch(`/api/${uIdx}/rating/${mIdx}`)
         .then(response => response.json())
         .then(data => {
             console.log(data.rated);
@@ -32,15 +32,16 @@ let ratingService = (() => {
 
     let counts = uIdx => {
         const ReviewMorePageHeader = _.el('.ReviewMorePage-header');
-        // fetch(`/api/${uIdx}/ratings/counts`)
-        fetch(`/api/100/ratings/counts`)
-        .then(response => response.json())
-        .then(count => {
-            console.log(count);
-            
-            ReviewMorePageHeader.innerHTML =
-            `<h2 class="ReviewMorePage-countingHeader">${count}</h2>`
-        });
+        if (ReviewMorePageHeader){
+            fetch(`/api/${uIdx}/ratings/counts`)
+            //fetch(`/api/100/ratings/counts`)
+            .then(response => response.json())
+            .then(count => {
+                console.log(count);
+                ReviewMorePageHeader.innerHTML =
+                `<h2 class="ReviewMorePage-countingHeader">${count}</h2>`
+            });
+        }
     }
 
     return {

@@ -37,17 +37,17 @@ public class RatingController {
 	
 	@GetMapping("/{uIdx}/rating/{mIdx}")
 	public RatingVO userRating(@PathVariable Integer uIdx,
-			@PathVariable String mIdx) {
+			@PathVariable Integer mIdx) {
 		return ratingDAO.readRating(uIdx, mIdx);
 	}
 	
 	@PostMapping(value = "/rating/{uIdx}/{mIdx}/new")
 	public void create(@RequestBody RatingVO vo,
 			@PathVariable("uIdx") Integer uIdx,
-			@PathVariable("uIdx") String mIdx) {
+			@PathVariable("mIdx") Integer mIdx) {
 		
 		// {"uIdx":100,"mIdx":"332562", "rated" : "test"}
-		log.info("ReviewVO: " + vo);
+		log.info("ADD RatingVO: " + vo);
 		ratingDAO.insertRating(vo);
 	}
 	
@@ -55,11 +55,11 @@ public class RatingController {
 			value = "/rating/{uIdx}/{mIdx}")
 	public void modify(@RequestBody RatingVO vo,
 			@PathVariable("uIdx") Integer uIdx,
-			@PathVariable("mIdx") String mIdx) {
+			@PathVariable("mIdx") Integer mIdx) {
 		vo.setuIdx(uIdx);
 		vo.setmIdx(mIdx);
 		
-		log.info("modify: " + vo);
+		log.info("modify RatingVO: " + vo);
 		ratingDAO.updateRating(vo);
 	}
 

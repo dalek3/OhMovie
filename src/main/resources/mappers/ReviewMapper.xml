@@ -32,11 +32,11 @@
 	 </select>
 	 
 	 <delete id="deleteReview">
-	 	delete from review where u_idx = #{rIdx} and m_idx = #{mIdx}
+	 	DELETE FROM review WHERE `u_idx`= #{uIdx} and m_idx = #{mIdx}
 	 </delete>
 	 
 	 <update id="updateReview">
 	 	update review set r_content = #{rContent}, updatedate = now() 
-	 	where u_idx = #{rIdx} and m_idx = #{mIdx}
+	 	where u_idx = #{uIdx} and m_idx = #{mIdx}
 	 </update>
 </mapper>

@@ -5,7 +5,7 @@ import java.util.Date;
 public class ReviewVO {
 	
 	private Integer uIdx;
-	private String mIdx;
+	private Integer mIdx;
 	private String rContent;
 	private Date watchdate;
 	private Integer liked;
@@ -20,11 +20,11 @@ public class ReviewVO {
 		this.uIdx = uIdx;
 	}
 
-	public String getmIdx() {
+	public Integer getmIdx() {
 		return mIdx;
 	}
 
-	public void setmIdx(String mIdx) {
+	public void setmIdx(Integer mIdx) {
 		this.mIdx = mIdx;
 	}
 
@@ -74,5 +74,5 @@ public class ReviewVO {
 				+ ", watchdate=" + watchdate + ", liked=" + liked + ", writedate=" + writedate + ", updatedate="
 				+ updatedate + "]";
 	}
-	
+
 }

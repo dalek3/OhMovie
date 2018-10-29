@@ -19,7 +19,7 @@ public class ApiController {
 	private MovieDAO movieDAO;
 
 	@GetMapping("/similar/{mIdx}")
-	public List<MovieVO> Movie(@PathVariable String mIdx) {
+	public List<MovieVO> Movie(@PathVariable Integer mIdx) {
 		return movieDAO.readMovie(mIdx);
 	}
 

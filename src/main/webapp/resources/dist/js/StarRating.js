@@ -64,15 +64,22 @@ class StarRating extends HTMLElement {
             this.value = starIndex + 1;
             let star =  this.value;
             console.log(star);
-            fetch("/api/100/rating/" + this.id)
+            fetch(`/api/${uIdx}/rating/${this.id}`)
             .then(response => response.json())
             .then(() => {
-                ratingService.modify({ uIdx: 100, mIdx: "" + this.id, rated: this.value})
+                ratingService.modify({ 
+                    uIdx: uIdx,
+                    mIdx: this.id,
+                    rated: this.value
+                })
             })
             .catch(() => {
-                ratingService.add({ uIdx: 100, mIdx: "" + this.id, rated: this.value})
+                ratingService.add({
+                    uIdx: uIdx,
+                    mIdx: this.id,
+                    rated: this.value})
                 setTimeout(() => {
-                    ratingService.counts(100);
+                    ratingService.counts(uIdx);
                 }, 100);
             })
 

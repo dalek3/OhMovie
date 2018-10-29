@@ -5,7 +5,7 @@ import java.util.Date;
 public class RatingVO {
 	
 	private Integer uIdx;
-	private String mIdx;
+	private Integer mIdx;
 	private Integer rated;
 	private Date regdate;
 	
@@ -15,10 +15,10 @@ public class RatingVO {
 	public void setuIdx(Integer uIdx) {
 		this.uIdx = uIdx;
 	}
-	public String getmIdx() {
+	public Integer getmIdx() {
 		return mIdx;
 	}
-	public void setmIdx(String mIdx) {
+	public void setmIdx(Integer mIdx) {
 		this.mIdx = mIdx;
 	}
 	public Integer getRated() {

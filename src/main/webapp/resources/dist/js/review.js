@@ -5,35 +5,31 @@ let reviewService = (() => {
             method: 'POST',
             body: JSON.stringify(review),
             headers: { 'Content-type': 'application/json' }
-        })
+        }).then(response => response.json())
         .catch(err => console.log(err))
     }
 
     let get = (uIdx, mIdx) => {
         console.log('review get');
-        fetch("/api/" + uIdx + "/review/" + mIdx)
+        fetch(`/api/${uIdx}/review/${mIdx}`)
         .then(response => response.json())
         .then(data => {
             modalInputContent.val(data.rContent);
         })
-        .catch(err => console.log(err))
     }
 
-    let remove = rIdx => {
-        console.log("review remove");
-        fetch("/api/review/" + rIdx, {
-            method: 'DELETE',
+    let remove = (uIdx, mIdx) => {
+        $.ajax({
+            type: 'delete',
+            url: `/api/${uIdx}/review/${mIdx}`
         })
-        .catch(err => console.log(err))
     }
 
     let modify = review => {
         console.log("review modify");
-        fetch("/api/review/" + review.rIdx, {
+        fetch(`/api/${review.uIdx}/review/${review.mIdx}`, {
             method: 'PUT',
-            body: JSON.stringify(review),
-            headers: { 'Content-type': 'application/json' }
-        })
+        }).then(response => response.json())
         .catch(err => console.log(err))
     }
 

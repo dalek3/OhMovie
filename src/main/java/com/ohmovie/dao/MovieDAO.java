@@ -6,6 +6,6 @@ import com.ohmovie.vo.MovieVO;
 
 public interface MovieDAO {
 
-	public List<MovieVO> readMovie(String mId);
+	public List<MovieVO> readMovie(Integer mIdx);
 	
 }
