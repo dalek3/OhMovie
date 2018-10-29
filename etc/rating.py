@@ -19,7 +19,6 @@ def load_data(filename, path="./"):
 # ,으로 나눈 데이터 / pred
 def load_data_pred(filename, path="./"):
     data = []
-    y = []
     with open(path + filename) as f:
         for line in f:
             (user, movieid) = line.split(',')

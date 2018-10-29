@@ -1,5 +1,5 @@
 import csv
-from _datetime import datetime
+from datetime import datetime
 
 ratings = []
 
