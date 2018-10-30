@@ -22,7 +22,6 @@ fetch("/api/"+ uIdx +"/reviews" )
                     <h3>${title}</h3>
                     <span class="rating rated-9">★★★★½</span>
                     <div class="body-text collapsible-text">
-                        <div class="date">2018/10/07</div>
                         <div class="collapsed-text">
                             <p>
                                 ${item.rContent}

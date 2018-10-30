@@ -8,6 +8,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="_csrf" content="${_csrf.token}"/>
+	<!-- default header name is X-CSRF-TOKEN -->
+	<meta name="_csrf_header" content="${_csrf.headerName}"/>
     <title>Oh!Movie</title>
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="<c:url value='/resources/vendor/bootstrap/css/bootstrap.min.css'/>">
@@ -16,10 +19,7 @@
     <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="<c:url value='/resources/vendor/font-awesome/css/font-awesome.min.css'/>">
 
-
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="<c:url value='/resources/dist/css/owl/owl.carousel.css'/>">
-    <link rel="stylesheet" href="<c:url value='/resources/dist/css/owl/owl.theme.default.css'/>">
     <link rel="stylesheet" href="<c:url value='/resources/dist/css/style.css'/>" >
 
 </head>
@@ -38,39 +38,34 @@
                         </button>
                         <a class="navbar-brand" href="/">Oh!Movie</a>
                     </div>
-        
                     <div class="collapse navbar-collapse" id="navbar-collapse-1">
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="/category">카테고리</a></li>
                             <li><a href="/rating">평가하기</a></li>
-                            
-                               <sec:authorize access="isAnonymous()">
-                                <li>
-                                    <a href="/auth/login">로그인/회원가입</a>
-                                </li>
+                            <sec:authorize access="isAnonymous()">
+                            <li>
+                                <a href="/auth/login">로그인/회원가입</a>
+                            </li>
                             </sec:authorize>
                             <sec:authorize access="isAuthenticated()">
-                                <li class="navbar-text"><sec:authentication property="principal.member.uName"/></li>
-                                <li class="dropdown">
-                                    <a class="dropdown-toggle" data-toggle="dropdown">
-                                        <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                                    </a>
-                                    <ul class="dropdown-menu dropdown-user">
-                                        <li><a href="/profile/<sec:authentication property='principal.member.uIdx' />"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
-                                        <li><a href="/setting"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
-                                        <li class="divider"></li>
-                                        <li class="logout">
-                                                <!-- <a href="/customLogout"><i class="fa fa-sign-out fa-fw"></i> 로그아웃</a> -->
-                                            <form action="/logout" method="post">
-                                                <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
-                                                <button><i class="fa fa-sign-out fa-fw"></i>로그아웃</button>
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </li>
+                            <li class="navbar-text"><sec:authentication property='principal.member.uId' /></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown">
+                                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-user">
+                                    <li><a href="/profile/<sec:authentication property='principal.member.uIdx' />"><i class="fa fa-user fa-fw"></i> 마이페이지</a></li>
+                                    <li><a href="/setting"><i class="fa fa-gear fa-fw"></i> 설정</a></li>
+                                    <li class="divider"></li>
+                                    <li class="logout">
+                                        <form action="/logout" method="post">
+                                            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}">
+                                            <button><i class="fa fa-sign-out fa-fw"></i>로그아웃</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
                             </sec:authorize>
-
-                            
                         </ul>
                         <ul class="nav navbar-nav">
                             <li class="navbar-form">

@@ -52,9 +52,6 @@ fetch("/api/" + mIdx + "/contentReviews")
                     <li>좋아요수</li>
                     <li>신고하기</li>
                 </ul>
-            </div>
-            <div id="review-footer">
-                <h3>보기</h3>
             </div>`
         _.append(review_content, template);
     });

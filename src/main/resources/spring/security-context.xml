@@ -26,7 +26,7 @@
 		<security:access-denied-handler ref="customAccessDenied"/>
 		
 		<security:logout logout-url="/logout" invalidate-session="true" logout-success-url="/"/>
-		<security:csrf disabled="true" />
+		<!-- <security:csrf disabled="true" /> -->
 	</security:http>
 	
 	<security:authentication-manager>

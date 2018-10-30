@@ -8,13 +8,6 @@
         <div class="profile">
             <div class="profile-header-wrap">
                 <section class="profile-header">
-
-                    <div class="profile-counts">
-                        <div class="profile-count"><a href="#"><span>0</span>영화</a></div>
-                        <div class="profile-count"><a href="#"><span>0</span>팔로우</a></div>
-                        <div class="profile-count"><a href="#"><span>0</span>팔로잉</a></div>
-                    </div>
-
                     <figure>
                         <div class="avatar">
                             <img src="https://secure.gravatar.com/avatar/e6d54aacfb88e045648ceb2fef4e6ffc?rating=PG&size=220&border=&default=https%3A%2F%2Fletterboxd.com%2Fstatic%2Fimg%2Favatar220.c0a51ba6.png"
@@ -22,16 +15,8 @@
                         </div>
                         <figcaption>
                             <h2>${member.uName}</h2>
-                            <p>
-                                레벨(평론가/유저)
-                            </p>
                         </figcaption>
                     </figure>
-
-                    <ul>
-                        <li><a href="#">the-favourite.tumblr.com</a></li>
-                        <li><a href="#">josegoeswest</a></li>
-                    </ul>
                 </section>
             </div>
 
@@ -64,13 +49,13 @@
 </script>
 <script src="<c:url value='/resources/dist/js/userReviews.js'/>"></script>
 <script>
-	let input = document.querySelector('.search');
+	let input = _.el('.search');
 	
 	function onKeyDetection(e) {
 		setTimeout(() => {
 			let result = input.value;
 	        window.location.href = '/search?q='+result;
-		}, 1500);
+		}, 1100);
 	}
 	input.addEventListener('keyup', onKeyDetection);
 </script>

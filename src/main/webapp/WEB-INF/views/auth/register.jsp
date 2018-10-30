@@ -18,7 +18,7 @@
             <a class="title-bar" href="/">OhMovie</a>
             <section class="contents">
                 <h2>회원가입</h2>
-                <form method="POST" autocomplete="off" onsubmit="return validate()"">
+                <form method="POST" autocomplete="off" onsubmit="return validate()">
                     <p class="input">
                         <input id="name" type="text" name="uName" placeholder="이름(닉네임)">
                     </p>

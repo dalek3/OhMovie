@@ -1,12 +1,12 @@
 let reviewService = (() => {
     let add = review => {
         console.log("review add");
-        fetch("/api/review/new", {
-            method: 'POST',
-            body: JSON.stringify(review),
-            headers: { 'Content-type': 'application/json' }
-        }).then(response => response.json())
-        .catch(err => console.log(err))
+        $.ajax({
+            type: 'post',
+            url: `/api/review/new`,
+            data: JSON.stringify(review),
+            contentType: "application/json; charset=utf-8"
+        })
     }
 
     let get = (uIdx, mIdx) => {
@@ -19,6 +19,7 @@ let reviewService = (() => {
     }
 
     let remove = (uIdx, mIdx) => {
+        console.log("review delete");
         $.ajax({
             type: 'delete',
             url: `/api/${uIdx}/review/${mIdx}`
@@ -27,13 +28,14 @@ let reviewService = (() => {
 
     let modify = review => {
         console.log("review modify");
-        fetch(`/api/${review.uIdx}/review/${review.mIdx}`, {
-            method: 'PUT',
-            body: JSON.stringify(review),
-            headers: { 'Content-type': 'application/json' }
-        }).then(response => response.json())
-        .catch(err => console.log(err))
+        $.ajax({
+            type: 'put',
+            url: `/api/${review.uIdx}/review/${review.mIdx}`,
+            data: JSON.stringify(review),
+            contentType: "application/json; charset=utf-8"
+        })
     }
+
 
     return {
         add,

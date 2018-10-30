@@ -25,13 +25,8 @@
                                 </li>
                                 <li>
                                     <div class="name">비밀번호</div>
-                                    <!-- Trigger the modal with a button -->
-                                    <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#myModal">비밀번호 변경</button>
+                                    <button type="button" class="btn btn-custom" data-toggle="modal" data-target="#pwModal">비밀번호 변경</button>
                                 </li>
-                                <li>
-                                    <div class="name">홈페이지</div>
-                                    <!-- <input type="url" name="u_homepage" value="http://www.youtube.com">  -->
-                                </li> 
                             </ul>
                         </section>
                         <section class="setting-content">
@@ -61,7 +56,7 @@
             </div>
         </div>
         <!-- Modal -->
-        <div id="myModal" class="modal fade" role="dialog">
+        <div id="pwModal" class="modal fade" role="dialog">
             <div class="modal-dialog">
                 <!-- Modal content-->
                 <div class="modal-content">
@@ -70,9 +65,10 @@
                         <h4 class="modal-title">비밀번호 수정</h4>
                     </div>
                     <div class="modal-body">
-                        <form action="/profile/<sec:authentication property='principal.member.uIdx'/>/changepw" method="POST">
+                        <form action="/profile/<sec:authentication property='principal.member.uIdx'/>/changepw" method="POST" onsubmit="return validate()">
                             <p>
-                                <input type="password" name="uPw" id="myInput">
+                                <label for="myInput2">새 비밀번호</label>
+                                <input type="password" name="uPw" id="pw" placeholder="비밀번호(8자이상)">
                             </p>
                             <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
                             <button type="submit" class="btn btn-custom">저장</button>
@@ -85,19 +81,43 @@
 <%@ include file="include/footer.jsp" %>
 <%@ include file="include/common.jsp" %>
 <script>
-	let input = document.querySelector('.search');
+	let input = _.el('.search');
 	
 	function onKeyDetection(e) {
 		setTimeout(() => {
 			let result = input.value;
 	        window.location.href = '/search?q='+result;
-		}, 1500);
+		}, 1100);
 	}
 	input.addEventListener('keyup', onKeyDetection);
 	
-    $('#myModal').on('shown.bs.modal', function () {
+    $('#pwModal').on('shown.bs.modal', function () {
         $('#myInput').focus()
     })
+    
+    let markingErrorMessage = (targetElement, message) => {
+        let $targetElement = $(targetElement);
+        $targetElement.siblings('.error-message').remove();
+        $targetElement.after('<span class="error-message" style="color: red;">' + message + '</span>')
+    };
+
+    function validate() {
+        let member = {
+            pw: _.el('#pw').value
+        };
+
+        if(!member.pw){
+            markingErrorMessage('#pw', '비밀번호를 작성해주세요');
+            return false;
+        } else {
+            $('#pw').siblings('.error-message').remove();
+            let regpw = /^[`~!@@#$%^&*|₩₩₩'₩";:₩/?0-9a-z]{8,}$/gi;
+            if(!regpw.test(member.pw)) {
+                markingErrorMessage('#pw', '비밀번호의 길이는 8 이상');
+                return false;
+            }
+        }
+    };
 </script>
 </body>
 

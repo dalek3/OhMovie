@@ -1,22 +1,22 @@
 let ratingService = (() => {
     let add = rating => {
         console.log("rating add");
-        fetch(`/api/rating/${rating.uIdx}/${rating.mIdx}/new`, {
-            method: 'POST',
-            body: JSON.stringify(rating),
-            headers: { 'Content-type': 'application/json' }
+        $.ajax({
+            type: 'post',
+            url: `/api/rating/${rating.uIdx}/${rating.mIdx}/new`,
+            data: JSON.stringify(rating),
+            contentType: "application/json; charset=utf-8"
         })
-        .catch(err => console.log(err))
     }
 
     let modify = rating => {
         console.log("rating modify");
-        fetch(`/api/rating/${rating.uIdx}/${rating.mIdx}`, {
-            method: 'PUT',
-            body: JSON.stringify(rating),
-            headers: { 'Content-type': 'application/json' }
+        $.ajax({
+            type: 'put',
+            url: `/api/rating/${rating.uIdx}/${rating.mIdx}`,
+            data: JSON.stringify(rating),
+            contentType: "application/json; charset=utf-8"
         })
-        .catch(err => console.log(err))
     }
 
     let get = (uIdx, mIdx) => {
@@ -31,7 +31,6 @@ let ratingService = (() => {
                 document.querySelector('.rating').value = data.rated
             }
         })
-        .catch(err => console.log(err))
     }
 
     let counts = uIdx => {

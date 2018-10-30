@@ -10,3 +10,12 @@
 <!-- Custom Theme JavaScript -->
 <script src="<c:url value='/resources/dist/js/common.js'/>"></script>
 <script src="<c:url value='/resources/dist/js/speech.js'/>"></script>
+<script>
+var token = $("meta[name='_csrf']").attr("content");
+var header = $("meta[name='_csrf_header']").attr("content");
+$(function() {
+    $(document).ajaxSend(function(e, xhr, options) {
+        xhr.setRequestHeader(header, token);
+    });
+});
+</script>

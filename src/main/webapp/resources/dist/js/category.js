@@ -32,8 +32,8 @@
                     _.addClass(li, 'Poster')
                     if (poster !== '') {
                         li.innerHTML =
-                        `    <a href="/item/${id}">
-                        <img src="${poster}" alt="${title} 포스터">
+                        `<a href="/item/${id}">
+                            <img src="${poster}" alt="${title} 포스터">
                         </a>`
                         _.append(uls, li);
                     }

@@ -3,24 +3,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="include/header.jsp" %>
-
 <main class="container">
     <section>
         <div>
+            <h3>검색결과</h3>
             <div>
-                <div>
-                    <h3>검색결과</h3>
-                    <div>
-                        <p>'${query}' 검색결과</p>
-                        <ul class="list">
-                        </ul>
-                    </div>
-                </div>
+                <p>'${query}' 검색결과</p>
+                <ul class="list">
+                </ul>
             </div>
         </div>
     </section>
 </main>
-<%@ include file="include/footer.jsp" %>
 <script>
 	let result = "${query}";
 </script>

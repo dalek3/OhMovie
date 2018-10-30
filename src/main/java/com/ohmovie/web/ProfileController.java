@@ -30,7 +30,7 @@ public class ProfileController {
 	@GetMapping("/{uIdx}")
 	public String profile(Model model,@PathVariable Integer uIdx) throws Exception {
 		LoginDTO member = memberDAO.readIdx(uIdx);
-		log.info("profile stats : " + member);		
+			
 		model.addAttribute("member", member);
 		return "/profile/userReviews";
 	}
@@ -38,7 +38,7 @@ public class ProfileController {
 	@GetMapping("/{uIdx}/reviews")
 	public String userReviews(Model model,@PathVariable Integer uIdx) throws Exception {
 		LoginDTO member = memberDAO.readIdx(uIdx);
-		log.info("profile stats : " + member);		
+				
 		model.addAttribute("member", member);
 		
 		return "/profile/userReviews";
@@ -47,7 +47,7 @@ public class ProfileController {
 	@GetMapping("/{uIdx}/review/{mIdx}")
 	public String userReview(Model model, @PathVariable Integer uIdx, @PathVariable Integer mIdx) throws Exception {
 		LoginDTO member = memberDAO.readIdx(uIdx);
-		log.info("profile stats : " + member);		
+				
 		model.addAttribute("member", member);
 		return "/profile/userReview";
 	}
@@ -55,7 +55,7 @@ public class ProfileController {
 	@GetMapping("/{uIdx}/ratings")
 	public String diary(Model model,@PathVariable Integer uIdx) throws Exception {
 		LoginDTO member = memberDAO.readIdx(uIdx);
-		log.info("profile stats : " + member);		
+				
 		model.addAttribute("member", member);
 		return "/profile/diary";
 	}

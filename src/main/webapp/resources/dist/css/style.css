@@ -125,7 +125,7 @@ main {
 
 .ContentJumbotron-PaneInner {
     width: 430px;
-    margin: 0 40px 0 40px;
+    margin: 80px;
 }
 
 .reviews-score {
@@ -167,8 +167,8 @@ main {
 }
 
 .ContentJumbotron-user-panel {
-    margin-top: 80px;
     font-size: 1.25rem;
+    margin: 20px 30px 0px;
 }
 
 .ContentJumbotron-user-panel ul{
@@ -176,15 +176,16 @@ main {
     border-radius: 10px;
     color: #6985F4;
     text-align: center;
-    width: 250px;
-}
-
-.ContentJumbotron-user-panel li:not(:last-child) {
-    border-bottom: 1px solid #6985F4;
+    display: flex;
+    border: 1px solid;
+    width: 340px;
 }
 
 .ContentJumbotron-user-panel li {
-    padding: 10px;
+    padding: 10px 0px 10px 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .ContentJumbotron-user-panel .user-panel {
@@ -816,9 +817,9 @@ x-star-rating {
     font-family: 'Ionicons';
     display: inline-flex;
     cursor: pointer;
-    font-size: 3rem;
+    font-size: 2rem;
     justify-content: center;
-    padding: 10px 0;
+    padding: 10px;
 }
 
 x-star-rating > .star::after {
@@ -972,4 +973,18 @@ x-star-rating > .star.full::after {
     height: 264px;
     border: 1px solid #e3e3e3;
     border-radius: 10px;
+}
+
+.carousel {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+.stage {
+    display: flex;
+    margin: 20px;
+}
+
+.stage .item {
+    margin: 0px 20px;
 }

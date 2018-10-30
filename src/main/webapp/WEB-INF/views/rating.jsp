@@ -6,17 +6,6 @@
         <main class="container">
             <div class="ReviewMorePage-wrapper">
                 <div class="ReviewMorePage-header"></div>
-                <!-- <div class="FilterBar-wrapper">
-                    <div class="FilterBar">
-                        <button class="FilterBar-titleButton">
-                            <span class="FilterBar-DropDown"></span>
-                            <span class="FilterBar-title">
-                                랜덤 영화
-                            </span>
-                        </button>
-                    </div>
-                </div> -->
-
                 <figure class="loading-spinner">
                     <img src="https://loading.io/spinners/lava-lamp/index.lava-lamp-preloader.svg">
                     <figcaption>데이터 로딩 중 ...</figcaption>
@@ -32,17 +21,17 @@
 <%@ include file="include/common.jsp" %>
 <script>
     let uIdx = <sec:authentication property='principal.member.uIdx' />
-    let input = document.querySelector('.search');
+    let input = _.el('.search');
     
     function onKeyDetection(e) {
         setTimeout(() => {
             let result = input.value;
             window.location.href = '/search?q='+result;
-        }, 1500);
+        }, 1100);
     }
     input.addEventListener('keyup', onKeyDetection);
 </script>
-<script src="<c:url value='/resources/dist/js/ratingService.js' />"></script>
+<script src="<c:url value='/resources/dist/js/ratingService.js'/>"></script>
 <script src="resources/dist/js/rating.js"></script>
 <script src="resources/dist/js/StarRating.js"></script>
 

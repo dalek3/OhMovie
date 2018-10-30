@@ -39,7 +39,6 @@ fetch("/api/" + uIdx + "/review/" + mIdx )
     <div class="reviews-detail-content">
         <span class="rating rated-9">★★★★½</span>
         <div class="body-text collapsible-text">
-            <div class="date">2018/10/07</div>
             <div class="collapsed-text">
                 <p>${rContent}</p>
             </div>

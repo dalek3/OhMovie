@@ -49,7 +49,7 @@
                     <div class="user-reviews reviews-score">
                         <div class="score">${data.vote_average*10}%</div>
                         <div class="reviews-wrap">
-                            <h3 class="reviews-header">유저 평점</h3>
+                            <h3 class="reviews-header">평점</h3>
                             <div class="score-stats">
                                 <div class="score-item">
                                     <span>평균 평점</span>
