@@ -32,17 +32,18 @@
     .then(response => response.json())
     .then(data => {
         let content  = data.overview ? data.overview : '영화 설명이 없습니다.';
+        let release_date = data.release_date ? data.release_date.substr(0,4) : '';
+        let genre = data.genres[0] ? data.genres[0].name : '';
+        let production_countries = data.production_countries[0] ? data.production_countries[0].iso_3166_1 :'';
         ContentJumbotron.innerHTML = 
             `<div class="ContentJumbotron__Poster">
                 <img src="https://image.tmdb.org/t/p/w300${data.poster_path}" alt="${data.title} 포스터">
                 <!-- 봤어요수 리스트수 좋아요수 -->
             </div>
             <div class="ContentJumbotron-PaneInner">
-                <!-- title -->
                 <h1 class="ContentJumbotron_title">${data.title}</h1>
-                <!-- release_date・genres・production_countries -->
                 <div class="ContentJumbotron_detail">
-                    ${data.release_date.substr(0, 4)}・${data.genres[0].name}・${data.production_countries[0].iso_3166_1}
+                    ${release_date}・${genre}・${production_countries}
                 </div>
                 <div class="ContentJumbotron_ContentRatings">
                     <div class="user-reviews reviews-score">
@@ -91,7 +92,7 @@
                     </div>
                     <div class="overview-item">
                         <dt>국가</dt>
-                        <dd>${data.production_countries[0].iso_3166_1}</dd>
+                        <dd>${production_countries}</dd>
                     </div>
                     <div class="overview-item">
                         <dt>장르</dt>

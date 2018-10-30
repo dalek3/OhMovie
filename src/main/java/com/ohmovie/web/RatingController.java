@@ -46,7 +46,6 @@ public class RatingController {
 			@PathVariable("uIdx") Integer uIdx,
 			@PathVariable("mIdx") Integer mIdx) {
 		
-		// {"uIdx":100,"mIdx":"332562", "rated" : "test"}
 		log.info("ADD RatingVO: " + vo);
 		ratingDAO.insertRating(vo);
 	}

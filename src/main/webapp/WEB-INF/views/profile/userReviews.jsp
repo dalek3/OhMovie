@@ -37,23 +37,14 @@
 
             <div class="profile-nav">
                 <ul>
-                    <li><a href="/profile/${member.uIdx}">취향분석</a></li>
                     <li><a href="/profile/${member.uIdx}/#">좋아요</a></li>
-                    <li><a href="/profile/${member.uIdx}/diary">평가작품</a></li>
                     <li><a href="/profile/${member.uIdx}/#">보고싶어요</a></li>
-                    <li><a href="/profile/${member.uIdx}/#">컬랙션</a></li>
+                    <li><a href="/profile/${member.uIdx}/reviews">리뷰</a></li>
+                    <li><a href="/profile/${member.uIdx}/ratings">평점</a></li>
                 </ul>
             </div>
 
             <section class="profile-contents">
-                <div class="contents-nav">
-                    <ul>
-                        <li><a href="/profile/${member.uIdx}/diary">봤어요</a></li>
-                        <li><a href="/profile/${member.uIdx}/diary">다이어리</a></li>
-                        <li><a href="/profile/${member.uIdx}/reviews">리뷰</a></li>
-                        <li><a href="/profile/${member.uIdx}/diary">평점</a></li>
-                    </ul>
-                </div>
                 <div class="profile-review">
                     <div class="profile-review-contents">
                         <section class="review-content">
@@ -69,7 +60,7 @@
 <%@ include file="../include/common.jsp" %>
 
 <script>
-    let userId = <c:out value="${uIdx}">uIdx</c:out>;
+    let uIdx = <c:out value="${uIdx}">uIdx</c:out>;
 </script>
 <script src="<c:url value='/resources/dist/js/userReviews.js'/>"></script>
 <script>

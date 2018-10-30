@@ -25,7 +25,11 @@ let ratingService = (() => {
         .then(response => response.json())
         .then(data => {
             console.log(data.rated);
-            document.querySelector('x-star-rating').value(data.rated)
+            if (document.querySelector('x-star-rating')){
+                document.querySelector('x-star-rating').value = data.rated
+            } else {
+                document.querySelector('.rating').value = data.rated
+            }
         })
         .catch(err => console.log(err))
     }

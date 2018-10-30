@@ -32,7 +32,7 @@ public class ProfileController {
 		LoginDTO member = memberDAO.readIdx(uIdx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
-		return "/profile/stats";
+		return "/profile/userReviews";
 	}
 
 	@GetMapping("/{uIdx}/reviews")
@@ -40,7 +40,7 @@ public class ProfileController {
 		LoginDTO member = memberDAO.readIdx(uIdx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
-		model.addAttribute("uIdx", uIdx);
+		
 		return "/profile/userReviews";
 	}
 	
@@ -49,12 +49,10 @@ public class ProfileController {
 		LoginDTO member = memberDAO.readIdx(uIdx);
 		log.info("profile stats : " + member);		
 		model.addAttribute("member", member);
-		model.addAttribute("uIdx", uIdx);
-		model.addAttribute("mIdx", mIdx);
 		return "/profile/userReview";
 	}
 	
-	@GetMapping("/{uIdx}/diary")
+	@GetMapping("/{uIdx}/ratings")
 	public String diary(Model model,@PathVariable Integer uIdx) throws Exception {
 		LoginDTO member = memberDAO.readIdx(uIdx);
 		log.info("profile stats : " + member);		
@@ -66,6 +64,7 @@ public class ProfileController {
 	public String signout(HttpSession session, Model model, @PathVariable Integer uIdx) {
 		log.info("signout");
 		memberDAO.signout(uIdx);
+		
 		session.invalidate();
 		return "redirect:/";
 	}
@@ -73,8 +72,7 @@ public class ProfileController {
 	@PostMapping("/{uIdx}/modify")
 	public String modify(@ModelAttribute MemberVO vo, Model model, @PathVariable Integer uIdx) throws Exception {
 		log.info("modify");
-		//BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-		//vo.setuPw(passwordEncoder.encode(vo.getuPw()));
+		
 		memberDAO.updateMember(uIdx, vo.getuName());
 		return "redirect:/setting";
 	}

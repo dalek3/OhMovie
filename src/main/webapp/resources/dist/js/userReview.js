@@ -3,7 +3,7 @@ const review_content = _.el('.review-content');
 let blank_poster = 'https://ssl.pstatic.net/static/movie/2012/06/dft_img203x290.png';
 
 // getPoster
-fetch("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
+fetch("https://api.themoviedb.org/3/movie/" + mIdx + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
 .then(response => response.json())
 .then(movie => {
     let title = movie.title;
@@ -17,7 +17,7 @@ fetch("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=bfdc49ba22b11b
 });
 
 // getReview
-fetch("/api/" + userId + "/review/" + movieId )
+fetch("/api/" + uIdx + "/review/" + mIdx )
 .then(response => response.json())
 .then(data => {
     let uName = data.uName
@@ -31,7 +31,7 @@ fetch("/api/" + userId + "/review/" + movieId )
                 alt="${uName} 프로필">
             <figcaption>
                 <p class="attribution">
-                    <a href="/profile/${userId}" class="context">${uName}</a>
+                    <a href="/profile/${uIdx}" class="context">${uName}</a>
                 </p>
             </figcaption>
         </figure>

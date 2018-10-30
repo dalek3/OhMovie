@@ -6,9 +6,7 @@
 }
 
 body, h1, h2, h3, li, a, ul, p, dl, dt, dd, figure, figcaption, button, input {
-    
     font-weight: 400;
-    
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -966,4 +964,12 @@ x-star-rating > .star.full::after {
   margin:   -1px;
   border:   0;
   padding:  0;
+}
+
+
+.Poster img{
+    width: 185px;
+    height: 264px;
+    border: 1px solid #e3e3e3;
+    border-radius: 10px;
 }

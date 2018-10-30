@@ -22,7 +22,7 @@
 <%@ include file="../include/common.jsp" %>
 <script>
     // restcontroller를 통해서 전달하기
-    let movieId = <c:out value="${movieId}">movieId</c:out>;
+    let mIdx = <c:out value="${mIdx}">mIdx</c:out>;
 </script>
 <script src="<c:url value='/resources/dist/js/contentReviewsAll.js'/>"></script>
 <script>

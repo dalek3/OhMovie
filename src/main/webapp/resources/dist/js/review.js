@@ -29,6 +29,8 @@ let reviewService = (() => {
         console.log("review modify");
         fetch(`/api/${review.uIdx}/review/${review.mIdx}`, {
             method: 'PUT',
+            body: JSON.stringify(review),
+            headers: { 'Content-type': 'application/json' }
         }).then(response => response.json())
         .catch(err => console.log(err))
     }

@@ -3,7 +3,7 @@ const review_content = _.el('.review-content');
 let blank_poster = 'https://ssl.pstatic.net/static/movie/2012/06/dft_img203x290.png';
 
 // getPoster
-fetch("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
+fetch("https://api.themoviedb.org/3/movie/" + mIdx + "?api_key=bfdc49ba22b11be34746dd5c861c3d27&language=ko-kr")
 .then(response => response.json())
 .then(movie => {
     let title = movie.title;
@@ -17,7 +17,7 @@ fetch("https://api.themoviedb.org/3/movie/" + movieId + "?api_key=bfdc49ba22b11b
 });
 
 // getReview
-fetch("/api/" + movieId + "/contentReviews")
+fetch("/api/" + mIdx + "/contentReviews")
 // fetch("/api/reviews/" + movieId )
 .then(response => response.json())
 .then(data => {
@@ -34,13 +34,13 @@ fetch("/api/" + movieId + "/contentReviews")
                     alt="${uName} 프로필">
                     <figcaption>
                         <p class="attribution">
-                            <a href="/profile/${uIdx}/review/${movieId}" class="context">${uName}</a>
+                            <a href="/profile/${uIdx}/review/${mIdx}" class="context">${uName}</a>
                         </p>
                     </figcaption>
                 </figure>
             </div>
             <div class="reviews-detail-content">
-                <span class="rating rated-9">★★★★½</span>
+                <span class="rating"></span>
                 <div class="body-text collapsible-text">
                     <div class="date">2018/10/07</div>
                     <div class="collapsed-text">

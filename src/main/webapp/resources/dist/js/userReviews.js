@@ -1,7 +1,7 @@
 const review_content = _.el('.review-content');
 let blank_poster = 'https://ssl.pstatic.net/static/movie/2012/06/dft_img203x290.png';
 
-fetch("/api/"+ userId +"/reviews" )
+fetch("/api/"+ uIdx +"/reviews" )
 .then(response => response.json())
 .then(data => {
     return data.map(item => {

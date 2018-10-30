@@ -14,7 +14,7 @@
                 <ul>
                     <li class="rating">
                         <span class="fw700">평가</span>
-                        <x-star-rating value="0" number="5" id="${data.id}"></x-star-rating>
+                        <x-star-rating value="0" number="5" id="${mIdx}"></x-star-rating>
                     </li>
                     <li>                      	
                       	<span id='addReviewBtn' class="fw700" data-toggle="modal" data-target="#myModal">리뷰 작성하기</span>	
@@ -70,29 +70,32 @@
         </main>
         
         <%@ include file="../include/footer.jsp" %>
-<%@ include file="../include/common.jsp" %>
+        <%@ include file="../include/common.jsp" %>
+<script src="<c:url value='/resources/dist/js/ratingService.js' />"></script>
 <script>
     // restcontroller를 통해서 전달하기
     let mIdx = <c:out value="${mIdx}">mIdx</c:out>;
     <sec:authorize access="isAuthenticated()">
     let uIdx = <sec:authentication property='principal.member.uIdx' />
-  	</sec:authorize>
+    ratingService.get(uIdx, mIdx)
+    </sec:authorize>
     let input = document.querySelector('.search');
     
     console.log(mIdx);
     
+    
+    
     function onKeyDetection(e) {
-    	setTimeout(() => {
-    		let result = input.value;
+        setTimeout(() => {
+            let result = input.value;
             window.location.href = '/search?q='+result;
-		}, 1200);
+        }, 1200);
     }
     input.addEventListener('keyup', onKeyDetection);
     
-</script>
+    </script>
 <script src="<c:url value='/resources/dist/js/item.js'/>"></script>
 <script src="<c:url value='/resources/dist/js/contentReviews.js'/>"></script>
-<script src="<c:url value='/resources/dist/js/ratingService.js' />"></script>
 <script src="<c:url value='/resources/dist/js/StarRating.js' />"></script>
 <script src="<c:url value='/resources/dist/js/review.js' />"></script>
 <script>

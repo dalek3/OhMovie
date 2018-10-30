@@ -22,8 +22,8 @@
 <%@ include file="../include/footer.jsp" %>
 <%@ include file="../include/common.jsp" %>
 <script>
-    let userId = <c:out value="${uIdx}">uIdx</c:out>;
-    let movieId = <c:out value="${mIdx}">mIdx</c:out>;
+    let uIdx = <c:out value="${uIdx}">uIdx</c:out>;
+    let mIdx = <c:out value="${mIdx}">mIdx</c:out>;
 </script>
 <script src="<c:url value='/resources/dist/js/userReview.js'/>"></script>
 <script>

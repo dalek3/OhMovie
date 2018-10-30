@@ -22,7 +22,6 @@ public class HomeController {
 	@GetMapping(value = "/")
 	public String home(Model model) {
 		log.info("index");
-		
 		return "index";
 	}
 
