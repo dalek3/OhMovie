@@ -13,6 +13,8 @@ public interface RatingDAO {
 	public RatingVO readRating(Integer uIdx, Integer mIdx);
 	
 	public List<RatingVO> readRatings(Integer uIdx);
+	
+	public List<RatingVO> readAllRatings();
 
 	public int countRatings(Integer uIdx);
 	

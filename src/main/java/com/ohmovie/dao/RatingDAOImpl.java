@@ -52,4 +52,10 @@ public class RatingDAOImpl implements RatingDAO {
 		return session.selectOne(namespace + ".countRatings", uIdx);
 	}
 
+	@Override
+	public List<RatingVO> readAllRatings() {
+		
+		return session.selectList(namespace + ".readAllRatings");
+	}
+
 }

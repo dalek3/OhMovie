@@ -15,7 +15,10 @@ let reviewService = (() => {
         .then(response => response.json())
         .then(data => {
             modalInputContent.val(data.rContent);
+        }).catch(() => {
+            modalInputContent.val('');
         })
+        
     }
 
     let remove = (uIdx, mIdx) => {

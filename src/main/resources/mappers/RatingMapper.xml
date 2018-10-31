@@ -27,6 +27,11 @@
 	 	WHERE u_idx = #{uIdx}
 	 </select>
 	 
+	 <select id="readAllRatings" resultType="RatingVO">
+	 	SELECT * 
+	 	FROM member_rating
+	 </select>
+	 
 	 <select id="countRatings" resultType="int">
 	 	SELECT COUNT(m_idx)
 	 	FROM member_rating

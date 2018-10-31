@@ -170,15 +170,15 @@
 <%@ include file="include/common.jsp" %>
 <script src="resources/dist/js/category.js"></script>
 <script>
-	let input = _.el('.search');
-	
-	function onKeyDetection(e) {
-		setTimeout(() => {
-			let result = input.value;
-	        window.location.href = '/search?q='+result;
-		}, 1100);
-	}
-	input.addEventListener('keyup', onKeyDetection);
+    let input = _.el('.search');
+    
+    function onKeyDetection(e) {
+        setTimeout(() => {
+            let result = input.value;
+            window.location.href = '/search?q='+result;
+        }, 1100);
+    }
+    input.addEventListener('keyup', onKeyDetection);
 </script>
 </body>
 

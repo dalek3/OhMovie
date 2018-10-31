@@ -24,11 +24,16 @@ let ratingService = (() => {
         fetch(`/api/${uIdx}/rating/${mIdx}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data.rated);
-            if (document.querySelector('x-star-rating')){
-                document.querySelector('x-star-rating').value = data.rated
+            if (_.el('x-star-rating')){
+                _.el('.rating').value = data.rated
             } else {
-                document.querySelector('.rating').value = data.rated
+                _.el('.rating').value = data.rated
+            }
+        }).catch( () => {
+            if (_.el('x-star-rating')) {
+                _.el('.rating').value = 0
+            } else {
+                _.el('.rating').value = 0
             }
         })
     }
@@ -37,10 +42,8 @@ let ratingService = (() => {
         const ReviewMorePageHeader = _.el('.ReviewMorePage-header');
         if (ReviewMorePageHeader){
             fetch(`/api/${uIdx}/ratings/counts`)
-            //fetch(`/api/100/ratings/counts`)
             .then(response => response.json())
             .then(count => {
-                console.log(count);
                 ReviewMorePageHeader.innerHTML =
                 `<h2 class="ReviewMorePage-countingHeader">${count}</h2>`
             });

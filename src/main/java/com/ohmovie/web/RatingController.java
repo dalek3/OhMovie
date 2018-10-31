@@ -61,5 +61,11 @@ public class RatingController {
 		log.info("modify RatingVO: " + vo);
 		ratingDAO.updateRating(vo);
 	}
+	
+	@GetMapping("/Allratings")
+	public List<RatingVO> readAllRatings() {
+		log.info("readAllRatings");
+		return ratingDAO.readAllRatings();
+	}
 
 }

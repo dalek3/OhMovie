@@ -43,11 +43,6 @@ fetch("/api/" + uIdx + "/review/" + mIdx )
                 <p>${rContent}</p>
             </div>
         </div>
-        <ul class="review-like">
-            <li>좋아요</li>
-            <li>좋아요수</li>
-            <li>신고하기</li>
-        </ul>
     </div>`
     _.append(review_content, template);
 });
