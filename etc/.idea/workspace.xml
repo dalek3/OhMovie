@@ -5,21 +5,27 @@
       <change beforePath="$PROJECT_DIR$/.idea/etc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/etc.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ratings_custom.py" beforeDir="false" afterPath="$PROJECT_DIR$/ratings_custom.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/ohmovie/dao/RatingDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/ohmovie/dao/RatingDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/ohmovie/dao/RatingDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/ohmovie/dao/RatingDAOImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/com/ohmovie/web/RatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/com/ohmovie/web/RatingController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/resources/mappers/RatingMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/resources/mappers/RatingMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/category.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/category.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/WEB-INF/views/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/category.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/category.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/contentReviewsAll.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/contentReviewsAll.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/rating.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/rating.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/ratingService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/ratingService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/reviewService.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/reviewService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/userReview.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/userReview.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/userReviews.js" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/webapp/resources/dist/js/userReviews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/base.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/links_tmdb.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/README.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/links.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/movies_w_imgurl.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/ratings.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml-latest-small-fastcampus/tags.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml-latest-small/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml-latest-small/README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ml-latest-small/movies.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/ml-latest-small/movies.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movieId.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/movies3.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/output3/56049_movie.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/rating_sgd.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ratings.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ratings_custom.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_file.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_save.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tmdb_total_file.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,34 +77,40 @@
     <session id="-1992030803">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="10" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.2" value="6" />
+          <entry key="project.open.time.3" value="3" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="csv" value="1" />
-          <entry key="py" value="7" />
+          <entry key="csv" value="33" />
+          <entry key="hdf5" value="1" />
+          <entry key="json" value="4" />
+          <entry key="py" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="Python" value="7" />
+          <entry key="JSON" value="4" />
+          <entry key="PLAIN_TEXT" value="34" />
+          <entry key="Python" value="48" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
+          <entry key="csv" value="11" />
           <entry key="dummy" value="7" />
-          <entry key="py" value="92" />
+          <entry key="py" value="3182" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="92" />
+          <entry key="PLAIN_TEXT" value="18" />
+          <entry key="Python" value="3182" />
         </counts>
       </usages-collector>
     </session>
@@ -137,18 +149,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ratings_custom.py">
+        <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="304">
-              <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
-              <folding>
-                <element signature="e#0#10#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="209">
+              <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>,</find>
+      <find>,118</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -159,16 +181,22 @@
         <option value="$PROJECT_DIR$/movieRead.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/rating_sgd.py" />
         <option value="$PROJECT_DIR$/ratings_custom.py" />
+        <option value="$PROJECT_DIR$/rating_sgd.py" />
+        <option value="$PROJECT_DIR$/rating_tes.py" />
+        <option value="$PROJECT_DIR$/test.csv" />
+        <option value="$PROJECT_DIR$/base.csv" />
+        <option value="$PROJECT_DIR$/test10.csv" />
+        <option value="$PROJECT_DIR$/test3.py" />
+        <option value="$PROJECT_DIR$/test1.py" />
+        <option value="$PROJECT_DIR$/test.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1296" />
-    <option name="height" value="1000" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -216,8 +244,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="ratings_custom" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test">
+    <configuration name="rating_sgd" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="etc" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -229,7 +257,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ratings_custom.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rating_sgd.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -238,9 +266,104 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="rating_tes" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="etc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/rating_tes.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="etc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test1" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="etc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test3" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="etc" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.rating_sgd" />
+      <item itemvalue="Python.rating_tes" />
+      <item itemvalue="Python.test" />
+      <item itemvalue="Python.test3" />
+      <item itemvalue="Python.test1" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ratings_custom" />
+        <item itemvalue="Python.test" />
+        <item itemvalue="Python.test1" />
+        <item itemvalue="Python.test3" />
+        <item itemvalue="Python.rating_tes" />
+        <item itemvalue="Python.rating_sgd" />
       </list>
     </recent_temporary>
   </component>
@@ -258,20 +381,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24880762" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18598525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3290993" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.44842562" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3984799" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3290993" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32894737" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -283,14 +406,65 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tmdb_save.py</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="int(float(rated))" language="Python" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="watch">
+      <expression>
+        <expression-string>int(float(rated))</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>float(rated)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>int(rated)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>rated</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>math.floor(rated)]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>len(i)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>range(k)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dict(test['u_idx'])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>dict('user_id', test['u_idx'])</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>test = df.loc[:,'u_idx':'m_idx':'rated']</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/tmdb_test.py" />
@@ -309,23 +483,95 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rating.py">
+    <entry file="file://$PROJECT_DIR$/Basic_REST_Server_v2.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.hdf5" />
+    <entry file="file://$PROJECT_DIR$/output3/56049_movie.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py36_test/Lib/json/encoder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="175">
+          <caret line="179" selection-start-line="179" selection-end-line="179" />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test2.json" />
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py36_test/Lib/site-packages/matplotlib/colorbar.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py36_test/Lib/site-packages/pandas/core/indexes/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="4299" selection-start-line="4299" selection-end-line="4299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db2.csv" />
     <entry file="file://$PROJECT_DIR$/movies3.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/rating_sgd.py">
+    <entry file="file://$USER_HOME$/Anaconda3/envs/py36_test/Lib/site-packages/pandas/core/indexing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="174">
+          <caret line="1784" selection-start-line="1784" selection-end-line="1784" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ratings2.csv" />
+    <entry file="file://$PROJECT_DIR$/ratings3.csv" />
+    <entry file="file://$PROJECT_DIR$/rating0.csv" />
+    <entry file="file://$PROJECT_DIR$/base.csv" />
+    <entry file="file://$PROJECT_DIR$/test.csv" />
+    <entry file="file://$PROJECT_DIR$/rating.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test3.py" />
+    <entry file="file://$PROJECT_DIR$/test10.csv" />
+    <entry file="file://$PROJECT_DIR$/pred2.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test1.py" />
+    <entry file="file://$PROJECT_DIR$/ratings_custom.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rating_tes.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1520">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tmdb_total_file.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="969">
+          <caret line="57" column="9" selection-start-line="57" selection-start-column="9" selection-end-line="57" selection-end-column="9" />
         </state>
       </provider>
     </entry>
@@ -336,38 +582,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Basic_REST_Server_v2.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/tmdb_file.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="228">
           <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tmdb_total_file.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ratings.csv">
+    <entry file="file://$PROJECT_DIR$/links2.csv" />
+    <entry file="file://$PROJECT_DIR$/links.csv">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/ratings_custom.py">
+    <entry file="file://$PROJECT_DIR$/ratings.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="22" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="76">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rating_sgd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="836">
+          <caret line="48" column="44" selection-start-line="48" selection-start-column="44" selection-end-line="48" selection-end-column="44" />
           <folding>
-            <element signature="e#0#10#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pred.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="190">
+          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
         </state>
       </provider>
     </entry>
