@@ -243,11 +243,11 @@
     });
     
     let input = _.el('.search');
-    // let regx = /^http:\/\/localhost:8080\/search\?q\=[0-9a-zA-Z%]*$/;
+    let regx = /^http:\/\/localhost:8080\/search\?q\=[0-9a-zA-Z%]*$/;
     
-    // if(regx.test(document.referrer)) {
-        // input.focus();    
-    // }
+    if(regx.test(document.referrer)) {
+        input.focus();    
+    }
 
     function onKeyDetection(e) {
         setTimeout(() => {

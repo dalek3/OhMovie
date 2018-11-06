@@ -58,4 +58,13 @@ public class RatingDAOImpl implements RatingDAO {
 		return session.selectList(namespace + ".readAllRatings");
 	}
 
+	@Override
+	public RatingVO predRating(Integer uIdx, Integer mIdx) {
+		Map<String, Object> paramMap = new HashMap<>();
+		
+		paramMap.put("uIdx", uIdx);
+		paramMap.put("mIdx", mIdx);
+		return session.selectOne(namespace + ".predRating", paramMap);
+	}
+
 }

@@ -24,17 +24,20 @@ let ratingService = (() => {
         fetch(`/api/${uIdx}/rating/${mIdx}`)
         .then(response => response.json())
         .then(data => {
-            if (_.el('x-star-rating')){
-                _.el('.rating').value = data.rated
-            } else {
-                _.el('.rating').value = data.rated
-            }
+            _.el('x-star-rating').value = data.rated
         }).catch( () => {
-            if (_.el('x-star-rating')) {
-                _.el('.rating').value = 0
-            } else {
-                _.el('.rating').value = 0
-            }
+            _.el('x-star-rating').value = 0
+        })
+    }
+
+    let pred = (uIdx, mIdx) => {
+        console.log('rating pred');
+        fetch(`/api/${uIdx}/pred/${mIdx}`)
+        .then(response => response.json())
+        .then(data => {
+            _.el('.pred').innerHTML = 
+            `<span>예상 평점</span>
+            <em>${data.rated}</em>`
         })
     }
 
@@ -54,6 +57,7 @@ let ratingService = (() => {
         add,
         modify,
         get,
-        counts
+        counts,
+        pred
     }; 
 })();

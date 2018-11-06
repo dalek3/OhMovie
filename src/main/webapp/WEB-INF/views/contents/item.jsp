@@ -72,6 +72,7 @@
     <sec:authorize access="isAuthenticated()">
     let uIdx = <sec:authentication property='principal.member.uIdx' />
     ratingService.get(uIdx, mIdx)
+    ratingService.pred(uIdx, mIdx)
     </sec:authorize>
     let input = _.el('.search');
     
@@ -83,7 +84,7 @@
     }
     input.addEventListener('keyup', onKeyDetection);
     
-    </script>
+</script>
 <script src="<c:url value='/resources/dist/js/item.js'/>"></script>
 <script src="<c:url value='/resources/dist/js/StarRating.js' />"></script>
 <script src="<c:url value='/resources/dist/js/contentReviews.js'/>"></script>
@@ -100,7 +101,6 @@
     $('#addReviewBtn').on("click", e => {
         reviewService.get(uIdx, mIdx);
         modal.find("button[id !='modalCloseBtn']").hide();
-        console.log("test" + modalInputContent.val());
         setTimeout(() => {
             if(modalInputContent.val() != ''){
                 modalModBtn.show();

@@ -41,6 +41,12 @@ public class RatingController {
 		return ratingDAO.readRating(uIdx, mIdx);
 	}
 	
+	@GetMapping("/{uIdx}/pred/{mIdx}")
+	public RatingVO predRating(@PathVariable Integer uIdx,
+			@PathVariable Integer mIdx) {
+		return ratingDAO.predRating(uIdx, mIdx);
+	}
+	
 	@PostMapping(value = "/rating/{uIdx}/{mIdx}/new")
 	public void create(@RequestBody RatingVO vo,
 			@PathVariable("uIdx") Integer uIdx,

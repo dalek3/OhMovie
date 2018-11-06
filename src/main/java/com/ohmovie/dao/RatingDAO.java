@@ -18,4 +18,5 @@ public interface RatingDAO {
 
 	public int countRatings(Integer uIdx);
 	
+	public RatingVO predRating(Integer uIdx, Integer mIdx);
 }

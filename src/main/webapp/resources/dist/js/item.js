@@ -55,9 +55,8 @@
                                     <span>평균 평점</span>
                                     <em>${data.vote_average}/10</em>
                                 </div>
-                                <div class="score-item">
-                                    <span>예상 평점</span>
-                                    <em>7.6/10</em>
+                                <div class="score-item pred">
+
                                 </div>
                                 <div class="score-item">
                                     <span>참여 인원</span>

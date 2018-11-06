@@ -38,4 +38,10 @@
 	 	WHERE u_idx = #{uIdx}
 	 </select>
 	 
+	 <select id="predRating" resultType="RatingVO">
+	 	select * 
+	 	from member_pred
+	 	where u_idx = #{uIdx}
+	 	and m_idx = #{mIdx}
+	 </select>
 </mapper>
